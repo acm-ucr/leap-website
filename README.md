@@ -11,7 +11,7 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/design/CCnUdMWEPhpFrttdqPdFjj/LEAP-Club-Website?node-id=0-1&p=f&t=lICRKUF0QZS5r1KI-0)
+[UCR LEAP Figma Design](https://www.figma.com/design/CCnUdMWEPhpFrttdqPdFjj/LEAP-Club-Website?node-id=0-1&p=f&t=lICRKUF0QZS5r1KI-0)
 
 ## Node.js
 
