@@ -1,4 +1,4 @@
-# ACM UCR Website Template
+# UCR LEAP Website
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -11,7 +11,7 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/)
+[ACM UCR Website Template Figma Design File](https://www.figma.com/design/CCnUdMWEPhpFrttdqPdFjj/LEAP-Club-Website?node-id=0-1&p=f&t=lICRKUF0QZS5r1KI-0)
 
 ## Node.js
 
