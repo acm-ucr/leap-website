@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "UCR LEAP",
-  description: "Create by ACM @ UCR",
+  description: "Create by ACM@UCR",
 };
 
 type LayoutProps = {
