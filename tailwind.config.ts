@@ -1,8 +1,21 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        leap: {
+          "dark-green": "#324935",
+          "mid-green": "#4F8C6C",
+          "light-green": "#6FA36A",
+          yellow: "#F2AE01",
+        },
+        fontFamily: {
+          leap: "var(--krub-font)",
+        },
+      },
+    },
   },
   plugins: [],
 };
