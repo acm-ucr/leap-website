@@ -1,0 +1,33 @@
+
+
+
+.value-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0; /* Adjust spacing as needed */
+    font-weight: bold;
+}
+
+.value-card-title {
+    font-size: 2rem;
+    color: #3a593e;
+    margin-bottom: 16px; /* Space between the title and the textbox */
+    text-align: center;
+    font-weight: bold;
+}
+
+.value-card-box {
+    background: #5e9679; /* Textbox color */
+    padding: 20px;
+    border-radius: 0; /* Sharp edges */
+    box-shadow: 0 8px 10px rgba(0.9, 0.9, 0.9, 0.9); /* Subtle shadow below the box */
+    max-width: 300px; /* Adjust width as needed */
+    text-align: center;
+    color: #ffffff; /* Text color */
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative; /* Ensure shadow applies correctly */
+}
+
+
