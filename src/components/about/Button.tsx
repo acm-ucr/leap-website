@@ -11,9 +11,9 @@ const Button = () => {
           style={{ borderColor: "#3E6F55AB" }}
         >
           <div className="px-8 text-center text-lg md:text-xl">
-            View Our
+            View our
             <br />
-            Constitution
+            constitution
           </div>
         </div>
       </Link>
