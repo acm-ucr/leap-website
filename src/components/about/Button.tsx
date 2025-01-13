@@ -3,11 +3,14 @@ import Link from "next/link";
 
 const Button = () => {
   return (
-    <div className="flex justify-center items-center">
-                {/* Temporary Link Change */}
+    <div className="flex items-center justify-center">
+      {/* Temporary Link Change */}
       <Link href="https://www.google.com" passHref>
-        <div className="bg-leap-mid-green text-white py-2 px-4 rounded-lg border-4 text-fontFamily-leap" style={{ borderColor: "#3E6F55AB" }}>
-          <div className="text-center text-lg md:text-xl px-8">
+        <div
+          className="rounded-lg border-4 bg-leap-mid-green px-4 py-2 text-fontFamily-leap text-white"
+          style={{ borderColor: "#3E6F55AB" }}
+        >
+          <div className="px-8 text-center text-lg md:text-xl">
             View Our
             <br />
             Constitution
