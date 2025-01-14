@@ -14,7 +14,8 @@ const Value_Box = () => {
                     </div>
                 ))}
             </div>
-        </div>);
+        </div>
+        );
 };
 
 export default Value_Box;
