@@ -4,8 +4,7 @@ const Home = () => {
   return (
     <div>
       <Value_Box />
-    </div>
-  );
+    </div>);
 };
 
 export default Home;
