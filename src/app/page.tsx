@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <Value_Box />
     </div>
-    );
+  );
 };
 
 export default Home;

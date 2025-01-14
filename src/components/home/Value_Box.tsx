@@ -1,21 +1,21 @@
 import React from "react";
 
 const Value_Box = () => {
-    const topics = ["Awareness", "Community", "Safety", "Mental Health"];
-    return (
-        <div className="flex justify-end items-center min-h-screen">
-            <div className="grid grid-cols-1 gap-4 w-full max-w-xs mr-52">
-                {topics.map((topic, index) => (
-                    <div
-                        key={index}
-                        className="bg-leap-mid-green w-72 h-52 flex justify-center items-center p-2 text-5xl font-normal text-center text-white border-2 border-white rounded-lg"
-                    >
-                        {topic}
-                    </div>
-                ))}
-            </div>
-        </div>
-        );
+  const topics = ["Awareness", "Community", "Safety", "Mental Health"];
+  return (
+    <div className="flex min-h-screen items-center justify-end">
+      <div className="mr-52 grid w-full max-w-xs grid-cols-1 gap-4">
+        {topics.map((topic, index) => (
+          <div
+            key={index}
+            className="flex h-52 w-72 items-center justify-center rounded-lg border-2 border-white bg-leap-mid-green p-2 text-center text-5xl font-normal text-white"
+          >
+            {topic}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Value_Box;
