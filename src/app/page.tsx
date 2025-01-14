@@ -1,5 +1,11 @@
+import Value_Box from "@/components/home/Value_Box";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Value_Box />
+    </div>
+  );
 };
 
 export default Home;
