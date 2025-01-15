@@ -5,7 +5,7 @@ const Button = () => {
   return (
     <div className="flex items-center justify-center">
       {/* Temporary Link Change */}
-      <Link href="https://www.google.com" passHref>
+      <Link href="#" passHref>
         <div
           className="rounded-lg border-4 bg-leap-mid-green px-4 py-2 text-fontFamily-leap text-white"
           style={{ borderColor: "#3E6F55AB" }}
