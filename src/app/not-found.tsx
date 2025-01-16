@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BackgroundImage from "@/public/assets/bg-error.png";
+import BackgroundImage from "@/public/assets/bg-error.webp";
 import Image from "next/image";
 const NotFound = () => {
   return (
