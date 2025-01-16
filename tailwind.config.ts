@@ -11,9 +11,9 @@ module.exports = {
           yellow: "#F2AE01",
           text: "#FFEFEF",
         },
-        fontFamily: {
-          leap: "var(--krub-font)",
-        },
+      },
+      fontFamily: {
+        leap: "var(--krub-font)",
       },
     },
   },
