@@ -10,6 +10,7 @@ module.exports = {
           "light-green": "#6FA36A",
           yellow: "#F2AE01",
           text: "#FFEFEF",
+          grey: "#C3C5B8",
         },
       },
       fontFamily: {
