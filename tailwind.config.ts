@@ -10,9 +10,9 @@ module.exports = {
           "light-green": "#6FA36A",
           yellow: "#F2AE01",
         },
-        fontFamily: {
-          leap: "var(--krub-font)",
-        },
+      },
+      fontFamily: {
+        leap: "var(--krub-font)",
       },
     },
   },
