@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <div>
       <About />
-      <Button />
+      <Button text="View our constitution" link="#" />
     </div>
   );
 };

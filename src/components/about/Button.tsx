@@ -1,20 +1,20 @@
 import React from "react";
 import Link from "next/link";
 
-const Button = () => {
+interface ButtonProps {
+  text: string;
+  link: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ text, link }) => {
   return (
-    <div className="flex items-center justify-center">
-      {/* Temporary Link Change */}
-      <Link href="#" passHref>
+    <div className="flex items-center justify-center w-1/6 h-1/6">
+      <Link href={link} target="_blank">
         <div
-          className="rounded-lg border-4 bg-leap-mid-green px-4 py-2 text-fontFamily-leap text-white"
-          style={{ borderColor: "#3E6F55AB" }}
+          className="flex items-center rounded-lg border-4 border-leap-dark-green
+           bg-leap-mid-green text-white font-leap m-0 text-center text-lg h-15 w-40 px-4 py-1"
         >
-          <div className="px-8 text-center text-lg md:text-xl">
-            View our
-            <br />
-            constitution
-          </div>
+            {text}
         </div>
       </Link>
     </div>
