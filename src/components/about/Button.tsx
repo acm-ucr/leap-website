@@ -8,13 +8,10 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ text, link }) => {
   return (
-    <div className="flex items-center justify-center w-1/6 h-1/6">
+    <div className="flex h-1/6 w-1/6 items-center justify-center">
       <Link href={link} target="_blank">
-        <div
-          className="flex items-center rounded-lg border-4 border-leap-dark-green
-           bg-leap-mid-green text-white font-leap m-0 text-center text-lg h-15 w-40 px-4 py-1"
-        >
-            {text}
+        <div className="h-15 m-0 flex w-40 items-center rounded-lg border-4 border-leap-dark-green bg-leap-mid-green px-4 py-1 text-center font-leap text-lg text-white">
+          {text}
         </div>
       </Link>
     </div>
