@@ -25,6 +25,20 @@ const Home = () => {
           health in the AAPI community. Come join us to hang out!
         </p>
       </div>
+      <div className="flex w-1/5 flex-row space-x-10 p-2">
+        <button className="rounded bg-leap-light-green px-4 py-2 font-leap font-bold text-white hover:bg-green-600">
+          Awareness
+        </button>
+        <button className="rounded bg-leap-light-green px-4 py-2 font-leap font-bold text-white hover:bg-green-600">
+          Community
+        </button>
+        <button className="rounded bg-leap-light-green px-4 py-2 font-leap font-bold text-white hover:bg-green-600">
+          Safety
+        </button>
+        <button className="rounded bg-leap-light-green px-4 py-2 font-leap font-bold text-white hover:bg-green-600">
+          Mental Health
+        </button>
+      </div>
     </div>
   );
 };
