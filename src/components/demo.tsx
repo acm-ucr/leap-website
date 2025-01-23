@@ -4,15 +4,11 @@ import Image, { StaticImageData } from "next/image";
 
 const Demo = ({ text, image }: { text: string; image: StaticImageData }) => {
   return (
-    <div className="h-1/3 w-1/3 border-2 border-leap-mid-green py-9">
-      <Image src={image} alt="wee" />
-      <Link
-        className="text-center font-leap text-leap-yellow"
-        href="https://github.com/acm-ucr/leap-website/pull/30/files"
-        target="_blank"
-      >
+    <div className="m-10 w-full border-2 border-black bg-leap-light-green p-10">
+      <Link href="/about" target="_blank">
         {text}
       </Link>
+      <Image className="object-fil aspec-square" src={image} alt="oops!" />
     </div>
   );
 };

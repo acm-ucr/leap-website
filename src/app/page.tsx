@@ -3,12 +3,9 @@ import filler from "@/public/filler.webp";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex h-screen flex-col items-center">
       Home
-      <Demo
-        text="avia is asdha as dasd a sda sd asd a sd a sd a sd"
-        image={filler}
-      />
+      <Demo text="kevin is cool" image={filler} />
     </div>
   );
 };
