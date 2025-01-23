@@ -9,4 +9,10 @@ export const example = [
     text: "avia is cool",
     image: { filler },
   },
+  {
+    text: "divyank is cool",
+    image: "filler",
+  },
+  {},
+  {},
 ];
