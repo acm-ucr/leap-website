@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="h-screen bg-gradient-to-b from-white to-leap-mid-green">
       <div className="py-10">
-        <h2 className= "ml-6 mb-3 mt-80 font-leap text-3xl font-bold text-leap-dark-green underline">
+        <h2 className="mb-3 ml-6 mt-80 font-leap text-3xl font-bold text-leap-dark-green underline">
           Our Core Values
         </h2>
         <p className="ml-6 max-w-3xl font-leap text-leap-dark-green">
