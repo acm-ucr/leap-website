@@ -1,9 +1,9 @@
-import Value_Box from "@/components/home/Value_Box";
+import Example from "../components/Example";
 
 const Home = () => {
   return (
-    <div>
-      <Value_Box />
+    <div className="flex h-screen w-full items-center justify-center">
+      <Example text1="Adjust" text2="these" text3="Props" />
     </div>
   );
 };
