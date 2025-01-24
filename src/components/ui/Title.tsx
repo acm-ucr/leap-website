@@ -1,14 +1,13 @@
 const Title: React.FC<{ title: string; color: string }> = ({
   title,
-  color = "green",
+  color = "leap-dark-green",
 }) => {
   return (
-    <div className="mb-[3%] mt-[6%]">
+    <div className="m-8">
       <p
-        className="text-alignment font-title mx-auto text-[6vw] md:text-[4vw]"
+        className="text-alignment font-leap mx-auto text-center text-8xl font-semibold"
         style={{ color }}
       >
-        {" "}
         {/* default color is green, can be changed */}
         {title}
       </p>
