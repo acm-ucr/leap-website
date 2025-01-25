@@ -8,8 +8,7 @@ const Title: React.FC<{ title: string; color: string }> = ({
         className="text-alignment font-leap mx-auto text-center text-8xl font-semibold text-leap-dark-green"
         style={{ color }}
       >
-        {" "}
-        {/* color doesnt work here for now */}
+        {/* default color is green, can be changed */}
         {title}
       </p>
     </div>
