@@ -3,7 +3,7 @@ import React from "react";
 const Value_Box = () => {
   const topics = ["Awareness", "Community", "Safety", "Mental Health"];
   return (
-    <div className="flex min-h-screen items-center justify-end">
+    <div className="flex min-h-screen items-start justify-end">
       <div className="mr-52 grid w-full max-w-xs grid-cols-1 gap-4">
         {topics.map((topic, index) => (
           <div
