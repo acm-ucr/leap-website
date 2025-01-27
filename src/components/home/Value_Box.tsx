@@ -8,7 +8,7 @@ const Value_Box = () => {
         {topics.map((topic, index) => (
           <div
             key={index}
-            className="flex h-52 w-72 items-center justify-center border-2 border-white bg-leap-mid-green p-2 text-center font-leap text-5xl text-white shadow-lg shadow-leap-light-green"
+            className="flex h-40 w-72 items-center justify-center border-2 border-white bg-leap-mid-green p-2 text-center font-leap text-3xl text-white shadow-lg shadow-leap-light-green"
           >
             {topic}
           </div>

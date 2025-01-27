@@ -2,6 +2,7 @@ import "./globals.css";
 import { Krub } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const krub = Krub({
   subsets: ["latin"],
@@ -22,7 +23,8 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={krub.className}>
+      <body className="{krub.className} min-h-screen">
+        <Navbar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
         <Footer />
       </body>
