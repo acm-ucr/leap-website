@@ -3,12 +3,12 @@ import Description from "@/components/home/Description";
 
 const Description_Component = () => {
   return (
-    <div className="flex min-h-screen items-start bg-leap-dark-green">
-      <div className="flex flex-1 items-start justify-center">
+    <div className="flex items-start bg-leap-dark-green">
+      <div className="mt-24 flex flex-1 items-start justify-center">
         <Description />
       </div>
 
-      <div className="flex flex-1 items-start justify-center">
+      <div className="mt-24 flex flex-1 items-start justify-center">
         <Value_Box />
       </div>
     </div>
