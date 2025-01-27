@@ -5,7 +5,7 @@ const FlowerImg = "/assets/home/description.webp";
 
 const Description = () => {
   return (
-    <div className="ml-44 flex items-start justify-center">
+    <div className="ml-96 flex items-start justify-center">
       <Image
         src={FlowerImg}
         alt="Flowers"

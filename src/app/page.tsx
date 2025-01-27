@@ -1,17 +1,8 @@
-import Value_Box from "@/components/home/Value_Box";
-import Description from "@/components/home/Description";
+import Description_Component from "@/components/home/Description_Component";
 
 const Home = () => {
   return (
-    <div className="flex min-h-screen items-start bg-leap-dark-green">
-      <div className="flex flex-1 items-start justify-center">
-        <Description />
-      </div>
-
-      <div className="flex flex-1 items-start justify-center">
-        <Value_Box />
-      </div>
-    </div>
+    <div> <Description_Component/> </div>
   );
 };
 
