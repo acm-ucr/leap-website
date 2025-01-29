@@ -2,7 +2,7 @@ import React from "react";
 
 const Description_Component = () => {
   return (
-    <div className="h-screen bg-gradient-to-b from-white to-leap-mid-green">
+    <div className="h-screen bg-gradient-to-b from-leap-light-green to-leap-mid-green">
       <div className="py-10">
         <h2 className="mb-3 ml-6 mt-80 font-leap text-3xl font-bold text-white">
           Our Core Values
