@@ -5,7 +5,12 @@ const OurBoard = () => {
   return (
     <div>
       <Board />
-      <Header />
+      <Header
+        title={"Our Board"}
+        subtitle={
+          "Individuals dedicated to helping students overcome mental health issues."
+        }
+      />
     </div>
   );
 };

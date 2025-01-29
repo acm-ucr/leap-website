@@ -1,14 +1,20 @@
 import React from "react";
 
-const Header = () => {
+interface HeaderProps {
+  title: string;
+  subtitle: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
   return (
-    <div className="w-full bg-green-500">
-      <div className="mt-64 place-self-center text-5xl">Our Board</div>;
-      <div className="mt-8 place-self-center text-2xl">
-        <p> Individuals dedicated to helping students overcome mental </p>
-        <p className="place-self-center">heatlh issues.</p>
+    <div className="w-full bg-transparent">
+      <div className="text-leap place-self-center pt-32 text-5xl text-leap-dark-green">
+        {title}
       </div>
       ;
+      <div className="text-leap place-self-center pt-4 text-2xl text-leap-dark-green">
+        <p> {subtitle}</p>
+      </div>
     </div>
   );
 };
