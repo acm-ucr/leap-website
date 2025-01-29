@@ -7,8 +7,8 @@ const Leap = () => {
   return (
     <div className="flex items-center p-8">
       <div className="w-2/3 pr-8 text-left">
-        <h2 className="font-leap text-2xl font-bold">LEAP</h2>
-        <p className="mt-4 text-gray-700">
+        <h2 className="font-leap text-5xl font-bold">LEAP</h2>
+        <p className="mt-4 text-black">
           We are LEAP!, a.k.a. Loving our Emotions as Asians & Pacific
           Islanders. We are a club committed to mental health wellness &
           awareness within API communities, especially here at UCR. We feel it
@@ -19,7 +19,7 @@ const Leap = () => {
         </p>
       </div>
 
-      <div className="flex w-1/3 justify-end">
+      <div className="mr-36 flex w-1/3 justify-end">
         <Image
           src={ButterflyImg}
           alt="Butterfly"
