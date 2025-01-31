@@ -20,4 +20,4 @@ const FAQCard: React.FC<FAQCardProps> = ({ text }) => {
   );
 };
 
-export default FAQCard;
+export default FAQCard;  
