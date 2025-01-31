@@ -11,12 +11,12 @@ const About = () => {
           Recruitment Questions
         </h1>
         <div className="flex flex-wrap items-center justify-center gap-6">
-          {faqData.map((FAQItem,index) => (
+          {faqData.map((FAQItem, index) => (
             <FAQCard key={index} text={FAQItem.text} />
           ))}
         </div>
       </div>
-    </div>  
+    </div>
   );
 };
 
