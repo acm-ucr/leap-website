@@ -10,7 +10,7 @@ const Leap = () => {
       className="bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${BackgroundImg})` }}
     >
-      <div className="ml-8 flex items-center p-8 text-center lg:ml-24">
+      <div className="ml-8 flex items-center bg-cover bg-center bg-no-repeat p-8 text-center lg:ml-24">
         <div className="w-2/3">
           <h2 className="mb-14 font-leap text-7xl font-bold">LEAP</h2>
           <p className="max-w-1xl mt-14 font-leap text-3xl font-semibold leading-loose text-black">
