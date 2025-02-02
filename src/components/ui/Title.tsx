@@ -5,7 +5,7 @@ const Title: React.FC<{ title: string; color: string }> = ({
   return (
     <div className="m-8">
       <p
-        className="text-alignment font-leap mx-auto text-center text-8xl font-semibold text-leap-dark-green"
+        className="text-alignment mx-auto text-center font-leap text-8xl font-semibold text-leap-dark-green"
         style={{ color }}
       >
         {" "}
