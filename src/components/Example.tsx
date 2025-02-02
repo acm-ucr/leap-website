@@ -1,12 +1,19 @@
 const Example = (props: { text1: string; text2: string; text3: string }) => {
   return (
-    <div className="flex w-3/4 items-center gap-1 bg-red-200 p-10">
-      <div className="w-1/2 bg-green-200 p-5 text-left">{props.text1}</div>
-      <div className="flex w-1/2 flex-row gap-1">
-        <div className="w-full bg-green-200 p-5 text-left">props.text2</div>
-        <div className="w-full bg-green-200 p-5 text-right">{props.text2}</div>
+    <div className="flex flex-col w-2/3 items-center bg-red-200 p-10 gap-8  rounded-lg">
+      
+      {/* First Box */}
+      <div className="w-1/2 bg-blue-200 p-5 text-center text-black">{props.text1}</div>
+
+      {/* 2n row with 2 rounded Boxes */}
+      <div className="flex w-1/4 justify-center items-center gap-4">
+
+      <div className=" flex items-center justify-center w-full bg-blue-300 p-5 text-center rounded-full">{props.text2}</div>
+        <div className="flex items-center justify-center w-full bg-blue-400 p-5    text-center rounded-full">{props.text2}</div>
       </div>
-      {/* Hint: Add another box/div here similarly to line 4 */}
+
+      {/* last bottom box  */}
+      <div className="w-1/2 bg-blue-500 p-5 text-center text-white ">{props.text1}</div>
     </div>
   );
 };
