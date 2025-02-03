@@ -7,7 +7,7 @@ const NotFound = () => {
       <Image
         src={BackgroundImage}
         alt="404"
-        className="absolute -z-10 min-h-screen w-screen"
+        className="absolute -z-20 min-h-screen w-screen"
       />
       <h1 className="mb-2 text-5xl font-bold text-leap-text md:text-7xl">
         404
