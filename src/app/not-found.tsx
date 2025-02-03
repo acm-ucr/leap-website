@@ -3,11 +3,11 @@ import BackgroundImage from "@/public/assets/bg-error.webp";
 import Image from "next/image";
 const NotFound = () => {
   return (
-    <div className="relative flex h-screen flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-[90vh] flex-col items-center justify-center overflow-hidden">
       <Image
         src={BackgroundImage}
         alt="404"
-        className="absolute -z-10 min-h-screen w-screen"
+        className="absolute -z-20 min-h-screen w-screen"
       />
       <h1 className="mb-2 text-5xl font-bold text-leap-text md:text-7xl">
         404
