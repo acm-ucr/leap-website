@@ -1,9 +1,9 @@
-import Example from "../components/Example";
+import Description_Component from "@/components/home/Description_Component";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <Example text1="Adjust" text2="these" text3="Props" />
+    <div>
+      <Description_Component />
     </div>
   );
 };
