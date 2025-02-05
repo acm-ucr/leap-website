@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const FlowerImg = "@/public/assets/home/description.webp";
+import FlowerImg from "@/public/assets/home/description.webp";
 
 const Description = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-const ButterflyImg = "@/public/assets/about/bird.webp";
-const BackgroundImg = "@/public/assets/about/background.webp";
+import ButterflyImg from "@/public/assets/about/bird.webp";
+import BackgroundImg from "@/public/assets/about/background.webp";
 
 const Leap = () => {
   return (
