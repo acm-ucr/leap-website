@@ -4,11 +4,11 @@ import Description from "@/components/home/Description";
 const Description_Component = () => {
   return (
     <div className="flex items-start bg-leap-dark-green">
-      <div className="mt-24 flex flex-1 items-start justify-center">
+      <div className="flex flex-1 items-start justify-center sm:mt-16 md:mt-20 lg:mt-24">
         <Description />
       </div>
 
-      <div className="mt-24 flex flex-1 items-start justify-center">
+      <div className="flex flex-1 items-start justify-center sm:mt-16 md:mt-20 lg:mt-24">
         <Value_Box />
       </div>
     </div>

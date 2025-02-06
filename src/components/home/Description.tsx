@@ -5,13 +5,11 @@ import FlowerImg from "@/public/assets/home/description.webp";
 
 const Description = () => {
   return (
-    <div className="ml-96 mt-28 flex items-start justify-center">
+    <div className="md:ml-88 flex items-start justify-center sm:ml-80 sm:mt-20 md:mt-24 lg:ml-96 lg:mt-28">
       <Image
         src={FlowerImg}
         alt="Flowers"
-        width={450}
-        height={550}
-        className=""
+        className="sm:h-[350px] sm:w-[250px] md:h-[450px] md:w-[350px] lg:h-[550px] lg:w-[450px]"
       />
     </div>
   );
