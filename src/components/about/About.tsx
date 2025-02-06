@@ -1,13 +1,11 @@
 import React from "react";
-import FAQCard from "./FAQCard";
+import FAQSection from "./question";
 
 const About = () => {
   return (
     <div>
       <h1>About Us Page</h1>
-      <div className="#D5E2C9 flex min-h-screen flex-wrap items-center justify-center">
-        <FAQCard text="How do I become an active member of LEAP!?" />
-      </div>
+      <FAQSection />
     </div>
   );
 };
