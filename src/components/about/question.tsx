@@ -1,6 +1,6 @@
 import { faqData } from "./faqData";
 import FAQCard from "./FAQCard";
-import BackgroundImage from "@/public/assets/about/bg-about-questions.webp";
+import BackgroundImage from "@/public/assets/about/bg-about-questions.png";
 import Image from "next/image";
 
 export default function FAQSection() {
