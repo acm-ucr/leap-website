@@ -1,6 +1,6 @@
 import React from "react";
 
-const UpcommingTitle: React.FC<{ title: string }> = ({ title }) => {
+const UpcomingTitle: React.FC<{ title: string }> = ({ title }) => {
   return (
     <div className="m-5">
       <p className="text-alignment mx-auto text-center font-leap text-5xl font-semibold text-leap-dark-green">
@@ -11,4 +11,4 @@ const UpcommingTitle: React.FC<{ title: string }> = ({ title }) => {
   );
 };
 
-export default UpcommingTitle;
+export default UpcomingTitle;
