@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-
 import ButterflyImg from "@/public/assets/about/bird.webp";
 import BackgroundImg from "@/public/assets/about/background.webp";
 
@@ -8,7 +7,7 @@ const Leap = () => {
   return (
     <div
       className="bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${BackgroundImg})` }}
+      style={{ backgroundImage: `url(${BackgroundImg.src})` }}
     >
       <div className="ml-8 flex items-center p-8 text-center lg:ml-24">
         <div className="w-2/3">
