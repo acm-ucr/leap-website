@@ -1,6 +1,7 @@
 import Events from "../../components/events/Events";
 import Header from "../../components/board/header";
 import { events } from "@/data/events";
+import UpcommingTitle from "@/components/events/UpcommingTitle";
 
 const OurEvents = () => {
   return (
@@ -9,6 +10,7 @@ const OurEvents = () => {
         title={"Events"}
         subtitle={"Explore when our next event is and make sure to stop by."}
       />
+      <UpcommingTitle title="Upcomming Events" />
       {events.map((event) => (
         <Events
           title={event.title}
