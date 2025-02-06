@@ -10,10 +10,10 @@ const Header = () => {
         className="m-h-screen absolute -z-30 w-screen"
       />
       <div className="flex w-2/3 flex-col items-center justify-center gap-10">
-        <div className="font-leap text-center text-8xl font-bold text-leap-dark-green">
+        <div className="text-center font-leap text-8xl font-bold text-leap-dark-green">
           UCR LEAP
         </div>
-        <div className="font-leap text-center text-4xl font-semibold text-leap-dark-green">
+        <div className="text-center font-leap text-4xl font-semibold text-leap-dark-green">
           Leap!'s mission is to promote and encourage the acknowledgement and
           health of mental health in the Asian & Pacific Islander community of
           UCR.
