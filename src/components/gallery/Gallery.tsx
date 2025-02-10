@@ -10,7 +10,7 @@ const Gallery = () => {
       <Image
         src={BackgroundImage}
         alt="Gallery Background"
-        className="absolute -z-10 min-h-screen w-screen h-screen"
+        className="absolute -z-10 h-screen min-h-screen w-screen"
       />
       <div className="mt-12 pt-12">
         <h1 className="mt-5 pt-12 text-center font-leap text-4xl font-bold">
