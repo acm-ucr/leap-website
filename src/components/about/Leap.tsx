@@ -9,12 +9,10 @@ const Leap = () => {
       className="bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${BackgroundImg.src})` }}
     >
-      <div className="flex items-center p-8 text-center sm:ml-12 md:ml-16 lg:ml-20">
-        <div className="w-2/3 font-leap">
-          <h2 className="sm:text-6x1 font-bold sm:mb-6 md:mb-10 md:text-7xl lg:mb-12 lg:text-8xl">
-            LEAP
-          </h2>
-          <p className="max-w-1xl md:text-3x1 font-semibold leading-loose text-black sm:mt-8 sm:text-2xl md:mt-12 lg:mt-16 lg:text-4xl">
+      <div className="flex flex-col items-center p-8 text-center sm:ml-10 md:ml-16 md:flex-row lg:ml-20">
+        <div className="text-align: center w-2/3 font-leap">
+          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">LEAP</h2>
+          <p className="max-w-1xl text-xl font-semibold text-black md:text-2xl lg:text-3xl">
             We are LEAP!, a.k.a. Loving our Emotions as Asians & Pacific
             Islanders. We are a club committed to mental health wellness &
             awareness within API communities, especially here at UCR. We feel it
@@ -25,11 +23,11 @@ const Leap = () => {
           </p>
         </div>
 
-        <div className="md:mr-18 flex justify-end sm:mr-14 lg:mr-24">
+        <div className="flex w-full justify-center">
           <Image
             src={ButterflyImg}
-            alt="Butterfly"
-            className="sm:h-[450px] sm:w-[250px] md:h-[650px] md:w-[350px] lg:h-[800px] lg:w-[500px]"
+            alt="Butterfly" //md:mr-18 flex justify-end sm:mr-14 lg:mr-24
+            className="h-[400px] w-[250px] md:h-[550px] md:w-[350px] lg:h-[700px] lg:w-[550px]"
           />
         </div>
       </div>
