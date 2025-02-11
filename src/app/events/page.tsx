@@ -1,6 +1,7 @@
 import Events from "../../components/events/Events";
-import Header from "../../components/board/header";
+import Header from "../../components/board/Header";
 import { events } from "@/data/events";
+import BackgroundImage from "@/public/assets/header-background-about.webp";
 
 const OurEvents = () => {
   return (
@@ -8,6 +9,7 @@ const OurEvents = () => {
       <Header
         title={"Events"}
         subtitle={"Explore when our next event is and make sure to stop by."}
+        background={BackgroundImage}
       />
       {events.map((event) => (
         <Events
