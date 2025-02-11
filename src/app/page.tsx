@@ -1,5 +1,11 @@
+import Description_Component from "@/components/home/Description_Component";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Description_Component />
+    </div>
+  );
 };
 
 export default Home;
