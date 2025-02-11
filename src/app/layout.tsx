@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <body className={krub.className}>
         {<Navbar />}
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
-        {/* <Footer /> */}
+        {<Footer />}
       </body>
     </html>
   );
