@@ -21,7 +21,7 @@ export const navigations: navigation[] = [
     link: "/resources",
   },
   {
-    name: "Connect",
-    link: "/connect",
+    name: "Events",
+    link: "/events",
   },
 ];
