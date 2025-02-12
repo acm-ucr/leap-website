@@ -1,5 +1,5 @@
 import Board from "../../components/board/Board";
-import Header from "@/components/header";
+import Header from "@/components/Header";
 import BackgroundImage from "@/public/assets/header-background-about.webp";
 
 const OurBoard = () => {
