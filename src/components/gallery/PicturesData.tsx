@@ -52,8 +52,7 @@ export const PicturesData: PicturesData[] = [
     Alt: "Image 9",
   },
   {
-    className:
-      "flex justify-center items-center",
+    className: "flex justify-center items-center",
     Pictures: "/gallery/grid/grid10.webp",
     Alt: "Image 10",
   },
@@ -68,20 +67,17 @@ export const PicturesData: PicturesData[] = [
     Alt: "Image 12",
   },
   {
-    className:
-      "flex justify-center items-center",
+    className: "flex justify-center items-center",
     Pictures: "/gallery/grid/grid13.webp",
     Alt: "Image 13",
   },
   {
-    className:
-      "flex justify-center items-center",
+    className: "flex justify-center items-center",
     Pictures: "/gallery/grid/grid14.webp",
     Alt: "Image 14",
   },
   {
-    className:
-      "flex justify-center items-center",
+    className: "flex justify-center items-center",
     Pictures: "/gallery/grid/grid15.webp",
     Alt: "Image 15",
   },

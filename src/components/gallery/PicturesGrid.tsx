@@ -3,7 +3,7 @@ import { PicturesData } from "./PicturesData";
 
 const PicturesGrid = () => {
   return (
-    <div className="grid grid-cols-4 grid-rows-4 gap-1 pb-1 pt-8 h-[900px] md:grid-cols-6 lg:grid-cols-6 lg:grid-rows-3">
+    <div className="grid h-[900px] grid-cols-4 grid-rows-4 gap-1 pb-1 pt-8 md:grid-cols-6 lg:grid-cols-6 lg:grid-rows-3">
       {PicturesData.map((item, index) => (
         <div key={index} className={`${item.className}`}>
           <img
