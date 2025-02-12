@@ -1,4 +1,4 @@
-import Description_Component from "@/components/home/Description_Component";
+import Description_Component from "../components/homepage/Description_Component";
 
 const Home = () => {
   return (
