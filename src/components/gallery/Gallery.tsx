@@ -19,6 +19,11 @@ const Gallery = () => {
           Gallery Page
         </h1>
         <Carousel />
+        <div className="flex justify-center mt-5 pt-12">
+          <h2 className="text-center font-leap text-2xl font-bold border-b-2 border-black inline-block">
+            2024-2025
+          </h2>
+        </div>
         <PicturesGrid />
       </div>
     </div>

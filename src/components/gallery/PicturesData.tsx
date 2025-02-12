@@ -1,81 +1,88 @@
 export interface PicturesData {
-  text: string;
   className: string;
+  Pictures: string;
+  Alt: string;
+  ImgProperties?: string;
 }
 
 export const PicturesData: PicturesData[] = [
   {
-    text: "1",
-    className: "flex items-center justify-center bg-red-500",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid1.webp",
+    Alt: "Image 1",
   },
   {
-    text: "2",
-    className: "flex items-center justify-center bg-blue-500",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid2.webp",
+    Alt: "Image 2",
   },
   {
-    text: "3",
-    className: "flex items-center justify-center bg-green-500",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid3.webp",
+    Alt: "Image 3",
   },
   {
-    text: "4",
-    className: "flex items-center justify-center bg-yellow-500",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid4.webp",
+    Alt: "Image 4",
   },
   {
-    text: "5",
-    className: "flex items-center justify-center bg-purple-500",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid5.webp",
+    Alt: "Image 5",
   },
   {
-    text: "6",
-    className: "flex items-center justify-center bg-pink-500",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid6.webp",
+    Alt: "Image 6",
   },
   {
-    text: "7",
-    className: "flex items-center justify-center bg-indigo-500",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid7.webp",
+    Alt: "Image 7",
   },
   {
-    text: "8",
-    className: "flex items-center justify-center bg-leap-dark-green",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid8.webp",
+    Alt: "Image 8",
   },
   {
-    text: "9",
-    className: "flex items-center justify-center bg-leap-grey lg:col-span-2",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid9.webp",
+    Alt: "Image 9",
   },
   {
-    text: "10",
     className:
-      "flex items-center justify-center bg-leap-light-green lg:col-span-2",
+      "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid10.webp",
+    Alt: "Image 10",
   },
   {
-    text: "11",
-    className: "flex items-center justify-center bg-red-700 lg:col-span-2",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid11.webp",
+    Alt: "Image 11",
   },
   {
-    text: "12",
-    className: "flex items-center justify-center bg-leap-yellow lg:col-span-2",
+    className: "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid12.webp",
+    Alt: "Image 12",
   },
   {
-    text: "13",
     className:
-      "flex items-center justify-center bg-blue-800 md:col-span-2 lg:col-span-3 lg:row-span-2",
+      "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid13.webp",
+    Alt: "Image 13",
   },
   {
-    text: "14",
     className:
-      "col-span-2 flex items-center justify-center bg-teal-400 sm:col-span-2 md:col-span-2 lg:col-span-2 lg:row-span-2",
+      "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid14.webp",
+    Alt: "Image 14",
   },
   {
-    text: "15",
     className:
-      "flex items-center justify-center bg-purple-700 md:col-span-2 lg:col-span-3 lg:row-span-2",
-  },
-  {
-    text: "16",
-    className:
-      "col-span-4 row-span-2 flex items-center justify-center bg-leap-mid-green md:col-span-3 lg:col-span-4 lg:row-span-3",
-  },
-  {
-    text: "17",
-    className:
-      "col-span-4 row-span-2 flex items-center justify-center bg-leap-dark-green md:col-span-3 lg:col-span-4 lg:row-span-3",
+      "flex justify-center items-center",
+    Pictures: "/gallery/grid/grid15.webp",
+    Alt: "Image 15",
   },
 ];
