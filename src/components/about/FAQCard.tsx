@@ -1,6 +1,5 @@
 import React from "react";
 
-// Reusable Card Component
 interface FAQCardProps {
   text: string;
 }
@@ -8,16 +7,11 @@ interface FAQCardProps {
 const FAQCard: React.FC<FAQCardProps> = ({ text }) => {
   return (
     <div className="relative m-4 flex flex-col items-center">
-      {/*Icon*/}
-      <div className="top text-3xl text-leap-mid-green md:text-5xl">♡</div>
+      {/* Icon */}
+      <div className="top text-4xl text-leap-mid-green md:text-5xl">♡</div>
 
-      {/*Card*/}
-      <div
-        className="square-lg aspect-[4/3] w-11/12 bg-leap-mid-green p-6 text-center font-leap text-xl text-white shadow-xl sm:w-64 md:w-72 md:p-8 lg:w-80"
-        style={{
-          boxShadow: "10px 10px 5px #324935",
-        }}
-      >
+      {/* Card */}
+      <div className="square-lg flex aspect-[4/3] w-8/12 items-center justify-center bg-leap-mid-green p-6 text-center font-leap text-xl text-white shadow-lg shadow-leap-dark-green sm:w-64 md:w-72 md:text-lg lg:w-80 lg:text-2xl">
         <p>{text}</p>
       </div>
     </div>

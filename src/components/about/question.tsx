@@ -19,7 +19,7 @@ export default function FAQSection() {
       </h1>
 
       {/* FAQ Cards */}
-      <div className="mt-6 grid w-full max-w-6xl gap-6 px-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 flex w-full max-w-6xl flex-wrap items-center justify-center gap-6 px-4">
         {faqData.map((FAQItem, index) => (
           <FAQCard key={index} text={FAQItem.text} />
         ))}
