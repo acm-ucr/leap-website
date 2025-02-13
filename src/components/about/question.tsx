@@ -5,16 +5,21 @@ import Image from "next/image";
 
 export default function FAQSection() {
   return (
-    <div className="relative flex h-[90vh] flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
+      {/* Background */}
       <Image
         src={BackgroundImage}
         alt="questions background"
-        className="absolute -z-10 min-h-screen w-screen"
+        className="absolute -z-10 h-full w-full object-cover"
       />
-      <h1 className="ml-10 text-left text-4xl font-bold text-leap-dark-green">
+
+      {/* Title */}
+      <h1 className="mt-20 text-2xl font-bold text-leap-dark-green md:mt-32 md:text-4xl">
         Recruitment Questions
       </h1>
-      <div className="flex flex-wrap items-center justify-center gap-6">
+
+      {/* FAQ Cards */}
+      <div className="mt-6 flex w-full max-w-6xl flex-wrap items-center justify-center gap-6 px-4">
         {faqData.map((FAQItem, index) => (
           <FAQCard key={index} text={FAQItem.text} />
         ))}
