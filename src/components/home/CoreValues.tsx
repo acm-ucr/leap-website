@@ -1,8 +1,8 @@
 import React from "react";
 
-const Description_Component = () => {
+const CoreValues = () => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center bg-leap-dark-green">
       <div className="w-3/4 text-left">
         <h2 className="font-leap text-4xl font-bold text-white sm:text-5xl lg:text-7xl">
           Our Core Values
@@ -19,4 +19,4 @@ const Description_Component = () => {
   );
 };
 
-export default Description_Component;
+export default CoreValues;

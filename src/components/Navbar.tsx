@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-transparent p-8">
+    <div className="z-10 flex w-full flex-row items-center justify-between bg-transparent p-8">
       <div className="pl-8">
         <Link href="/">
           <Image src={ucr_leap_logo} alt="leap navbar logo" className="w-16" />
