@@ -24,14 +24,15 @@ const Leap = () => {
           </p>
         </div>
 
-      <div className="mr-28 flex w-1/3 justify-end">
-        <Image
-          src={ButterflyImg}
-          alt="Butterfly"
-          width={400}
-          height={1000}
-          className=""
-        />
+        <div className="mr-28 flex w-1/3 justify-end">
+          <Image
+            src={ButterflyImg}
+            alt="Butterfly"
+            width={400}
+            height={1000}
+            className=""
+          />
+        </div>
       </div>
     </div>
   );
