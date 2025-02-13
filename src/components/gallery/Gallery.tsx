@@ -6,7 +6,7 @@ import { Carousel } from "../Carousel";
 
 const Gallery = () => {
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative flex min-h-screen w-full flex-col items-center">
       <Image
         src={BackgroundImage}
         alt="Gallery Background"
@@ -14,7 +14,7 @@ const Gallery = () => {
         objectFit="cover"
         className="absolute -z-10"
       />
-      <div className="relative mt-12 pt-12">
+      <div className="relative mt-12 w-5/6 pt-12">
         <h1 className="mt-5 pt-12 text-center font-leap text-4xl font-bold">
           Gallery Page
         </h1>
