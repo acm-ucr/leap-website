@@ -1,4 +1,4 @@
-import animate from "tailwindcss-animate";
+import animate from "tailwindcss-animated";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,6 +11,7 @@ export default {
           "dark-green": "#324935",
           "mid-green": "#4F8C6C",
           "light-green": "#6FA36A",
+          "white-green": "#F0EDE0",
           yellow: "#F2AE01",
           text: "#FFEFEF",
           grey: "#C3C5B8",
