@@ -1,6 +1,6 @@
 import Events from "../../components/events/Events";
 import Header from "../../components/board/header";
-import Calendar from "../../components/events/Calendar"
+import Calendar from "../../components/events/Calendar";
 import { events } from "@/data/events";
 import UpcomingTitle from "@/components/events/UpcomingTitle";
 
