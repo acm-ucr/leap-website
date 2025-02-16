@@ -35,17 +35,10 @@ function Calendar({
         nav_button_next: "absolute  right-0 md:left-64",
         table: "w-full border-collapse",
         head_row: "flex bg-leap-mid-green w-full text-center items-center",
-        //head_cell:
-        //  "text-white w-9 h-9 sm:h-16 sm:w-20 lg:h-20 lg:w-24 xl:h-12 xl:w-32 font-leap text-sm md:text-xl border-x border-black pt-2",
         head_cell:
           "text-white w-full font-leap text-sm md:text-xl border-x border-black pt-2",
         row: "flex w-full",
-        //cell: "h-9 w-9 sm:h-16 sm:w-20 lg:h-20 lg:w-24 xl:h-28 xl:w-32 text-sm md:text-lg text-right px-1 border border-black relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
-        cell: "relative w-full h-9 sm:h-20 lg:h-24 xl:h-32 font-leap text-sm md:text-xl text-right border border-black pt-2",
-        // day: cn(
-        //   buttonVariants({ variant: "ghost" }),
-        //   "h-9 w-9 p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl aria-selected:opacity-50",
-        // ),
+        cell: "relative w-full h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black pt-2",
         day: cn(
           buttonVariants({ variant: "ghost" }),
           "h-1/2 w-1/2 sm:h-1/4 sm:w-1/4 p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl aria-selected:opacity-50",
