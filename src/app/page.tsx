@@ -1,9 +1,11 @@
-import Description_Component from "../components/homepage/Description_Component";
+import CoreValues from "../components/home/CoreValues";
+import ValuesContainer from "@/components/home/ValuesContainer";
 
 const Home = () => {
   return (
-    <div>
-      <Description_Component />
+    <div className="flex flex-col">
+      <CoreValues />
+      <ValuesContainer />
     </div>
   );
 };
