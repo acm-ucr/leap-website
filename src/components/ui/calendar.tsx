@@ -21,27 +21,34 @@ function Calendar({
       fixedWeeks={true}
       className={cn("w-full p-3", className)}
       classNames={{
-        months: "flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0",
+        months: "flex flex-col sm:space-x-4 sm:space-y-0",
         month: "space-y-0",
         caption: "flex pt-1 relative mt-3 mb-5",
         caption_label:
-          "text-xl text-leap-mid-green font-leap font-bold tracking-wide ml-24",
+          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide ml-16 md:ml-24",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
           buttonVariants({ variant: "ghost" }),
-          "h-16 w-16 bg-transparent text-leap-mid-green opacity-100 hover:opacity-100",
+          "h-9 w-9 md:h-16 md:w-16 bg-transparent text-leap-mid-green opacity-100 hover:opacity-100",
         ),
         nav_button_previous: "absolute left-0",
-        nav_button_next: "absolute left-64",
+        nav_button_next: "absolute  right-0 md:left-64",
         table: "w-full border-collapse",
         head_row: "flex bg-leap-mid-green w-full text-center items-center",
+        //head_cell:
+        //  "text-white w-9 h-9 sm:h-16 sm:w-20 lg:h-20 lg:w-24 xl:h-12 xl:w-32 font-leap text-sm md:text-xl border-x border-black pt-2",
         head_cell:
-          "text-white w-9 h-9 md:h-12 md:w-36 font-leap text-xl border-x border-black pt-2",
+          "text-white w-full font-leap text-sm md:text-xl border-x border-black pt-2",
         row: "flex w-full",
-        cell: "h-9 w-9 md:h-28 md:w-36 text-sm md:text-lg text-right px-1 border border-black relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+        //cell: "h-9 w-9 sm:h-16 sm:w-20 lg:h-20 lg:w-24 xl:h-28 xl:w-32 text-sm md:text-lg text-right px-1 border border-black relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+        cell: "relative w-full h-9 sm:h-20 lg:h-24 xl:h-32 font-leap text-sm md:text-xl text-right border border-black pt-2",
+        // day: cn(
+        //   buttonVariants({ variant: "ghost" }),
+        //   "h-9 w-9 p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl aria-selected:opacity-50",
+        // ),
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "h-9 w-9 p-0 font-leap text-sm md:text-xl aria-selected:opacity-50",
+          "h-1/2 w-1/2 sm:h-1/4 sm:w-1/4 p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl aria-selected:opacity-50",
         ),
         day_range_end: "day-range-end",
         day_selected:
