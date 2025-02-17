@@ -22,7 +22,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -36,11 +39,10 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-    
+
     console.log(dimensions);
   }, [isOpen]);
 
-  
   return (
     <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-transparent p-8">
       {/* Logo */}
@@ -115,7 +117,6 @@ const Navbar = () => {
   );
 };
 
-
 // Sidebar Animation
 const sidebarVariants = {
   open: {
@@ -177,7 +178,7 @@ const useDimensions = (ref: React.RefObject<HTMLDivElement | null>) => {
     updateDimensions(); // Set initial dimensions when component mounts
 
     window.addEventListener("resize", updateDimensions);
-    
+
     return () => {
       window.removeEventListener("resize", updateDimensions);
     };
@@ -185,7 +186,5 @@ const useDimensions = (ref: React.RefObject<HTMLDivElement | null>) => {
 
   return dimensions;
 };
-
-
 
 export default Navbar;
