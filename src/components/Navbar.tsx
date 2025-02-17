@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { height } = useDimensions(containerRef);
+  const dimensions = useDimensions(containerRef);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -22,7 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (!containerRef.current?.contains(event.target as Node)) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
@@ -36,8 +36,11 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+    
+    console.log(dimensions);
   }, [isOpen]);
 
+  
   return (
     <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-transparent p-8">
       {/* Logo */}
@@ -112,6 +115,7 @@ const Navbar = () => {
   );
 };
 
+
 // Sidebar Animation
 const sidebarVariants = {
   open: {
@@ -158,16 +162,30 @@ const itemVariants = {
 };
 
 const useDimensions = (ref: React.RefObject<HTMLDivElement | null>) => {
-  const dimensions = useRef({ width: 0, height: 0 });
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    if (ref.current) {
-      dimensions.current.width = ref.current.offsetWidth;
-      dimensions.current.height = ref.current.offsetHeight;
-    }
+    const updateDimensions = () => {
+      if (ref.current) {
+        setDimensions({
+          width: ref.current.offsetWidth,
+          height: ref.current.offsetHeight,
+        });
+      }
+    };
+
+    updateDimensions(); // Set initial dimensions when component mounts
+
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+    };
   }, [ref]);
 
-  return dimensions.current;
+  return dimensions;
 };
+
+
 
 export default Navbar;
