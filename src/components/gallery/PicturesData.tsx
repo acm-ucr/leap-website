@@ -20,19 +20,20 @@ export const PicturesData: PicturesData[] = [
     className: "flex justify-center items-center md:row-span-2 lg:row-span-2",
     Pictures: "/gallery/grid/grid3.webp",
     Alt: "Image 3",
-  }, 
+  },
   {
     className: "flex justify-center items-center md:row-span-2 lg:row-span-2",
     Pictures: "/gallery/grid/grid5.webp",
     Alt: "Image 5",
-  },  
+  },
   {
     className: "flex justify-center items-center md:row-span-2 lg:row-span-2",
     Pictures: "/gallery/grid/grid6.webp",
     Alt: "Image 6",
   },
   {
-    className: "flex justify-center items-center row-span-2 col-span-2  md:row-span-4 lg:row-span-4",
+    className:
+      "flex justify-center items-center row-span-2 col-span-2  md:row-span-4 lg:row-span-4",
     Pictures: "/gallery/grid/grid4.webp",
     Alt: "Image 4",
   },
@@ -70,16 +71,17 @@ export const PicturesData: PicturesData[] = [
     className: "flex justify-center items-center md:row-span-2 lg:row-span-2",
     Pictures: "/gallery/grid/grid13.webp",
     Alt: "Image 13",
-  },  
+  },
   {
-    className: "flex justify-center items-center col-span-2 md:row-span-2 lg:row-span-2",
+    className:
+      "flex justify-center items-center col-span-2 md:row-span-2 lg:row-span-2",
     Pictures: "/gallery/grid/grid15.webp",
     Alt: "Image 15",
   },
   {
-    className: "flex justify-center items-center col-span-2 md:row-span-2 lg:row-span-2",
+    className:
+      "flex justify-center items-center col-span-2 md:row-span-2 lg:row-span-2",
     Pictures: "/gallery/grid/grid14.webp",
     Alt: "Image 14",
   },
-
 ];
