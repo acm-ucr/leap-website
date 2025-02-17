@@ -24,5 +24,4 @@ export const navigations: navigation[] = [
   //   name: "Resources",
   //   link: "/resources",
   // },
-  
 ];
