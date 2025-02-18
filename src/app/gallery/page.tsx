@@ -2,7 +2,7 @@ import Gallery from "../../components/gallery/Gallery";
 
 const OurGallery = () => {
   return (
-    <div>
+    <div className="">
       <Gallery />
     </div>
   );
