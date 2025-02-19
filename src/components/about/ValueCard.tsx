@@ -7,11 +7,14 @@ interface ValueCardProps {
 
 const ValueCard: React.FC<ValueCardProps> = ({ title, text }) => {
   return (
-    <div className="my-8 flex flex-col items-center p-3 font-leap">
-      <div className="mb-6 text-center text-3xl font-bold text-leap-dark-green">
+    <div className="relative m-4 flex flex-col items-center">
+      {/* Title */}
+      <h2 className="mb-3 text-center text-4xl font-semibold text-leap-dark-green">
         {title}
-      </div>
-      <div className="w-1/4 bg-leap-mid-green p-6 text-center text-lg text-white shadow-lg shadow-leap-light-green">
+      </h2>
+
+      {/* Box */}
+      <div className="flex aspect-[5/4] w-full items-center justify-center bg-leap-mid-green p-6 text-center font-leap text-3xl text-white shadow-lg shadow-leap-dark-green">
         {text}
       </div>
     </div>
