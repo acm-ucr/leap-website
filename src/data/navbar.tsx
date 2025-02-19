@@ -9,6 +9,10 @@ export const navigations: navigation[] = [
     link: "/about",
   },
   {
+    name: "Events",
+    link: "/events",
+  },
+  {
     name: "Board",
     link: "/board",
   },
@@ -16,12 +20,8 @@ export const navigations: navigation[] = [
     name: "Gallery",
     link: "/gallery",
   },
-  {
-    name: "Resources",
-    link: "/resources",
-  },
-  {
-    name: "Events",
-    link: "/events",
-  },
+  // {
+  //   name: "Resources",
+  //   link: "/resources",
+  // },
 ];
