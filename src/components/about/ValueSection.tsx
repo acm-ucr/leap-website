@@ -1,6 +1,6 @@
 import { valueData } from "./ValueData";
 import ValueCard from "./ValueCard";
-import BackgroundImage from "@/public/assets/about/bg-Value-about.png";
+import BackgroundImage from "@/public/assets/about/bg-Value-about.webp";
 import Image from "next/image";
 
 export default function ValueSection() {
