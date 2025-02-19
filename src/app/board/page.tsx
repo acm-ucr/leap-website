@@ -1,5 +1,6 @@
 import Board from "../../components/board/Board";
-import Header from "../../components/board/header";
+import Header from "@/components/Header";
+import BackgroundImage from "@/public/assets/header-background-about.webp";
 import BoardMemberCards from "../../components/board/BoardMemberCards";
 
 const OurBoard = () => {
@@ -11,7 +12,9 @@ const OurBoard = () => {
         subtitle={
           "Individuals dedicated to helping students overcome mental health issues."
         }
+        background={BackgroundImage}
       />
+    
       <BoardMemberCards
         name1={"Cathy Nguyen"}
         role1={"President"}
