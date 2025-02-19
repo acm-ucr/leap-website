@@ -35,15 +35,14 @@ const Gallery = () => {
         </motion.div>
 
         <div className="mt-5 flex justify-center pt-12">
-          <h2 className="inline-block border-b-2 border-black text-center font-leap text-2xl font-bold">
-            <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1.5 }}
-            >
-              2024-2025
-            </motion.div>
-          </h2>
+          <motion.h2
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            className="inline-block border-b-2 border-black text-center font-leap text-2xl font-bold"
+          >
+            2024-2025
+          </motion.h2>
         </div>
         <PicturesGrid />
       </div>
