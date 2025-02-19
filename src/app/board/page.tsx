@@ -14,7 +14,7 @@ const OurBoard = () => {
         }
         background={BackgroundImage}
       />
-    
+
       <BoardMemberCards
         name1={"Cathy Nguyen"}
         role1={"President"}
