@@ -8,7 +8,7 @@ const Description = () => {
       <Image
         src={FlowerImg}
         alt="Flowers"
-        className="h-[300px] w-[200px] md:h-[450px] md:w-[375px] lg:h-[650px] lg:w-[480px]"
+        className="h-[300px] w-[200px] md:h-[450px] md:w-[350px] lg:h-[650px] lg:w-[475px]"
       />
     </div>
   );
