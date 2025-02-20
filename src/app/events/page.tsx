@@ -1,7 +1,12 @@
 import Events from "../../components/events/Events";
+<<<<<<< HEAD
 import Header from "../../components/board/header";
 import Calendar from "../../components/events/Calendar";
+=======
+import Header from "@/components/Header";
+>>>>>>> 3136f7edaa5e5d3981e94b9090689f85a8d8bb20
 import { events } from "@/data/events";
+import BackgroundImage from "@/public/assets/header-background-about.webp";
 import UpcomingTitle from "@/components/events/UpcomingTitle";
 
 const OurEvents = () => {
@@ -10,6 +15,7 @@ const OurEvents = () => {
       <Header
         title={"Events"}
         subtitle={"Explore when our next event is and make sure to stop by."}
+        background={BackgroundImage}
       />
       <Calendar />
       <UpcomingTitle title="Upcoming Events" />

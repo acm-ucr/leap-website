@@ -1,3 +1,4 @@
+//import { use } from "react";
 import About from "../../components/about/About";
 import Button from "../../components/about/Button";
 import Leap from "@/components/about/Leap";

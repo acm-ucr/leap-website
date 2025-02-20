@@ -20,7 +20,11 @@
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.5.2",
     "lucide-react": "^0.417.0",
+<<<<<<< HEAD
     "motion": "^12.4.2",
+=======
+    "motion": "^12.4.4",
+>>>>>>> 3136f7edaa5e5d3981e94b9090689f85a8d8bb20
     "next": "~14.2.10",
     "react": "~18.3.1",
     "react-day-picker": "^8.10.1",
