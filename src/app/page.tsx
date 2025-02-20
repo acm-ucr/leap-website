@@ -8,13 +8,13 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center relative min-h-screen overflow-hidden">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
       <Image
         src={valuesBg}
         alt="Background Image"
-        className="absolute -z-20 h-full w-full object-cover top-[240px] md:top-[400px] lg:top-[300px]"
+        className="absolute top-[240px] -z-20 h-full w-full object-cover md:top-[400px] lg:top-[300px]"
       />
-      <Header /> 
+      <Header />
       <CoreValues />
       <ValuesContainer />
     </div>
