@@ -7,17 +7,17 @@ interface FAQCardProps {
   backText: string;
 }
 
-const FAQCard: React.FC<FAQCardProps> = ({ text , backText}) => {
-  
+const FAQCard: React.FC<FAQCardProps> = ({ text, backText }) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <motion.div 
+    <motion.div
       whileHover={{ scale: 1.1 }}
-      transition={{ duration: 1/2 }}
-      animate={{ rotateY: flipped ? 180 : 0}}
+      transition={{ duration: 1 / 2 }}
+      animate={{ rotateY: flipped ? 180 : 0 }}
       onClick={() => setFlipped((prevState) => !prevState)}
-      className="relative m-4 flex flex-col items-center">
+      className="relative m-4 flex flex-col items-center"
+    >
       {/* Icon */}
       <div className="top text-4xl text-leap-mid-green md:text-5xl">♡</div>
 
