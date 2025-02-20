@@ -1,5 +1,5 @@
 "use client";
-import ucr_leap_logo from "../public/ucr_leap_logo.svg";
+import ucr_leap_logo from "@/public/ucr_leap_logo.svg";
 import { navigations } from "@/data/navbar";
 import Link from "next/link";
 import Image from "next/image";
