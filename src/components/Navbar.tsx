@@ -9,11 +9,9 @@ import { motion } from "motion/react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const dimensions = useDimensions(containerRef);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
-    console.log(!isOpen);
   };
 
   const closeMenu = () => {
@@ -39,14 +37,12 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-
-    console.log(dimensions);
   }, [isOpen]);
 
   return (
     <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-transparent p-8">
       {/* Logo */}
-      <div className="abolute z-30 pl-8">
+      <div className="abolute z-30 pl-8 duration-100 hover:scale-125">
         <Link href="/">
           <Image
             src={ucr_leap_logo}
@@ -57,7 +53,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Nav */}
-      <div className="hidden flex-row gap-20 pr-12 lg:flex">
+      <div className="hidden flex-row gap-20 pr-12 md:flex">
         {navigations.map((navigation, index) => (
           <Link href={navigation.link} key={index} className="font-leap">
             {navigation.name}
@@ -68,7 +64,7 @@ const Navbar = () => {
       {/* Hamburger -> X animation */}
       <button
         onClick={handleClick}
-        className="pointer-events-auto relative z-20 flex flex-col items-center justify-center lg:hidden"
+        className="pointer-events-auto relative z-20 flex flex-col items-center justify-center md:hidden"
       >
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
@@ -97,7 +93,7 @@ const Navbar = () => {
         animate={isOpen ? "open" : "closed"}
         exit="closed"
         ref={containerRef}
-        className="absolute left-0 top-0 flex h-[40vh] w-full flex-col items-center justify-center bg-leap-dark-green shadow-lg lg:hidden"
+        className="absolute left-0 top-0 flex h-[40vh] w-full flex-col items-center justify-center bg-leap-dark-green shadow-lg md:hidden"
         variants={sidebarVariants}
       >
         <motion.ul className="list-none space-y-6 text-2xl text-white">
@@ -164,31 +160,6 @@ const itemVariants = {
       damping: 15,
     },
   },
-};
-
-const useDimensions = (ref: React.RefObject<HTMLDivElement | null>) => {
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    const updateDimensions = () => {
-      if (ref.current) {
-        setDimensions({
-          width: ref.current.offsetWidth,
-          height: ref.current.offsetHeight,
-        });
-      }
-    };
-
-    updateDimensions(); // Set initial dimensions when component mounts
-
-    window.addEventListener("resize", updateDimensions);
-
-    return () => {
-      window.removeEventListener("resize", updateDimensions);
-    };
-  }, [ref]);
-
-  return dimensions;
 };
 
 export default Navbar;
