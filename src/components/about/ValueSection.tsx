@@ -1,4 +1,4 @@
-import { valueData } from "./ValueData";
+import { valueData } from "../../data/ValueData";
 import ValueCard from "./ValueCard";
 import BackgroundImage from "@/public/assets/about/bg-Value-about.webp";
 import Image from "next/image";
@@ -14,9 +14,9 @@ export default function ValueSection() {
       />
 
       {/* Title */}
-      <h1 className="mb-12 text-5xl font-bold text-leap-dark-green md:text-4xl">
+      <div className="mb-12 text-5xl font-bold text-leap-dark-green md:text-4xl">
         Values
-      </h1>
+      </div>
 
       {/* Cards Grid */}
       <div className="grid w-full max-w-6xl grid-cols-1 gap-11 px-4 sm:grid-cols-2">
