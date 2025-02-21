@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { Heart } from "lucide-react";
 
 interface FAQCardProps {
   text: string;
@@ -16,11 +17,21 @@ const FAQCard: React.FC<FAQCardProps> = ({ text, backText }) => {
       transition={{ duration: 0.5 }}
       animate={{ rotateY: flipped ? 180 : 0 }}
       onClick={() => setFlipped((prevState) => !prevState)}
-      className="relative m-4 flex flex-col items-center"
+      className="relative m-4 flex cursor-pointer flex-col items-center"
       style={{ transformStyle: "preserve-3d" }}
     >
       {/* Icon */}
-      <div className="top text-4xl text-leap-mid-green md:text-5xl">♡</div>
+      <div
+        className="top text-4xl text-leap-mid-green md:text-5xl"
+        style={{ position: "relative", transformStyle: "preserve-3d" }}
+      >
+        <div style={{ backfaceVisibility: "hidden" }}>♡</div>
+        <Heart
+          fill="#4F8C6C" //Leap light-green
+          className="absolute inset-0 flex items-center justify-center"
+          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+        ></Heart>
+      </div>
 
       {/* Card */}
       <div
@@ -31,13 +42,13 @@ const FAQCard: React.FC<FAQCardProps> = ({ text, backText }) => {
           className="absolute flex h-full w-full items-center justify-center"
           style={{ backfaceVisibility: "hidden" }}
         >
-          <p>{text}</p>
+          {text}
         </div>
         <div
-          className="absolute flex h-full w-full items-center justify-center"
+          className="absolute flex h-full w-full items-center justify-center text-sm"
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
-          <p>{backText}</p>
+          {backText}
         </div>
       </div>
     </motion.div>
