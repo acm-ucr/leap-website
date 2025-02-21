@@ -22,10 +22,10 @@ const FAQCard: React.FC<FAQCardProps> = ({ text, backText }) => {
     >
       {/* Icon */}
       <div
-        className="top text-4xl text-leap-mid-green md:text-5xl"
+        className="top pb-5 text-4xl text-leap-mid-green md:text-5xl"
         style={{ position: "relative", transformStyle: "preserve-3d" }}
       >
-        <div style={{ backfaceVisibility: "hidden" }}>♡</div>
+        <Heart style={{ backfaceVisibility: "hidden" }}></Heart>
         <Heart
           fill="#4F8C6C" //Leap light-green
           className="absolute inset-0 flex items-center justify-center"
