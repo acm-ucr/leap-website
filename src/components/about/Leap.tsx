@@ -14,9 +14,9 @@ const Leap = () => {
       <div className="flex flex-col items-center p-8 text-center sm:hidden">
         <motion.h2
           className="text-3xl font-bold"
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ x: -50, opacity: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
         >
           {" "}
           LEAP{" "}
@@ -36,9 +36,9 @@ const Leap = () => {
         </div>
         <motion.p
           className="text-xl font-semibold text-black"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <br /> &nbsp; We are LEAP!, a.k.a. Loving our Emotions as Asians &
           Pacific Islanders. We are a club committed to mental health wellness &
