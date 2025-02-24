@@ -1,4 +1,4 @@
-import { faqData } from "./faqData";
+import { faqData } from "../../data/faqData";
 import FAQCard from "./FAQCard";
 import BackgroundImage from "@/public/assets/about/bg-about-questions.webp";
 import Image from "next/image";
@@ -14,14 +14,18 @@ export default function FAQSection() {
       />
 
       {/* Title */}
-      <h1 className="mt-20 text-2xl font-bold text-leap-dark-green md:mt-32 md:text-4xl">
+      <div className="mt-20 text-2xl font-bold text-leap-dark-green md:mt-32 md:text-4xl">
         Recruitment Questions
-      </h1>
+      </div>
 
       {/* FAQ Cards */}
       <div className="mt-6 flex w-full max-w-6xl flex-wrap items-center justify-center gap-6 px-4">
         {faqData.map((FAQItem, index) => (
-          <FAQCard key={index} text={FAQItem.text} />
+          <FAQCard
+            key={index}
+            text={FAQItem.text}
+            backText={FAQItem.backText}
+          />
         ))}
       </div>
     </div>
