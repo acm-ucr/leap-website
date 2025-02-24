@@ -43,8 +43,7 @@ const Navbar = () => {
 
   return (
     <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-transparent p-8">
-      {/* Logo */}
-      <div className="abolute z-30 pl-8 duration-100 hover:scale-125">
+      <div className="abolute z-30 pl-8 duration-100 hover:scale-110">
         <Link href="/">
           <Image
             src={ucr_leap_logo}
@@ -54,7 +53,6 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Desktop Nav */}
       <div className="hidden flex-row gap-20 pr-12 md:flex">
         {navigations.map((navigation, index) => (
           <Link
@@ -71,7 +69,6 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* Hamburger -> X animation */}
       <button
         onClick={handleClick}
         className="pointer-events-auto relative z-20 flex flex-col items-center justify-center md:hidden"
@@ -97,7 +94,6 @@ const Navbar = () => {
         ></span>
       </button>
 
-      {/* Mobile Nav */}
       <motion.div
         initial="false"
         animate={isOpen ? "open" : "closed"}
@@ -135,7 +131,6 @@ const Navbar = () => {
   );
 };
 
-// Sidebar Animation
 const sidebarVariants = {
   open: {
     y: 0,
@@ -157,7 +152,6 @@ const sidebarVariants = {
   },
 };
 
-// Menu Item Animation
 const itemVariants = {
   open: (index: number) => ({
     y: 0,

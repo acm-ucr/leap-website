@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import ButterflyImg from "@/public/assets/about/bird.webp";
@@ -18,8 +17,7 @@ const Leap = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          {" "}
-          LEAP{" "}
+          LEAP
         </motion.h2>
         <div className="my-4 flex w-full justify-center">
           <motion.div
@@ -40,8 +38,8 @@ const Leap = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <br /> &nbsp; We are LEAP!, a.k.a. Loving our Emotions as Asians &
-          Pacific Islanders. We are a club committed to mental health wellness &
+          <br /> We are LEAP!, a.k.a. Loving our Emotions as Asians & Pacific
+          Islanders. We are a club committed to mental health wellness &
           awareness within API communities, especially here at UCR. We feel it
           is important we break cultural stigmas of mental health to allow us to
           achieve a strong & healthy well-being, both in mind & body. With this,
@@ -58,8 +56,7 @@ const Leap = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {" "}
-            LEAP{" "}
+            LEAP
           </motion.h2>
           <motion.p
             className="max-w-1xl md:text-1.5xl text-xl font-semibold text-black lg:text-3xl"
@@ -67,13 +64,13 @@ const Leap = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            <br /> &nbsp; We are LEAP!, a.k.a. Loving our Emotions as Asians &
-            Pacific Islanders. We are a club committed to mental health wellness
-            & awareness within API communities, especially here at UCR. We feel
-            it is important we break cultural stigmas of mental health to allow
-            us to achieve a strong & healthy well-being, both in mind & body.
-            With this, we hope to create a safe & welcoming space to talk about
-            our emotions and experiences to grow ourselves in every way.
+            <br /> We are LEAP!, a.k.a. Loving our Emotions as Asians & Pacific
+            Islanders. We are a club committed to mental health wellness &
+            awareness within API communities, especially here at UCR. We feel it
+            is important we break cultural stigmas of mental health to allow us
+            to achieve a strong & healthy well-being, both in mind & body. With
+            this, we hope to create a safe & welcoming space to talk about our
+            emotions and experiences to grow ourselves in every way.
           </motion.p>
         </div>
 

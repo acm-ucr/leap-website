@@ -1,5 +1,3 @@
-import React from "react";
-
 const CoreValues = () => {
   return (
     <div className="relative mt-[-15vh] flex items-center justify-center lg:mt-[0]">

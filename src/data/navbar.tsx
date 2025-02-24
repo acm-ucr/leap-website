@@ -20,8 +20,4 @@ export const navigations: navigation[] = [
     name: "Gallery",
     link: "/gallery",
   },
-  // {
-  //   name: "Resources",
-  //   link: "/resources",
-  // },
 ];

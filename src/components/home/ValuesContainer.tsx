@@ -1,4 +1,4 @@
-import Value_Box from "@/components/home/Value_Box";
+import ValueBox from "@/components/home/ValueBox";
 import Description from "@/components/home/Description";
 
 const ValuesContainer = () => {
@@ -9,7 +9,7 @@ const ValuesContainer = () => {
       </div>
 
       <div className="mx-6 flex items-center justify-center md:mx-24 md:mt-20 lg:mx-40 lg:mt-16">
-        <Value_Box />
+        <ValueBox />
       </div>
     </div>
   );

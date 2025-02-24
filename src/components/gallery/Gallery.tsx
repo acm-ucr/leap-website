@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import PicturesGrid from "./PicturesGrid";
 import BackgroundImage from "@/public/assets/bg-error.webp";
 import Image from "next/image";
