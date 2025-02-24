@@ -1,5 +1,3 @@
-import React from "react";
-
 const UpcomingTitle: React.FC<{ title: string }> = ({ title }) => {
   return (
     <div className="m-5">
