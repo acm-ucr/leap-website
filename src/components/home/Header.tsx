@@ -9,7 +9,7 @@ const Header = () => {
         alt="Home Header"
         className="absolute top-0 -z-30 min-h-screen w-screen object-fill"
       />
-      <div className="mt-[-15vh] flex w-2/3 flex-col items-center justify-center gap-4 md:mt-[-30vh] md:gap-10 lg:mt-[0] xl:mt-[0]">
+      <div className="mt-[-25vh] flex w-2/3 flex-col items-center justify-center gap-4 md:mt-[-30vh] md:gap-10 lg:mt-[-40vh] xl:mt-[0]">
         <div className="text-center font-leap text-4xl font-bold text-leap-dark-green md:text-6xl lg:text-8xl">
           UCR LEAP
         </div>
