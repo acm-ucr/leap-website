@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, subtitle, background }) => {
   return (
-    <div className="relative w-screen">
+    <div className="relative w-full">
       <Image
         src={background}
         className="absolute -z-20 h-[60vh] w-full md:flex"
