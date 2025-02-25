@@ -1,11 +1,11 @@
 "use client";
-import PicturesGrid from "./PicturesGrid";
+import PicturesGrid from "@/components/gallery/PicturesGrid";
 import BackgroundImage from "@/public/assets/bg-error.webp";
 import Image from "next/image";
-import { Carousel } from "../Carousel";
+import { Carousel } from "@/components/Carousel";
 import { motion } from "motion/react";
 
-const Gallery = () => {
+const GalleryWrapper = () => {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center">
       <Image
@@ -54,4 +54,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default GalleryWrapper;
