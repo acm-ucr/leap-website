@@ -21,9 +21,14 @@ const Gallery = () => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="mt-5 pt-12 text-center font-leap text-4xl font-bold"
+          className="mt-10 py-10 text-center font-leap text-4xl font-bold"
         >
-          Gallery Page
+          <div className="text-leap place-self-center pt-40 pb-10 text-5xl text-leap-dark-green">
+            <p>Gallery</p>
+          </div>
+          <div className="text-leap place-self-center px-20 pb-20 pt-4 text-2xl text-leap-dark-green">
+            <p>Explore memories and photos from our past events</p>
+          </div>
         </motion.h1>
 
         <motion.div
