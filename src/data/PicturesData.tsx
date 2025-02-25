@@ -1,4 +1,4 @@
-export interface PicturesData {
+interface PicturesData {
   className: string;
   Pictures: string;
   Alt: string;
