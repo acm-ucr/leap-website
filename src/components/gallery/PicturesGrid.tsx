@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { PicturesData } from "./PicturesData";
+import { PicturesData } from "../../data/PicturesData";
 import { motion } from "motion/react";
 
 const PicturesGrid = () => {

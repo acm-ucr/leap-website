@@ -1,5 +1,3 @@
-import React from "react";
-
 interface MemberProps {
   name1: string;
   role1: string;
@@ -30,7 +28,6 @@ const BoardMemberCards: React.FC<MemberProps> = ({
   role6,
 }) => {
   return (
-    //for 2 boxes next to eachother with outside border, and inside border.
     <div className="mb-20 mt-40 flex flex-col items-center justify-center">
       <div className="mb-20 flex flex-row gap-20">
         <div className="flex h-80 w-64 justify-center rounded-3xl border-8 border-black bg-leap-dark-green">

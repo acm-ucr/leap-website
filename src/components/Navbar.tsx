@@ -5,10 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "motion/react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const pathName = usePathname();
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -41,8 +43,7 @@ const Navbar = () => {
 
   return (
     <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-transparent p-8">
-      {/* Logo */}
-      <div className="abolute z-30 pl-8 duration-100 hover:scale-125">
+      <div className="abolute z-30 pl-8 duration-100 hover:scale-110">
         <Link href="/">
           <Image
             src={ucr_leap_logo}
@@ -52,16 +53,22 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Desktop Nav */}
       <div className="hidden flex-row gap-20 pr-12 md:flex">
         {navigations.map((navigation, index) => (
-          <Link href={navigation.link} key={index} className="font-leap">
+          <Link
+            href={navigation.link}
+            key={index}
+            className={`rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
+              pathName === navigation.link
+                ? "border-b-leap-mid-green font-bold text-leap-dark-green"
+                : "border-b-leap-light-green"
+            }`}
+          >
             {navigation.name}
           </Link>
         ))}
       </div>
 
-      {/* Hamburger -> X animation */}
       <button
         onClick={handleClick}
         className="pointer-events-auto relative z-20 flex flex-col items-center justify-center md:hidden"
@@ -87,7 +94,6 @@ const Navbar = () => {
         ></span>
       </button>
 
-      {/* Mobile Nav */}
       <motion.div
         initial="false"
         animate={isOpen ? "open" : "closed"}
@@ -106,7 +112,15 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link href={navigation.link} onClick={closeMenu}>
+              <Link
+                href={navigation.link}
+                className={`rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
+                  pathName === navigation.link
+                    ? "border-b-leap-mid-green font-bold text-leap-mid-green"
+                    : "border-b-leap-light-green"
+                }`}
+                onClick={closeMenu}
+              >
                 {navigation.name}
               </Link>
             </motion.li>
@@ -117,7 +131,6 @@ const Navbar = () => {
   );
 };
 
-// Sidebar Animation
 const sidebarVariants = {
   open: {
     y: 0,
@@ -139,7 +152,6 @@ const sidebarVariants = {
   },
 };
 
-// Menu Item Animation
 const itemVariants = {
   open: (index: number) => ({
     y: 0,

@@ -1,6 +1,4 @@
-import React from "react";
-
-const Value_Box = () => {
+const ValueBox = () => {
   const topics = ["Awareness", "Community", "Safety", "Mental Health"];
   return (
     <div className="flex min-h-screen items-center justify-center">
@@ -18,4 +16,4 @@ const Value_Box = () => {
   );
 };
 
-export default Value_Box;
+export default ValueBox;
