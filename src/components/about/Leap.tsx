@@ -11,14 +11,14 @@ const Leap = () => {
       style={{ backgroundImage: `url(${BackgroundImg.src})` }}
     >
       <div className="flex flex-col items-center p-8 text-center sm:hidden">
-        <motion.h2
+        <motion.div
           className="text-3xl font-bold"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           LEAP
-        </motion.h2>
+        </motion.div>
         <div className="my-4 flex w-full justify-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -50,14 +50,14 @@ const Leap = () => {
 
       <div className="lg:ml-26 hidden flex-col items-center p-8 text-center sm:ml-14 sm:flex md:ml-20 md:flex-row">
         <div className="w-2/3 text-center font-leap">
-          <motion.h2
+          <motion.div
             className="text-3xl font-bold md:text-4xl lg:text-5xl"
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             LEAP
-          </motion.h2>
+          </motion.div>
           <motion.p
             className="max-w-1xl md:text-1.5xl text-xl font-semibold text-black lg:text-3xl"
             initial={{ opacity: 0, y: 50 }}
