@@ -17,12 +17,8 @@ export default function FAQSection() {
       </div>
 
       <div className="mt-6 flex w-full max-w-6xl flex-wrap items-center justify-center gap-6 px-4">
-        {faqData.map((FAQItem, index) => (
-          <FAQCard
-            key={index}
-            text={FAQItem.text}
-            backText={FAQItem.backText}
-          />
+        {faqData.map(({ text, backText }, index) => (
+          <FAQCard key={index} text={text} backText={backText} />
         ))}
       </div>
     </div>
