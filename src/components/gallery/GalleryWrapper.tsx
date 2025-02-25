@@ -15,17 +15,17 @@ const GalleryWrapper = () => {
         objectFit="cover"
         className="absolute -z-10"
       />
-      <div className="relative mt-12 w-5/6 pt-12">
+      <div className="relative mt-12 w-5/6 sm:pt-8 md:pt-10 lg:pt-12">
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="mt-10 py-10 text-center font-leap text-4xl font-bold"
+          className="text-center font-leap md:mt-8 md:py-8 lg:mt-10 lg:py-10"
         >
-          <div className="text-leap place-self-center pb-10 pt-40 text-5xl text-leap-dark-green">
+          <div className="text-leap place-self-center pb-10 pt-40 text-3xl font-bold text-leap-dark-green sm:text-4xl md:text-4xl lg:text-5xl">
             <p>Gallery</p>
           </div>
-          <div className="text-leap place-self-center px-20 pb-20 pt-4 text-2xl text-leap-dark-green">
+          <div className="text-leap md:pb-15 place-self-center px-20 pb-8 pt-4 text-base font-semibold text-leap-dark-green sm:pb-10 sm:text-lg md:text-xl lg:pb-20 lg:text-2xl">
             <p>Explore memories and photos from our past events</p>
           </div>
         </motion.div>
