@@ -28,7 +28,7 @@ const Gallery = () => {
           <div className="text-leap place-self-center px-20 pb-20 pt-4 text-2xl text-leap-dark-green">
             <p>Explore memories and photos from our past events</p>
           </div>
-        </motion.h1>
+        </motion.div>
 
         <motion.div
           initial={{ x: -50, opacity: 0 }}
