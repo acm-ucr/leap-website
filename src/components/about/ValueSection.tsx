@@ -1,5 +1,5 @@
-import { valueData } from "../../data/ValueData";
-import ValueCard from "./ValueCard";
+import { valueData } from "@/data/ValueData";
+import ValueCard from "@/components/about/ValueCard";
 import BackgroundImage from "@/public/assets/about/bg-Value-about.webp";
 import Image from "next/image";
 

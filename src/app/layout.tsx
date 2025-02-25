@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 import { Krub } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Footer from "@/components/Footer";
