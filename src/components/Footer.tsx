@@ -12,9 +12,9 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex flex-row space-x-6 pr-0 md:pr-12">
-        {socials.map((social, index) => (
-          <Link href={social.link} key={index} className="hover:scale-110">
-            {social.icon}
+        {socials.map(({ link, icon }, index) => (
+          <Link href={link} key={index} className="hover:scale-110">
+            {icon}
           </Link>
         ))}
       </div>
