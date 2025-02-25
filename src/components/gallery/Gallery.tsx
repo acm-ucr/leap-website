@@ -23,7 +23,7 @@ const Gallery = () => {
           transition={{ duration: 1 }}
           className="mt-10 py-10 text-center font-leap text-4xl font-bold"
         >
-          <div className="text-leap place-self-center pt-40 pb-10 text-5xl text-leap-dark-green">
+          <div className="text-leap place-self-center pb-10 pt-40 text-5xl text-leap-dark-green">
             <p>Gallery</p>
           </div>
           <div className="text-leap place-self-center px-20 pb-20 pt-4 text-2xl text-leap-dark-green">
