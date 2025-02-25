@@ -1,4 +1,4 @@
-export interface navigation {
+interface navigation {
   name: string;
   link: string;
 }

@@ -1,6 +1,6 @@
 import { Instagram, Mail, Linkedin } from "lucide-react";
 
-export interface social {
+interface social {
   link: string;
   icon: React.ReactNode;
 }

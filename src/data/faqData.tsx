@@ -1,4 +1,4 @@
-export interface FAQItem {
+interface FAQItem {
   text: string;
   backText: string;
 }
