@@ -7,7 +7,7 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { slides, slide } from "@/data/gallery";
+import { slides, slide } from "@/data/Gallery";
 
 export function Carousel() {
   const [api, setApi] = useState<CarouselApi>();

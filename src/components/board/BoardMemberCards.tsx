@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 interface MemberProps {
@@ -23,10 +22,10 @@ const BoardMemberCards: React.FC<MemberProps> = ({ name, role, img }) => {
               />
             </div>
             <p className="mt-5 flex justify-center font-leap text-2xl font-bold text-white">
-              {name}{" "}
+              {name}
             </p>
             <p className="mt-1 flex justify-center font-leap text-2xl font-bold text-white">
-              {role}{" "}
+              {role}
             </p>
           </div>
         </div>

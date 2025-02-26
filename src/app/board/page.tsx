@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import BackgroundImage from "@/public/assets/header-background-about.webp";
-import { boardmembers } from "@/data/boardmembers";
+import { boardmembers } from "@/data/BoardMembers";
 import BoardMemberCards from "@/components/board/BoardMemberCards";
 
 const OurBoard = () => {
@@ -15,12 +15,11 @@ const OurBoard = () => {
       />
 
       <div className="mx-auto grid w-5/6 place-content-center justify-center sm:mt-20 sm:grid-cols-2 lg:mt-60 lg:grid-cols-3">
-        {boardmembers.map((boardmembers) => (
+        {boardmembers.map(({name, role, img}) => (
           <BoardMemberCards
-            key={boardmembers.name}
-            name={boardmembers.name}
-            role={boardmembers.role}
-            img={boardmembers.img}
+            name={name}
+            role={role}
+            img={img}
           />
         ))}
       </div>
