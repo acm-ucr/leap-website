@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 import { Heart } from "lucide-react";
 
@@ -20,20 +20,18 @@ const FAQCard: React.FC<FAQCardProps> = ({ text, backText }) => {
       className="relative m-4 flex cursor-pointer flex-col items-center"
       style={{ transformStyle: "preserve-3d" }}
     >
-      {/* Icon */}
       <div
         className="top pb-5 text-4xl text-leap-mid-green md:text-5xl"
         style={{ position: "relative", transformStyle: "preserve-3d" }}
       >
         <Heart style={{ backfaceVisibility: "hidden" }}></Heart>
         <Heart
-          fill="#4F8C6C" //Leap light-green
+          fill="#4F8C6C"
           className="absolute inset-0 flex items-center justify-center"
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         ></Heart>
       </div>
 
-      {/* Card */}
       <div
         className="square-lg flex aspect-[4/3] w-64 items-center justify-center bg-leap-mid-green p-6 text-center font-leap text-xl text-white shadow-lg shadow-leap-dark-green md:w-72 md:text-lg lg:w-80 lg:text-2xl"
         style={{ position: "relative", transformStyle: "preserve-3d" }}

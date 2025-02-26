@@ -1,4 +1,4 @@
-export interface ValueItem {
+interface ValueItem {
   title: string;
   text: string;
 }
