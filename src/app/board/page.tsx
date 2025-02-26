@@ -2,6 +2,7 @@ import Board from "../../components/board/Board";
 import Header from "@/components/Header";
 import BackgroundImage from "@/public/assets/header-background-about.webp";
 import BoardMemberCards from "../../components/board/BoardMemberCards";
+import { boardmembers } from "@/data/boardmembers";
 
 const OurBoard = () => {
   return (
@@ -15,20 +16,16 @@ const OurBoard = () => {
         background={BackgroundImage}
       />
 
-      <BoardMemberCards
-        name1={"Cathy Nguyen"}
-        role1={"President"}
-        name2={"Ethan Ly"}
-        role2={"Vice President"}
-        name3={"Abby Hinojales"}
-        role3={"Secretary"}
-        name4={"Debdeep Bandyopadhyay"}
-        role4={"Treasurer"}
-        name5={"Denise Hicks"}
-        role5={"Publicist"}
-        name6={"Sneha Panda"}
-        role6={"Events Coordinator"}
-      />
+      <div className="sm:mt-30 mx-auto grid w-5/6 place-content-center justify-center sm:grid-cols-2 lg:mt-60 lg:grid-cols-3">
+        {boardmembers.map((boardmembers) => (
+          <BoardMemberCards
+            key={boardmembers.name}
+            name={boardmembers.name}
+            role={boardmembers.role}
+            img={boardmembers.img}
+          />
+        ))}
+      </div>
     </div>
   );
 };
