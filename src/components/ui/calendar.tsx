@@ -124,7 +124,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
         ) {
           return (
             <div
-              className="my-1 text-ellipsis bg-fencing-border-blue p-1 text-left text-white"
+              className="bg-fencing-border-blue my-1 text-ellipsis p-1 text-left text-white"
               key={index}
               onClick={() =>
                 setCurrent({ title, start, end, location, description })
@@ -202,13 +202,9 @@ function Calendar({
         IconRight: ({ className, ...props }) => (
           <ChevronRight className={cn("h-4 w-4", className)} {...props} />
         ),
-        
       }}
       {...props}
     />
-
-
-    
   );
 }
 Calendar.displayName = "Calendar";
