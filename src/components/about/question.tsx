@@ -1,4 +1,4 @@
-import { faqData } from "../../data/FaqData";
+import { faqData } from "../../data/FAQsData";
 import FAQCard from "./FAQCard";
 import BackgroundImage from "@/public/assets/about/bg-about-questions.webp";
 import Image from "next/image";
