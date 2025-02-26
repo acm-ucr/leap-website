@@ -8,17 +8,17 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, subtitle, background }) => {
   return (
-    <div className="relative w-screen">
+    <div className="relative w-full text-center">
       <Image
         src={background}
-        className="absolute -z-20 h-[60vh] w-full md:flex"
+        layout="fill"
+        className="absolute -z-20"
         alt="header background"
       />
-      <div className="text-leap place-self-center pt-40 text-5xl text-leap-dark-green">
+      <div className="text-leap place-self-center pb-10 pt-52 md:pt-60 text-3xl font-bold text-leap-dark-green sm:text-4xl md:text-4xl lg:text-5xl">
         {title}
       </div>
-      ;
-      <div className="text-leap place-self-center px-20 pb-32 pt-4 text-2xl text-leap-dark-green">
+      <div className="text-leap md:pb-15 place-self-center px-20 pb-8 pt-4 text-base font-semibold text-leap-dark-green sm:pb-10 sm:text-lg md:text-xl lg:pb-20 lg:text-2xl">
         <p> {subtitle}</p>
       </div>
     </div>
