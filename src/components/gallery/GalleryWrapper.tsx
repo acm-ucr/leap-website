@@ -20,7 +20,7 @@ const GalleryWrapper = () => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-center font-leap py-3 md:py-8 lg:py-10"
+          className="py-3 text-center font-leap md:py-8 lg:py-10"
         >
           <div className="text-leap place-self-center pb-10 pt-40 text-3xl font-bold text-leap-dark-green sm:text-4xl md:text-4xl lg:text-5xl">
             <p>Gallery</p>
