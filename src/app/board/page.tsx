@@ -14,7 +14,7 @@ const OurBoard = () => {
         background={BackgroundImage}
       />
 
-      <div className="sm:mt-20 mx-auto grid w-5/6 place-content-center justify-center sm:grid-cols-2 lg:mt-60 lg:grid-cols-3">
+      <div className="mx-auto grid w-5/6 place-content-center justify-center sm:mt-20 sm:grid-cols-2 lg:mt-60 lg:grid-cols-3">
         {boardmembers.map((boardmembers) => (
           <BoardMemberCards
             key={boardmembers.name}
