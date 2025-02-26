@@ -98,12 +98,12 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   setCurrent: (props: EventProps) => void;
 };
 
-interface DayProps {
-  date: Date;
-  displayMonth: Date;
-  events: EventProps[];
-  setCurrent: (props: EventProps) => void;
-}
+// interface DayProps {
+//   date: Date;
+//   displayMonth: Date;
+//   events: EventProps[];
+//   setCurrent: (props: EventProps) => void;
+// }
 
 // const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
 //   const currentMonth = displayMonth.getMonth() === date.getMonth();
