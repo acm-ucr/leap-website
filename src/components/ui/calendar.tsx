@@ -7,7 +7,141 @@ import { DayPicker } from "react-day-picker";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
-export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+// export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+
+// export interface DayProps {
+//   date: Date;
+// }
+
+// export interface EventProps {
+//   date: Date;
+//   location: string;
+//   startingTime: {dateTime:Date}
+//   endingTime: {dateTime:Date};
+//   title: string;
+//   description: string;
+// }
+
+// export interface GoogleCalendarEventProps {
+//   date: Date;
+//   start: {
+//     dateTime?: Date;
+//   };
+//   end: {
+//     dateTime?: Date;
+//   };
+//   description: string;
+//   location?: string;
+//   summary: string;
+// }
+
+// const Day = ({ date }: DayProps) => {
+//   const currentMonth = date.getMonth() === date.getMonth();
+
+//   return (
+//     <div
+//       className={`${currentMonth ? "text-black" : "text-gray-400"} h-24 overflow-y-scroll border`}
+//     >
+//       <p className="sticky px-2 text-right">{date.getDate()}</p>
+
+//       {events?.map(({ title, start, end, location, description }, index) => {
+//         const startDate = new Date(start as string);
+
+//         if (
+//           startDate.getDate() === date.getDate() &&
+//           startDate.getMonth() === date.getMonth() &&
+//           startDate.getFullYear() === date.getFullYear()
+//         ) {
+//           return (
+//             <div
+//               className="my-1 text-ellipsis bg-fencing-border-blue p-1 text-left text-white"
+//               key={index}
+//               onClick={() =>
+//                 setCurrent({ title, start, end, location, description })
+//               }
+//             >
+//               {title} -{" "}
+//               {startDate.toLocaleTimeString("en-US", {
+//                 hour: "2-digit",
+//                 minute: "2-digit",
+//               })}
+//             </div>
+//           );
+//         }
+//       })}
+//     </div>
+//   );
+// };
+
+export type GoogleEventProps = {
+  start: {
+    dateTime: Date;
+  };
+  end: {
+    dateTime: Date;
+  };
+  location: string;
+  description: string;
+  summary: string;
+};
+
+export type EventProps = Partial<{
+  start: string;
+  end: string;
+  location: string;
+  description: string;
+  title: string;
+}>;
+
+export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
+  events: EventProps[];
+  setCurrent: (props: EventProps) => void;
+};
+
+interface DayProps {
+  date: Date;
+  displayMonth: Date;
+  events: EventProps[];
+  setCurrent: (props: EventProps) => void;
+}
+
+const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
+  const currentMonth = displayMonth.getMonth() === date.getMonth();
+
+  return (
+    <div
+      className={`${currentMonth ? "text-black" : "text-gray-400"} h-24 overflow-y-scroll border`}
+    >
+      <p className="sticky px-2 text-right">{date.getDate()}</p>
+
+      {events?.map(({ title, start, end, location, description }, index) => {
+        const startDate = new Date(start as string);
+
+        if (
+          startDate.getDate() === date.getDate() &&
+          startDate.getMonth() === date.getMonth() &&
+          startDate.getFullYear() === date.getFullYear()
+        ) {
+          return (
+            <div
+              className="my-1 text-ellipsis bg-fencing-border-blue p-1 text-left text-white"
+              key={index}
+              onClick={() =>
+                setCurrent({ title, start, end, location, description })
+              }
+            >
+              {title} -{" "}
+              {startDate.toLocaleTimeString("en-US", {
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </div>
+          );
+        }
+      })}
+    </div>
+  );
+};
 
 function Calendar({
   className,
@@ -36,16 +170,16 @@ function Calendar({
         table: "w-full border-collapse",
         head_row: "flex bg-leap-mid-green w-full text-center items-center",
         head_cell:
-          "text-white w-full font-leap text-sm md:text-xl border-x border-black pt-2",
+          "text-white w-full font-leap text-sm md:text-xl border-x border-t border-t-2 border-black pt-2",
         row: "flex w-full",
-        cell: "relative w-full h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black pt-2",
+        cell: "relative w-full h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black pt-0 lg:pt-1 xl:pt-2",
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "h-1/2 w-1/2 sm:h-1/4 sm:w-1/4 p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl aria-selected:opacity-50",
+          "h-1/2 w-1/2 sm:h-1/4 sm:w-1/4 p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl",
         ),
         day_range_end: "day-range-end",
-        day_selected:
-          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
+        // day_selected:
+        //   "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
         day_today: "bg-accent text-accent-foreground",
         day_outside:
           "day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground",
@@ -68,9 +202,13 @@ function Calendar({
         IconRight: ({ className, ...props }) => (
           <ChevronRight className={cn("h-4 w-4", className)} {...props} />
         ),
+        
       }}
       {...props}
     />
+
+
+    
   );
 }
 Calendar.displayName = "Calendar";

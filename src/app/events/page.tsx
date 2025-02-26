@@ -1,10 +1,7 @@
 import Events from "../../components/events/Events";
-<<<<<<< HEAD
-import Header from "../../components/board/header";
+import CalEvents from "../../components/events/index";
+import Header from "../../components/Header";
 import Calendar from "../../components/events/Calendar";
-=======
-import Header from "@/components/Header";
->>>>>>> 3136f7edaa5e5d3981e94b9090689f85a8d8bb20
 import { events } from "@/data/events";
 import BackgroundImage from "@/public/assets/header-background-about.webp";
 import UpcomingTitle from "@/components/events/UpcomingTitle";
@@ -31,4 +28,5 @@ const OurEvents = () => {
   );
 };
 
-export default OurEvents;
+//export default OurEvents;
+export default CalEvents;

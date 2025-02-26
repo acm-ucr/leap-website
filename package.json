@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.2",
     "@shadcn/ui": "^0.0.4",
     "@tanstack/react-query": "~5.53.3",
@@ -19,12 +20,9 @@
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.5.2",
+    "googleapis": "^105.0.0",
     "lucide-react": "^0.417.0",
-<<<<<<< HEAD
-    "motion": "^12.4.2",
-=======
     "motion": "^12.4.4",
->>>>>>> 3136f7edaa5e5d3981e94b9090689f85a8d8bb20
     "next": "~14.2.10",
     "react": "~18.3.1",
     "react-day-picker": "^8.10.1",
