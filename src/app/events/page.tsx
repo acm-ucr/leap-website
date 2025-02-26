@@ -1,5 +1,5 @@
 import Events from "../../components/events/Events";
-import CalEvents from "../../components/events/index";
+//import CalEvents from "../../components/events/index";
 import Header from "../../components/Header";
 import Calendar from "../../components/events/Calendar";
 import { events } from "@/data/events";
@@ -28,5 +28,5 @@ const OurEvents = () => {
   );
 };
 
-//export default OurEvents;
-export default CalEvents;
+export default OurEvents;
+// export default CalEvents;

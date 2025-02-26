@@ -105,43 +105,43 @@ interface DayProps {
   setCurrent: (props: EventProps) => void;
 }
 
-const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
-  const currentMonth = displayMonth.getMonth() === date.getMonth();
+// const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
+//   const currentMonth = displayMonth.getMonth() === date.getMonth();
 
-  return (
-    <div
-      className={`${currentMonth ? "text-black" : "text-gray-400"} h-24 overflow-y-scroll border`}
-    >
-      <p className="sticky px-2 text-right">{date.getDate()}</p>
+//   return (
+//     <div
+//       className={`${currentMonth ? "text-black" : "text-gray-400"} h-24 overflow-y-scroll border`}
+//     >
+//       <p className="sticky px-2 text-right">{date.getDate()}</p>
 
-      {events?.map(({ title, start, end, location, description }, index) => {
-        const startDate = new Date(start as string);
+//       {events?.map(({ title, start, end, location, description }, index) => {
+//         const startDate = new Date(start as string);
 
-        if (
-          startDate.getDate() === date.getDate() &&
-          startDate.getMonth() === date.getMonth() &&
-          startDate.getFullYear() === date.getFullYear()
-        ) {
-          return (
-            <div
-              className="bg-fencing-border-blue my-1 text-ellipsis p-1 text-left text-white"
-              key={index}
-              onClick={() =>
-                setCurrent({ title, start, end, location, description })
-              }
-            >
-              {title} -{" "}
-              {startDate.toLocaleTimeString("en-US", {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
-            </div>
-          );
-        }
-      })}
-    </div>
-  );
-};
+//         if (
+//           startDate.getDate() === date.getDate() &&
+//           startDate.getMonth() === date.getMonth() &&
+//           startDate.getFullYear() === date.getFullYear()
+//         ) {
+//           return (
+//             <div
+//               className="bg-fencing-border-blue my-1 text-ellipsis p-1 text-left text-white"
+//               key={index}
+//               onClick={() =>
+//                 setCurrent({ title, start, end, location, description })
+//               }
+//             >
+//               {title} -{" "}
+//               {startDate.toLocaleTimeString("en-US", {
+//                 hour: "2-digit",
+//                 minute: "2-digit",
+//               })}
+//             </div>
+//           );
+//         }
+//       })}
+//     </div>
+//   );
+// };
 
 function Calendar({
   className,
