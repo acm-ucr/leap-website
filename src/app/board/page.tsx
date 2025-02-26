@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import BackgroundImage from "@/public/assets/header-background-about.webp";
-import { boardmembers } from "@/data/BoardMembers";
+import { boardmembers } from "@/data/boardmembers";
 import BoardMemberCards from "@/components/board/BoardMemberCards";
 
 const OurBoard = () => {
