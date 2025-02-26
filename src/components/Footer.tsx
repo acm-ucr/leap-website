@@ -1,5 +1,5 @@
 import ucr_leap_logo from "@/public/ucr_leap_logo.svg";
-import { socials } from "@/data/Footer";
+import { socials } from "@/data/footer";
 import Link from "next/link";
 import Image from "next/image";
 
