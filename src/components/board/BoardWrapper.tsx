@@ -9,12 +9,11 @@ const BoardWrapper = () => {
       <Image
         src={BackgroundImage}
         alt="Board Background"
-        layout="fill"
         objectFit="cover"
-        className="absolute -z-10"
+        className="absolute -z-10 h-full w-full"
       />
 
-      <div className="mx-auto grid w-5/6 place-content-center justify-center sm:grid-cols-2 lg:grid-cols-3">
+      <div className="justify-centersm:mt-20 mx-auto grid w-5/6 place-content-center sm:grid-cols-2 lg:grid-cols-3">
         {boardmembers.map(({ name, role, img }) => (
           <BoardMemberCards name={name} role={role} img={img} />
         ))}
