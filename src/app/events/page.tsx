@@ -1,6 +1,6 @@
 import Events from "@/components/events/Events";
 import Header from "@/components/Header";
-import { events } from "@/data/events";
+import { events } from "@/data/EventsData";
 import BackgroundImage from "@/public/assets/header-background-about.webp";
 import UpcomingTitle from "@/components/events/UpcomingTitle";
 
