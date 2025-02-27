@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 
 interface HeaderProps {
   title: string;
-  subtitle: string;
+  subtitle: React.ReactNode;
   background: StaticImageData;
 }
 
