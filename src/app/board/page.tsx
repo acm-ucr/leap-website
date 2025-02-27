@@ -15,8 +15,8 @@ const OurBoard = () => {
       />
 
       <div className="mx-auto grid w-5/6 place-content-center justify-center sm:mt-20 sm:grid-cols-2 lg:mt-60 lg:grid-cols-3">
-        {boardmembers.map(({ name, role, img }) => (
-          <BoardMemberCards name={name} role={role} img={img} />
+        {boardmembers.map(({ name, role, img, desc }) => (
+          <BoardMemberCards name={name} role={role} img={img} desc={desc} />
         ))}
       </div>
     </div>
