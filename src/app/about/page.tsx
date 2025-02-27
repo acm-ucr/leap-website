@@ -1,6 +1,6 @@
 import Button from "../../components/Button";
 import Leap from "@/components/about/Leap";
-import FAQSection from "@/components/about/question";
+import FAQSection from "@/components/about/FAQSection";
 import ValueSection from "@/components/about/ValueSection";
 import Header from "@/components/Header";
 import BackgroundImage from "@/public/assets/backgrounds/HeaderAbout.webp";
