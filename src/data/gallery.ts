@@ -1,10 +1,15 @@
+import ImageOne from "@/public/gallery/carousel/carousel1.webp";
+import ImageTwo from "@/public/gallery/carousel/carousel2.webp";
+import ImageThree from "@/public/gallery/carousel/carousel3.webp";
+import { StaticImageData } from "next/image";
+
 export const slides: slide[] = [
-  { color: "bg-red-500", id: 1 },
-  { color: "bg-green-500", id: 2 },
-  { color: "bg-blue-500", id: 3 },
+  { image: ImageOne, id: 1 },
+  { image: ImageTwo, id: 2 },
+  { image: ImageThree, id: 3 },
 ];
 
 export type slide = {
-  color: string;
+  image: StaticImageData;
   id: number;
 };
