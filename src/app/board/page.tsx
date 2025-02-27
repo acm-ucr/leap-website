@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import BackgroundImage from "@/public/assets/header-background-about.webp";
+import BackgroundImage from "@/public/assets/backgrounds/HeaderBoard.webp";
 import { boardmembers } from "@/data/BoardData";
 import BoardMemberCards from "@/components/board/BoardMemberCards";
 

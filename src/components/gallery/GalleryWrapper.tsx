@@ -1,8 +1,8 @@
 "use client";
 import PicturesGrid from "@/components/gallery/PicturesGrid";
-import BackgroundImage from "@/public/assets/bg-error.webp";
+import BackgroundImage from "@/public/assets/backgrounds/BackgroundGallery.webp";
 import Image from "next/image";
-import { Carousel } from "@/components/Carousel";
+import { Carousel } from "@/components/gallery/Carousel";
 import { motion } from "motion/react";
 
 const GalleryWrapper = () => {

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import BackgroundImage from "@/public/assets/bg-error.webp";
+import BackgroundImage from "@/public/assets/backgrounds/BackgroundError.webp";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
