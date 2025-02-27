@@ -15,13 +15,14 @@ const BoardMemberCards: React.FC<MemberProps> = ({ name, role, img, desc }) => {
   return (
     <div className="mb-20 mt-10 flex flex-col items-center justify-center">
       <div className="mb-20 flex flex-row gap-20">
-      <motion.div
+        <motion.div
           style={{ transformStyle: "preserve-3d" }}
           transition={{ duration: 0.7 }}
           className="relative flex cursor-pointer flex-col items-center"
           animate={{ rotateY: flipped ? 180 : 0 }}
           onClick={() => setFlipped((prevState) => !prevState)}
         >
+          {/* front of card */}
           <div className="flex h-96 w-80 justify-center rounded-3xl border-8 border-black bg-leap-dark-green">
             <div className="flex flex-col items-center">
               <div className="mt-5 flex h-60 w-60 justify-center rounded-3xl border-8 border-leap-light-green">
@@ -41,6 +42,7 @@ const BoardMemberCards: React.FC<MemberProps> = ({ name, role, img, desc }) => {
               </p>
             </div>
           </div>
+          {/* back of card */}
           <div
             className="absolute flex h-full w-full items-center justify-center rounded-3xl border-8 border-black bg-leap-dark-green"
             style={{
