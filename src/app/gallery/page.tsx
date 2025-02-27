@@ -2,7 +2,7 @@ import GalleryWrapper from "@/components/gallery/GalleryWrapper";
 
 const Gallery = () => {
   return (
-    <div className="">
+    <div>
       <GalleryWrapper />
     </div>
   );
