@@ -7,10 +7,19 @@ interface MemberProps {
   name: string;
   role: string;
   img: string;
-  desc: string;
+  majorInfo: string;
+  careerGoal: string;
+  whyLeap: string;
 }
 
-const BoardMemberCards: React.FC<MemberProps> = ({ name, role, img, desc }) => {
+const BoardMemberCards: React.FC<MemberProps> = ({
+  name,
+  role,
+  img,
+  majorInfo,
+  careerGoal,
+  whyLeap,
+}) => {
   const [flipped, setFlipped] = useState(false);
   return (
     <div className="mb-20 mt-10 flex flex-col items-center justify-center">
@@ -44,15 +53,18 @@ const BoardMemberCards: React.FC<MemberProps> = ({ name, role, img, desc }) => {
           </div>
           {/* back of card */}
           <div
-            className="absolute flex h-full w-full items-center justify-center rounded-3xl border-8 border-black bg-leap-dark-green"
+            className="absolute flex h-full w-full flex-col items-center rounded-3xl border-8 border-black bg-leap-dark-green"
             style={{
               backfaceVisibility: "hidden",
               transform: "rotateY(180deg)",
             }}
           >
-            <p className="text-center text-lg font-bold text-leap-text">
-              {desc}
-            </p>
+            <div className="p-6 text-left">
+              <p className="text-md text-leap-text">{majorInfo}</p>
+              <p className="text-md pb-4 text-leap-text">{careerGoal}</p>
+              <p className="text-lg font-bold text-leap-text">Why leap?</p>
+              <p className="text-md pt-4 text-leap-text">{whyLeap}</p>
+            </div>
           </div>
         </motion.div>
       </div>
