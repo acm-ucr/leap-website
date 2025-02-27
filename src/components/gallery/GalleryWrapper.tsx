@@ -23,10 +23,10 @@ const GalleryWrapper = () => {
           className="text-center font-leap md:mt-8 md:py-8 lg:mt-10 lg:py-10"
         >
           <div className="text-leap place-self-center pb-10 pt-40 text-3xl font-bold text-leap-dark-green sm:text-4xl md:text-4xl lg:text-5xl">
-            <p>Gallery</p>
+            Gallery
           </div>
           <div className="text-leap md:pb-15 place-self-center px-20 pb-8 pt-4 text-base font-semibold text-leap-dark-green sm:pb-10 sm:text-lg md:text-xl lg:pb-20 lg:text-2xl">
-            <p>Explore memories and photos from our past events</p>
+            Explore memories and photos from our past events
           </div>
         </motion.div>
 

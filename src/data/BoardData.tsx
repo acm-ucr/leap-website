@@ -1,4 +1,4 @@
-export interface boardmembers {
+interface boardmembers {
   name: string;
   role: string;
   img: string;
