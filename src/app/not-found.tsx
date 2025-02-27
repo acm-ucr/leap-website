@@ -34,10 +34,7 @@ const NotFound = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
       >
-        <Button
-          text="Back to Home"
-          link="/">
-        </Button>
+        <Button text="Back to Home" link="/"></Button>
       </motion.div>
     </div>
   );
