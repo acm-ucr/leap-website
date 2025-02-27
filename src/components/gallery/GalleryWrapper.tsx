@@ -1,8 +1,8 @@
 "use client";
 import PicturesGrid from "@/components/gallery/PicturesGrid";
-import BackgroundImage from "@/public/assets/bg-error.webp";
+import BackgroundImage from "@/public/assets/backgrounds/BackgroundGallery.webp";
 import Image from "next/image";
-import { Carousel } from "@/components/Carousel";
+import { Carousel } from "@/components/gallery/Carousel";
 import { motion } from "motion/react";
 
 const GalleryWrapper = () => {
@@ -11,9 +11,8 @@ const GalleryWrapper = () => {
       <Image
         src={BackgroundImage}
         alt="Gallery Background"
-        layout="fill"
         objectFit="cover"
-        className="absolute -z-10"
+        className="absolute -z-10 h-full w-full"
       />
       <div className="relative mt-3 w-5/6 md:mt-10 lg:mt-12">
         <motion.div
