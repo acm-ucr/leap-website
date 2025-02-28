@@ -1,6 +1,6 @@
-import ImageOne from "@/public/gallery/carousel/carousel1.webp";
-import ImageTwo from "@/public/gallery/carousel/carousel2.webp";
-import ImageThree from "@/public/gallery/carousel/carousel3.webp";
+import ImageOne from "@/public/assets/gallery/carousel/carousel1.webp";
+import ImageTwo from "@/public/assets/gallery/carousel/carousel2.webp";
+import ImageThree from "@/public/assets/gallery/carousel/carousel3.webp";
 import { StaticImageData } from "next/image";
 
 export const slides: slide[] = [
