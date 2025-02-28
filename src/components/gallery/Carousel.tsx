@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/carousel/Card";
 import {
   Carousel as CarouselPrimitive,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
-} from "@/components/ui/carousel";
-import { slides, slide } from "@/data/gallery";
+} from "@/components/carousel/Carousel";
+import { slides, slide } from "@/data/GalleryData";
 import Image from "next/image";
 
 export function Carousel() {
