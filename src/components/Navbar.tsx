@@ -1,6 +1,6 @@
 "use client";
 import ucr_leap_logo from "@/public/ucr_leap_logo.svg";
-import { navigations } from "@/data/navbar";
+import { navigations } from "@/data/NavbarData";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
@@ -54,17 +54,17 @@ const Navbar = () => {
       </div>
 
       <div className="hidden flex-row gap-20 pr-12 md:flex">
-        {navigations.map((navigation, index) => (
+        {navigations.map(({ link, name }, index) => (
           <Link
-            href={navigation.link}
+            href={link}
             key={index}
             className={`rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
-              pathName === navigation.link
+              pathName === link
                 ? "border-b-leap-mid-green font-bold text-leap-dark-green"
                 : "border-b-leap-light-green"
             }`}
           >
-            {navigation.name}
+            {name}
           </Link>
         ))}
       </div>
@@ -103,7 +103,7 @@ const Navbar = () => {
         variants={sidebarVariants}
       >
         <motion.ul className="list-none space-y-6 text-2xl text-white">
-          {navigations.map((navigation, index) => (
+          {navigations.map(({ link, name }, index) => (
             <motion.li
               key={index}
               variants={itemVariants}
@@ -113,15 +113,15 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Link
-                href={navigation.link}
+                href={link}
                 className={`rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
-                  pathName === navigation.link
+                  pathName === link
                     ? "border-b-leap-mid-green font-bold text-leap-mid-green"
                     : "border-b-leap-light-green"
                 }`}
                 onClick={closeMenu}
               >
-                {navigation.name}
+                {name}
               </Link>
             </motion.li>
           ))}

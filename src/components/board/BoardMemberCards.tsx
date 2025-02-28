@@ -1,104 +1,70 @@
+"use client";
+import React, { useState } from "react";
+import { motion } from "motion/react";
+import Image from "next/image";
+
 interface MemberProps {
-  name1: string;
-  role1: string;
-  name2: string;
-  role2: string;
-  name3: string;
-  role3: string;
-  name4: string;
-  role4: string;
-  name5: string;
-  role5: string;
-  name6: string;
-  role6: string;
+  name: string;
+  role: string;
+  img: string;
+  majorInfo: string;
+  careerGoal: string;
+  whyLeap: string;
 }
 
 const BoardMemberCards: React.FC<MemberProps> = ({
-  name1,
-  role1,
-  name2,
-  role2,
-  name3,
-  role3,
-  name4,
-  role4,
-  name5,
-  role5,
-  name6,
-  role6,
+  name,
+  role,
+  img,
+  majorInfo,
+  careerGoal,
+  whyLeap,
 }) => {
+  const [flipped, setFlipped] = useState(false);
   return (
-    <div className="mb-20 mt-40 flex flex-col items-center justify-center">
+    <div className="mb-20 mt-10 flex flex-col items-center justify-center">
       <div className="mb-20 flex flex-row gap-20">
-        <div className="flex h-80 w-64 justify-center rounded-3xl border-8 border-black bg-leap-dark-green">
-          <div className="flex flex-col items-center">
-            <div className="mt-10 flex h-40 w-40 justify-center rounded-3xl border-8 border-leap-light-green"></div>
-            <p className="mt-5 flex justify-center font-leap text-lg font-bold text-white">
-              {name1}{" "}
-            </p>
-            <p className="mt-1 flex justify-center font-leap text-lg font-bold text-white">
-              {role1}{" "}
-            </p>
+        <motion.div
+          style={{ transformStyle: "preserve-3d" }}
+          transition={{ duration: 0.7 }}
+          className="relative flex cursor-pointer flex-col items-center"
+          animate={{ rotateY: flipped ? 180 : 0 }}
+          onClick={() => setFlipped((prevState) => !prevState)}
+        >
+          <div className="flex h-96 w-80 justify-center rounded-3xl border-8 border-white bg-leap-dark-green">
+            <div className="flex flex-col items-center">
+              <div className="mt-5 flex h-60 w-60 justify-center rounded-3xl border-8 border-leap-light-green">
+                <Image
+                  src={img}
+                  alt={name}
+                  width={230}
+                  height={220}
+                  className="rounded-2xl"
+                />
+              </div>
+              <p className="mt-5 flex justify-center font-leap text-2xl font-bold text-white">
+                {name}
+              </p>
+              <p className="mt-1 flex justify-center font-leap text-2xl font-bold text-white">
+                {role}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="flex h-80 w-64 justify-center rounded-3xl border-8 border-black bg-leap-dark-green">
-          <div className="flex flex-col items-center">
-            <div className="mt-10 flex h-40 w-40 justify-center rounded-3xl border-8 border-leap-light-green"></div>
-            <p className="mt-5 flex justify-center font-leap text-lg font-bold text-white">
-              {name2}{" "}
-            </p>
-            <p className="mt-1 flex justify-center font-leap text-lg font-bold text-white">
-              {role2}{" "}
-            </p>
+          <div
+            className="absolute flex h-full w-full flex-col items-center rounded-3xl border-8 border-white bg-leap-dark-green"
+            style={{
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
+            }}
+          >
+            <div className="text-md p-6 text-left">
+              <p className="text-leap-text">{majorInfo}</p>
+              <p className="pb-4 text-leap-text">{careerGoal}</p>
+              <p className="text-lg font-bold text-leap-text">Why leap?</p>
+              <p className="pt-4 text-leap-text">{whyLeap}</p>
+            </div>
           </div>
-        </div>
-        <div className="flex h-80 w-64 justify-center rounded-3xl border-8 border-black bg-leap-dark-green">
-          <div className="flex flex-col items-center">
-            <div className="mt-10 flex h-40 w-40 justify-center rounded-3xl border-8 border-leap-light-green"></div>
-            <p className="mt-5 flex justify-center font-leap text-lg font-bold text-white">
-              {name3}{" "}
-            </p>
-            <p className="mt-1 flex justify-center font-leap text-lg font-bold text-white">
-              {role3}{" "}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="mb-20 flex flex-row gap-20">
-        <div className="flex h-80 w-64 justify-center rounded-3xl border-8 border-black bg-leap-dark-green">
-          <div className="flex flex-col items-center">
-            <div className="mt-10 flex h-40 w-40 justify-center rounded-3xl border-8 border-leap-light-green"></div>
-            <p className="mt-5 flex justify-center font-leap text-lg font-bold text-white">
-              {name4}{" "}
-            </p>
-            <p className="mt-1 flex justify-center font-leap text-lg font-bold text-white">
-              {role4}{" "}
-            </p>
-          </div>
-        </div>
-        <div className="flex h-80 w-64 justify-center rounded-3xl border-8 border-black bg-leap-dark-green">
-          <div className="flex flex-col items-center">
-            <div className="mt-10 flex h-40 w-40 justify-center rounded-3xl border-8 border-leap-light-green"></div>
-            <p className="mt-5 flex justify-center font-leap text-lg font-bold text-white">
-              {name5}{" "}
-            </p>
-            <p className="mt-1 flex justify-center font-leap text-lg font-bold text-white">
-              {role5}{" "}
-            </p>
-          </div>
-        </div>
-        <div className="flex h-80 w-64 justify-center rounded-3xl border-8 border-black bg-leap-dark-green">
-          <div className="flex flex-col items-center">
-            <div className="mt-10 flex h-40 w-40 justify-center rounded-3xl border-8 border-leap-light-green"></div>
-            <p className="mt-5 flex justify-center font-leap text-lg font-bold text-white">
-              {name6}{" "}
-            </p>
-            <p className="mt-1 flex justify-center font-leap text-lg font-bold text-white">
-              {role6}{" "}
-            </p>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

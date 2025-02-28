@@ -17,8 +17,8 @@ export default function ValueSection() {
       </div>
 
       <div className="grid w-full max-w-6xl grid-cols-1 gap-11 px-4 sm:grid-cols-2">
-        {valueData.map((item, index) => (
-          <ValueCard key={index} title={item.title} text={item.text} />
+        {valueData.map(({ title, text }, index) => (
+          <ValueCard key={index} title={title} text={text} />
         ))}
       </div>
     </div>
