@@ -58,7 +58,7 @@ const Navbar = () => {
           <Link
             href={link}
             key={index}
-            className={`rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
+            className={`duration-1 rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap text-lg hover:scale-110 ${
               pathName === link
                 ? "border-b-leap-mid-green font-bold text-leap-dark-green"
                 : "border-b-leap-light-green"
@@ -71,7 +71,7 @@ const Navbar = () => {
 
       <button
         onClick={handleClick}
-        className="pointer-events-auto relative z-20 flex flex-col items-center justify-center hover:scale-110 md:hidden"
+        className="duration-1 pointer-events-auto relative z-20 flex flex-col items-center justify-center hover:scale-110 md:hidden"
       >
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
@@ -102,7 +102,7 @@ const Navbar = () => {
         className="absolute left-0 top-0 flex h-[40vh] w-full flex-col items-center justify-center bg-leap-dark-green shadow-lg md:hidden"
         variants={sidebarVariants}
       >
-        <motion.ul className="list-none space-y-6 text-3xl text-white">
+        <motion.ul className="list-none space-y-6 text-2xl text-white">
           {navigations.map(({ link, name }, index) => (
             <motion.li
               key={index}
