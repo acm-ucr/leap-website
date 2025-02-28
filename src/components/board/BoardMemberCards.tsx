@@ -31,8 +31,7 @@ const BoardMemberCards: React.FC<MemberProps> = ({
           animate={{ rotateY: flipped ? 180 : 0 }}
           onClick={() => setFlipped((prevState) => !prevState)}
         >
-          {/* front of card */}
-          <div className="flex h-96 w-80 justify-center rounded-3xl border-8 border-black bg-leap-dark-green">
+          <div className="flex h-96 w-80 justify-center rounded-3xl border-8 border-white bg-leap-dark-green">
             <div className="flex flex-col items-center">
               <div className="mt-5 flex h-60 w-60 justify-center rounded-3xl border-8 border-leap-light-green">
                 <Image
@@ -51,19 +50,18 @@ const BoardMemberCards: React.FC<MemberProps> = ({
               </p>
             </div>
           </div>
-          {/* back of card */}
           <div
-            className="absolute flex h-full w-full flex-col items-center rounded-3xl border-8 border-black bg-leap-dark-green"
+            className="absolute flex h-full w-full flex-col items-center rounded-3xl border-8 border-white bg-leap-dark-green"
             style={{
               backfaceVisibility: "hidden",
               transform: "rotateY(180deg)",
             }}
           >
-            <div className="p-6 text-left">
-              <p className="text-md text-leap-text">{majorInfo}</p>
-              <p className="text-md pb-4 text-leap-text">{careerGoal}</p>
+            <div className="text-md p-6 text-left">
+              <p className="text-leap-text">{majorInfo}</p>
+              <p className="pb-4 text-leap-text">{careerGoal}</p>
               <p className="text-lg font-bold text-leap-text">Why leap?</p>
-              <p className="text-md pt-4 text-leap-text">{whyLeap}</p>
+              <p className="pt-4 text-leap-text">{whyLeap}</p>
             </div>
           </div>
         </motion.div>
