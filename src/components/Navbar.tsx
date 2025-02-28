@@ -42,8 +42,8 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-transparent p-8">
-      <div className="abolute z-30 pl-8 duration-100 hover:scale-110">
+    <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-white p-4 lg:p-2">
+      <div className="abolute z-30 pl-0 duration-100 hover:scale-110 md:p-8">
         <Link href="/">
           <Image
             src={ucr_leap_logo}
@@ -71,7 +71,7 @@ const Navbar = () => {
 
       <button
         onClick={handleClick}
-        className="pointer-events-auto relative z-20 flex flex-col items-center justify-center md:hidden"
+        className="pointer-events-auto relative z-20 flex flex-col items-center justify-center hover:scale-110 md:hidden"
       >
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
@@ -102,7 +102,7 @@ const Navbar = () => {
         className="absolute left-0 top-0 flex h-[40vh] w-full flex-col items-center justify-center bg-leap-dark-green shadow-lg md:hidden"
         variants={sidebarVariants}
       >
-        <motion.ul className="list-none space-y-6 text-2xl text-white">
+        <motion.ul className="list-none space-y-6 text-3xl text-white">
           {navigations.map(({ link, name }, index) => (
             <motion.li
               key={index}
