@@ -8,6 +8,7 @@ import {
   type CarouselApi,
 } from "@/components/carousel/Carousel";
 import { slides, slide } from "@/data/GalleryData";
+import Image from "next/image";
 
 export function Carousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -27,7 +28,15 @@ export function Carousel() {
         <CarouselContent>
           {slides?.map((slide: slide) => (
             <CarouselItem key={slide.id}>
-              <Card className={`aspect-video w-full ${slide.color}`} />
+              <Card className="relative aspect-video w-full">
+                <Image
+                  src={slide.image}
+                  alt={`Slide ${slide.id}`}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg"
+                />
+              </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
