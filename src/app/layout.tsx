@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 import { Krub } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Footer from "@/components/Footer";
@@ -13,7 +13,7 @@ const krub = Krub({
 
 export const metadata = {
   title: "UCR LEAP",
-  description: "Create by ACM@UCR",
+  description: "Created by ACM@UCR",
 };
 
 type LayoutProps = {

@@ -1,11 +1,11 @@
-import header_bg from "@/public/assets/home/header.webp";
+import headerBg from "@/public/assets/home/header.webp";
 import Image from "next/image";
 
 const Header = () => {
   return (
     <div className="relative flex h-screen w-full flex-col items-center justify-center md:h-[120vh] lg:h-[140vh]">
       <Image
-        src={header_bg}
+        src={headerBg}
         alt="Home Header"
         className="absolute top-0 -z-30 min-h-screen w-screen object-fill"
       />

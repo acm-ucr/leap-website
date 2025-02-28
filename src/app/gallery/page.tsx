@@ -1,11 +1,11 @@
-import Gallery from "../../components/gallery/Gallery";
+import GalleryWrapper from "@/components/gallery/GalleryWrapper";
 
-const OurGallery = () => {
+const Gallery = () => {
   return (
-    <div className="">
-      <Gallery />
+    <div>
+      <GalleryWrapper />
     </div>
   );
 };
 
-export default OurGallery;
+export default Gallery;
