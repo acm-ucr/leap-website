@@ -1,9 +1,8 @@
 "use client";
-import Link from "next/link";
 import BackgroundImage from "@/public/assets/backgrounds/BackgroundError.webp";
 import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
+import Button from "../components/Button";
 
 const NotFound = () => {
   return (
@@ -25,7 +24,7 @@ const NotFound = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.1 }}
-        className="mb-6 text-lg font-semibold text-leap-text md:text-2xl"
+        className="mb-3 text-lg font-semibold text-leap-text md:text-2xl"
       >
         Page Not Found
       </motion.div>
@@ -34,12 +33,7 @@ const NotFound = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
       >
-        <Link
-          href="/"
-          className="rounded-md bg-leap-mid-green px-6 py-3 text-leap-text transition hover:opacity-80"
-        >
-          Back to Home
-        </Link>
+        <Button text="Back to Home" link="/"></Button>
       </motion.div>
     </div>
   );
