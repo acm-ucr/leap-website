@@ -17,7 +17,7 @@ const ValueCard: React.FC<ValueCardProps> = ({ title, text }) => {
         {title}
       </div>
 
-      <motion.div className="flex aspect-[4/3] w-full items-center justify-center bg-leap-mid-green p-6 text-center font-leap text-white shadow-lg shadow-black sm:text-lg md:text-xl lg:text-2xl">
+      <motion.div className="flex aspect-[4/3] w-full items-center justify-center bg-leap-mid-green p-6 text-center font-leap text-lg text-white shadow-lg shadow-black md:text-xl lg:text-2xl">
         {text}
       </motion.div>
     </motion.div>

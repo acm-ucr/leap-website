@@ -23,26 +23,12 @@ export default function ValueSection() {
         Values
       </motion.div>
 
-      <motion.div
-        className="grid w-full max-w-6xl grid-cols-1 gap-12 px-4 sm:grid-cols-2"
-        initial={{ y: -50, opacity: 0 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.3 },
-          },
-        }}
-      >
+      <motion.div className="grid w-full max-w-6xl grid-cols-1 gap-12 px-4 sm:grid-cols-2">
         {valueData.map(({ title, text }, index) => (
           <motion.div
-            key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.3 }}
           >
             <ValueCard key={index} title={title} text={text} />
           </motion.div>
