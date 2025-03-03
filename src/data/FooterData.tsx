@@ -8,14 +8,29 @@ interface social {
 export const socials: social[] = [
   {
     link: "https://www.instagram.com/ucrleap/",
-    icon: <Instagram size={40} className="text-white hover:text-leap-yellow" />,
+    icon: (
+      <Instagram
+        size={40}
+        className="text-leap-light-green hover:text-leap-dark-green"
+      />
+    ),
   },
   {
     link: "https://www.google.com/",
-    icon: <Mail size={40} className="text-white hover:text-leap-yellow" />,
+    icon: (
+      <Mail
+        size={40}
+        className="text-leap-light-green hover:text-leap-dark-green"
+      />
+    ),
   },
   {
     link: "https://www.linkedin.com/",
-    icon: <Linkedin size={40} className="text-white hover:text-leap-yellow" />,
+    icon: (
+      <Linkedin
+        size={40}
+        className="text-leap-light-green hover:text-leap-dark-green"
+      />
+    ),
   },
 ];

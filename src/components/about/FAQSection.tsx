@@ -16,7 +16,7 @@ export default function FAQSection() {
         Recruitment Questions
       </div>
 
-      <div className="mt-6 flex w-full max-w-6xl flex-wrap items-center justify-center gap-6 px-4">
+      <div className="mt-6 flex w-full max-w-6xl flex-wrap items-center justify-center gap-6 px-4 pb-4">
         {faqData.map(({ text, backText }, index) => (
           <FAQCard key={index} text={text} backText={backText} />
         ))}
