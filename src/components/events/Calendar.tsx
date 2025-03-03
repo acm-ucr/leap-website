@@ -9,6 +9,7 @@ import {
 import { Calendar } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import { useEffect } from "react";
 import {
   Dialog,
   DialogContent,
@@ -19,35 +20,108 @@ import {
 } from "@/components/ui/dialog"
 
 
+
 const Events = () => {  
   const [current, setCurrent] = useState<EventProps>({});
 
-  const { isPending, error, data } = useQuery({
-    queryKey: ["repoData"],
-    queryFn: async () => {
-      const response =
-        await fetch(`https://www.googleapis.com/calendar/v3/calendars/${
-          process.env.NEXT_PUBLIC_GOOGLE_CALENDAR
-        }/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}
-          &singleEvents=true&orderBy=startTime&timeMin=${new Date(
-            new Date().getTime() - 60 * 60 * 24 * 7 * 10 * 1000,
-          ).toISOString()}&timeMax=${new Date(
-            new Date().getTime() + 60 * 60 * 24 * 7 * 10 * 1000,
-          ).toISOString()}`).then((res) => res.json());
+   const { isPending, error, data } = useQuery({
+     queryKey: ["repoData"],
+     queryFn: async () => {
 
-      const events = response.items.map(
-        ({ start, end, location, description, summary }: GoogleEventProps) => ({
-          start: start.dateTime,
-          end: end.dateTime,
-          location,
-          description,
-          title: summary,
-        }),
-      );
+      const apiKey = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY;
+      const calendarId = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL;
+  
+      if (!apiKey || !calendarId) {
+        console.error("API Key or Calendar ID is missing.");
+        return;
+      }
+      
+      const today = new Date();
+      const timeMin = today.toISOString();
+      const timeMax = new Date(today);
+      timeMax.setMonth(today.getMonth() + 2);
+      const timeMaxISO = timeMax.toISOString();
+  
+      const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true&timeMin=${encodeURIComponent(
+        timeMin,
+      )}&timeMax=${encodeURIComponent(timeMaxISO)}`;
+  
+      try {
+       const response = await fetch(url);
+       if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        const events = data.items.map(
+          ({ start, end, location, description, summary }: GoogleEventProps) => ({
+            start: start.dateTime,
+            end: end.dateTime,
+            location,
+            description,
+            title: summary,
+          }),
+        );
+        return events;
+      } catch (error) {
+        console.error("Error fetching events from Google Calendar:", error);
+      }
+    }});
+   
 
-      return events;
-    },
-  });
+  //     const events = response.items.map(
+  //       ({ start, end, location, description, summary }: GoogleEventProps) => ({
+  //         start: start.dateTime,
+  //         end: end.dateTime,
+  //         location,
+  //         description,
+  //         title: summary,
+  //       }),
+  //     );
+
+  //     return events;
+  //   },
+  // });
+
+  //useEffect(() => {
+  //  const fetchEvents = async () => {
+      
+  //     try {
+  //       const response = await fetch(url);
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! status: ${response.status}`);
+  //       }
+  
+  //       const data = await response.json();
+  
+  //       // const formattedEvents: EventProps[] = data.items.map(
+  //       //   (event: GoogleCalendarEvent) => ({
+  //       //     date: new Date(event.start.dateTime || ""),
+  //       //     title: event.summary || "No Title",
+  //       //     startTime: event.start.dateTime || "",
+  //       //     location: event.location || "N/A",
+  //       //   }),
+  //       // );
+  
+  //       // setEvents(formattedEvents);
+  //       const events = data.items.map(
+  //               ({ start, end, location, description, summary }: GoogleEventProps) => ({
+  //                 start: start.dateTime,
+  //                 end: end.dateTime,
+  //                 location,
+  //                 description,
+  //                 title: summary,
+  //               }),
+  //             );
+
+  //         return events;
+        
+  //     } catch (error) {
+  //       console.error("Error fetching events from Google Calendar:", error);
+  //     }
+  //   };
+  
+  //   //fetchEvents();
+  // }, []);
 
 
   
