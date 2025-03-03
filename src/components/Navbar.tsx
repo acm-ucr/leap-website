@@ -42,7 +42,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-white p-4 lg:p-2">
+    <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-leap-light-yellow p-4 lg:p-2">
       <div className="abolute z-30 pl-0 duration-100 hover:scale-110 md:p-8">
         <Link href="/">
           <Image
