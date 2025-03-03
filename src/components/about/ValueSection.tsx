@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { valueData } from "@/data/ValueData";
 import ValueCard from "@/components/about/ValueCard";
 import BackgroundImage from "@/public/assets/about/bg-Value-about.webp";
@@ -25,14 +25,14 @@ export default function ValueSection() {
 
       <motion.div
         className="grid w-full max-w-6xl grid-cols-1 gap-12 px-4 sm:grid-cols-2"
-        initial={{ x: -50, opacity: 0 }}
+        initial={{ y: -50, opacity: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
         variants={{
           hidden: { opacity: 0 },
           visible: {
             opacity: 1,
-            transition: { staggerChildren: 0.3 }, // Adds smooth stagger effect
+            transition: { staggerChildren: 0.3 },
           },
         }}
       >
@@ -43,9 +43,6 @@ export default function ValueSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             viewport={{ once: true }}
-            whileHover={{
-              scale: 1.05,
-            }}
           >
             <ValueCard key={index} title={title} text={text} />
           </motion.div>
