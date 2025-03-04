@@ -41,16 +41,21 @@ interface DayProps {
 
 const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
   const currentMonth = displayMonth.getMonth() === date.getMonth();
+  const currentDate = new Date();
+  const isToday = (
+    date.getDate() === currentDate.getDate()
+    && date.getMonth() === currentDate.getMonth() 
+    && date.getFullYear() === currentDate.getFullYear());
+
 
   return (
-    <div
-      className={`${currentMonth ? "text-black" : "text-gray-400"} h-24 overflow-y-scroll border`}
-    >
-      <p className="sticky px-2 text-right">{date.getDate()}</p>
+    <div className={"h-full overflow-y-scroll"}>
+      <div className={isToday ? 'bg-leap-light-green m-0 p-0' : ''}>
+     <p className="">{date.getDate()}</p>
 
-      {events?.map(({ title, start, end, location, description }, index) => {
+      {events?.map(({start,end,location,description,title}, index) => {
         const startDate = new Date(start as string);
-
+        
         if (
           startDate.getDate() === date.getDate() &&
           startDate.getMonth() === date.getMonth() &&
@@ -58,21 +63,22 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
         ) {
           return (
             <div
-              className="text-ellipsis bg-leap-mid-green p-1 text-left text-white"
+              className="bg-leap-mid-green text-xs sm:text-sm md:text-md p-1 mb-1 text-left text-white hidden sm:block"
               key={index}
               onClick={() =>
                 setCurrent({ title, start, end, location, description })
               }
             >
-              {title} -{" "}
               {startDate.toLocaleTimeString("en-US", {
                 hour: "2-digit",
                 minute: "2-digit",
               })}
-            </div>
+               {" "}-{" "}{title}
+               </div>
           );
         }
       })}
+      </div>
     </div>
   );
 };
@@ -85,6 +91,7 @@ function Calendar({
   setCurrent,
   ...props
 }: CalendarProps) {
+
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
@@ -95,28 +102,26 @@ function Calendar({
         month: "space-y-0",
         caption: "flex pt-1 relative mt-3 mb-5",
         caption_label:
-          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide ml-16 md:ml-24",
+          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide ml-20 sm:pl-0 sm:ml-16 md:ml-24",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
           buttonVariants({ variant: "ghost" }),
           "h-9 w-9 md:h-16 md:w-16 bg-transparent text-leap-mid-green opacity-100 hover:opacity-100",
         ),
         nav_button_previous: "absolute left-0",
-        nav_button_next: "absolute  right-0 md:left-64",
+        nav_button_next: "absolute right-0 md:left-64",
         table: "w-full border-collapse",
         head_row: "flex bg-leap-mid-green w-full text-center items-center",
         head_cell:
           "text-white w-full font-leap text-sm md:text-xl border-x border-t border-t-2 border-black pt-2",
         row: "flex w-full",
-        cell: "relative w-full h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black pt-0 lg:pt-1 xl:pt-2",
+        cell: "bg-leap-white-green relative w-full h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black",
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "h-1/2 w-1/2 sm:h-1/4 sm:w-1/4 p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl",
+          "h-full w-full p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl",
         ),
         day_range_end: "day-range-end",
-        // day_selected:
-        //   "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
-        day_today: "bg-accent text-accent-foreground",
+        day_today: "bg-leap-light-green text-accent-foreground",
         day_outside:
           "day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground",
         day_disabled: "text-muted-foreground opacity-50",

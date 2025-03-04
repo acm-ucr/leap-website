@@ -66,63 +66,6 @@ const Events = () => {
         console.error("Error fetching events from Google Calendar:", error);
       }
     }});
-   
-
-  //     const events = response.items.map(
-  //       ({ start, end, location, description, summary }: GoogleEventProps) => ({
-  //         start: start.dateTime,
-  //         end: end.dateTime,
-  //         location,
-  //         description,
-  //         title: summary,
-  //       }),
-  //     );
-
-  //     return events;
-  //   },
-  // });
-
-  //useEffect(() => {
-  //  const fetchEvents = async () => {
-      
-  //     try {
-  //       const response = await fetch(url);
-  //       if (!response.ok) {
-  //         throw new Error(`HTTP error! status: ${response.status}`);
-  //       }
-  
-  //       const data = await response.json();
-  
-  //       // const formattedEvents: EventProps[] = data.items.map(
-  //       //   (event: GoogleCalendarEvent) => ({
-  //       //     date: new Date(event.start.dateTime || ""),
-  //       //     title: event.summary || "No Title",
-  //       //     startTime: event.start.dateTime || "",
-  //       //     location: event.location || "N/A",
-  //       //   }),
-  //       // );
-  
-  //       // setEvents(formattedEvents);
-  //       const events = data.items.map(
-  //               ({ start, end, location, description, summary }: GoogleEventProps) => ({
-  //                 start: start.dateTime,
-  //                 end: end.dateTime,
-  //                 location,
-  //                 description,
-  //                 title: summary,
-  //               }),
-  //             );
-
-  //         return events;
-        
-  //     } catch (error) {
-  //       console.error("Error fetching events from Google Calendar:", error);
-  //     }
-  //   };
-  
-  //   //fetchEvents();
-  // }, []);
-
 
   
   return (
@@ -160,7 +103,7 @@ const Events = () => {
       <Calendar
         mode="single"
         selected={new Date()}
-        className="w-full rounded-md border"
+        className="w-3/4"
         events={data}
         setCurrent={setCurrent}
       />
