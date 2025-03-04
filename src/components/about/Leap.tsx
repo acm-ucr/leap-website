@@ -17,7 +17,7 @@ const Leap = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          LEAP
+          LEAP!
         </motion.div>
         <div className="my-4 flex w-full justify-center">
           <motion.div
@@ -56,7 +56,7 @@ const Leap = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            LEAP
+            LEAP!
           </motion.div>
           <motion.p
             className="max-w-1xl md:text-1.5xl text-xl font-semibold text-black lg:text-3xl"
