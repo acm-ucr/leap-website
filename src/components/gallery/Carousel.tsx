@@ -72,13 +72,13 @@ export function Carousel() {
         className="absolute left-0 top-1/2 -translate-x-[20px] -translate-y-[40px] transform rounded-full bg-gray-300 p-2 shadow-lg sm:-translate-x-[30px] sm:p-3 md:-translate-x-[40px] md:p-4 lg:-translate-x-[40px] lg:p-4"
         onClick={() => handleScrollPrev()}
       >
-        &lt; {/*Means Less Than Symbol*/}
+        &lt;
       </button>
       <button
         className="absolute right-0 top-1/2 -translate-x-[-20px] -translate-y-[40px] transform rounded-full bg-gray-300 p-2 shadow-lg sm:-translate-x-[-30px] sm:p-3 md:-translate-x-[-40px] md:p-4 lg:-translate-x-[-40px] lg:p-4"
         onClick={() => handleScrollNext()}
       >
-        &gt; {/*Means Greater Than Symbol*/}
+        &gt;
       </button>
     </div>
   );
