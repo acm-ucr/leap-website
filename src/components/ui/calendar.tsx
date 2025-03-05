@@ -49,7 +49,11 @@ const Day = ({ date, events, setCurrent }: DayProps) => {
 
   return (
     <div className={"h-full overflow-y-scroll"}>
-      <div className={isToday ? "m-0 bg-leap-light-green p-0" : ""}>
+      <div
+        className={
+          isToday ? "m-0 bg-leap-light-green pb-3 md:pb-6 xl:pb-12" : ""
+        }
+      >
         <p className="">{date.getDate()}</p>
 
         {events?.map(({ start, end, location, description, title }, index) => {
