@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle, background }) => {
       <Image
         src={background}
         layout="fill"
-        className="absolute -z-20"
+        className="absolute-z-20"
         alt="header background"
       />
       <motion.div
