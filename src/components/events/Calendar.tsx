@@ -1,10 +1,7 @@
 "use client";
 
 import * as React from "react";
-import {
-  EventProps,
-  GoogleEventProps,
-} from "@/components/ui/calendar";
+import { EventProps, GoogleEventProps } from "@/components/ui/calendar";
 import { Calendar } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
