@@ -38,7 +38,7 @@ const GalleryWrapper = () => {
           <Carousel />
         </motion.div>
 
-        <div className="mt-0 sm:mt-5 flex justify-center pt-8 sm:pt-12">
+        <div className="mt-0 flex justify-center pt-8 sm:mt-5 sm:pt-12">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
