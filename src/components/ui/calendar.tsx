@@ -40,7 +40,7 @@ interface DayProps {
 }
 
 const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
-  const currentMonth = displayMonth.getMonth() === date.getMonth();
+  //const currentMonth = displayMonth.getMonth() === date.getMonth();
   const currentDate = new Date();
   const isToday =
     date.getDate() === currentDate.getDate() &&
