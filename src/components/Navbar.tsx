@@ -95,7 +95,7 @@ const Navbar = () => {
       </button>
 
       <motion.div
-        initial="false"
+        initial="closed"
         animate={isOpen ? "open" : "closed"}
         exit="closed"
         ref={containerRef}
