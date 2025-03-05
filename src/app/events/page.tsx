@@ -13,7 +13,7 @@ const OurEvents = () => {
         subtitle={"Explore when our next event is and make sure to stop by."}
         background={BackgroundImage}
       />
-      <Calendar/>
+      <Calendar />
       <UpcomingTitle title="Upcoming Events" />
       {events.map(({ title, date, time, description }) => (
         <Events title={title} date={date} time={time} desc={description} />

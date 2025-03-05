@@ -42,42 +42,41 @@ interface DayProps {
 const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
   const currentMonth = displayMonth.getMonth() === date.getMonth();
   const currentDate = new Date();
-  const isToday = (
-    date.getDate() === currentDate.getDate()
-    && date.getMonth() === currentDate.getMonth() 
-    && date.getFullYear() === currentDate.getFullYear());
-
+  const isToday =
+    date.getDate() === currentDate.getDate() &&
+    date.getMonth() === currentDate.getMonth() &&
+    date.getFullYear() === currentDate.getFullYear();
 
   return (
     <div className={"h-full overflow-y-scroll"}>
-      <div className={isToday ? 'bg-leap-light-green m-0 p-0' : ''}>
-     <p className="">{date.getDate()}</p>
+      <div className={isToday ? "m-0 bg-leap-light-green p-0" : ""}>
+        <p className="">{date.getDate()}</p>
 
-      {events?.map(({start,end,location,description,title}, index) => {
-        const startDate = new Date(start as string);
-        
-        if (
-          startDate.getDate() === date.getDate() &&
-          startDate.getMonth() === date.getMonth() &&
-          startDate.getFullYear() === date.getFullYear()
-        ) {
-          return (
-            <div
-              className="bg-leap-mid-green text-xs sm:text-sm md:text-md p-1 mb-1 text-left text-white hidden sm:block"
-              key={index}
-              onClick={() =>
-                setCurrent({ title, start, end, location, description })
-              }
-            >
-              {startDate.toLocaleTimeString("en-US", {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
-               {" "}-{" "}{title}
-               </div>
-          );
-        }
-      })}
+        {events?.map(({ start, end, location, description, title }, index) => {
+          const startDate = new Date(start as string);
+
+          if (
+            startDate.getDate() === date.getDate() &&
+            startDate.getMonth() === date.getMonth() &&
+            startDate.getFullYear() === date.getFullYear()
+          ) {
+            return (
+              <div
+                className="md:text-md mb-1 hidden bg-leap-mid-green p-1 text-left text-xs text-white sm:block sm:text-sm"
+                key={index}
+                onClick={() =>
+                  setCurrent({ title, start, end, location, description })
+                }
+              >
+                {startDate.toLocaleTimeString("en-US", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}{" "}
+                - {title}
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );
@@ -91,7 +90,6 @@ function Calendar({
   setCurrent,
   ...props
 }: CalendarProps) {
-
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
@@ -150,12 +148,12 @@ function Calendar({
             events={events}
             setCurrent={setCurrent}
           />
-         ),
+        ),
       }}
       {...props}
     />
-    );
+  );
 }
-Calendar.displayName = "Calendar"
+Calendar.displayName = "Calendar";
 
-export { Calendar }
+export { Calendar };

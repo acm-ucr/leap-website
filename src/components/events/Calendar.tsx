@@ -17,43 +17,46 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
+} from "@/components/ui/dialog";
 
-
-
-const Events = () => {  
+const Events = () => {
   const [current, setCurrent] = useState<EventProps>({});
 
-   const { isPending, error, data } = useQuery({
-     queryKey: ["repoData"],
-     queryFn: async () => {
-
+  const { isPending, error, data } = useQuery({
+    queryKey: ["repoData"],
+    queryFn: async () => {
       const apiKey = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY;
       const calendarId = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL;
-  
+
       if (!apiKey || !calendarId) {
         console.error("API Key or Calendar ID is missing.");
         return;
       }
-      
+
       const today = new Date();
       const timeMin = today.toISOString();
       const timeMax = new Date(today);
       timeMax.setMonth(today.getMonth() + 2);
       const timeMaxISO = timeMax.toISOString();
-  
+
       const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true&timeMin=${encodeURIComponent(
         timeMin,
       )}&timeMax=${encodeURIComponent(timeMaxISO)}`;
-  
+
       try {
-       const response = await fetch(url);
-       if (!response.ok) {
+        const response = await fetch(url);
+        if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
         const events = data.items.map(
-          ({ start, end, location, description, summary }: GoogleEventProps) => ({
+          ({
+            start,
+            end,
+            location,
+            description,
+            summary,
+          }: GoogleEventProps) => ({
             start: start.dateTime,
             end: end.dateTime,
             location,
@@ -65,9 +68,9 @@ const Events = () => {
       } catch (error) {
         console.error("Error fetching events from Google Calendar:", error);
       }
-    }});
+    },
+  });
 
-  
   return (
     <>
       {
