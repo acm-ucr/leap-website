@@ -1,5 +1,5 @@
 "use client";
-import ucr_leap_logo from "@/public/ucr_leap_logo.svg";
+import ucr_leap_logo from "@/public/leapIcon.svg";
 import { navigations } from "@/data/NavbarData";
 import Link from "next/link";
 import Image from "next/image";
@@ -95,7 +95,7 @@ const Navbar = () => {
       </button>
 
       <motion.div
-        initial="false"
+        initial="closed"
         animate={isOpen ? "open" : "closed"}
         exit="closed"
         ref={containerRef}
