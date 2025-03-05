@@ -48,10 +48,10 @@ const Day = ({ date, events, setCurrent }: DayProps) => {
     date.getFullYear() === currentDate.getFullYear();
 
   return (
-    <div className={"h-full overflow-y-scroll"}>
+    <div className={"h-full overflow-y-auto"}>
       <div
         className={
-          isToday ? "m-0 bg-leap-light-green pb-3 md:pb-6 xl:pb-12" : ""
+          isToday ? "m-0 h-full bg-leap-light-green/30 pr-1 font-bold" : "pr-1"
         }
       >
         <p className="">{date.getDate()}</p>

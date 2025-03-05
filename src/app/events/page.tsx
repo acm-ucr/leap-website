@@ -15,8 +15,14 @@ const OurEvents = () => {
       />
       <Calendar />
       <UpcomingTitle title="Upcoming Events" />
-      {events.map(({ title, date, time, description }) => (
-        <Events title={title} date={date} time={time} desc={description} />
+      {events.map(({ title, date, time, description }, index) => (
+        <Events
+          key={index}
+          title={title}
+          date={date}
+          time={time}
+          desc={description}
+        />
       ))}
     </div>
   );

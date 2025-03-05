@@ -28,14 +28,16 @@ const Events = () => {
       }
 
       const today = new Date();
-      const timeMin = today.toISOString();
-      const timeMax = new Date(today);
-      timeMax.setMonth(today.getMonth() + 2);
-      const timeMaxISO = timeMax.toISOString();
+      const timeMin = new Date(
+        today.getTime() - 60 * 60 * 24 * 7 * 5 * 1000,
+      ).toISOString();
+      const timeMax = new Date(
+        today.getTime() + 60 * 60 * 24 * 7 * 5 * 1000,
+      ).toISOString();
 
       const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true&timeMin=${encodeURIComponent(
         timeMin,
-      )}&timeMax=${encodeURIComponent(timeMaxISO)}`;
+      )}&timeMax=${encodeURIComponent(timeMax)}`;
 
       try {
         const response = await fetch(url);
