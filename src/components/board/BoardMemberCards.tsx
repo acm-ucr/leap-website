@@ -33,13 +33,13 @@ const BoardMemberCards: React.FC<MemberProps> = ({
         >
           <div className="flex h-96 w-80 justify-center rounded-3xl border-8 border-white bg-leap-dark-green">
             <div className="flex flex-col items-center">
-              <div className="mt-5 flex h-60 w-60 justify-center rounded-3xl border-8 border-leap-light-green">
+              <div className="mt-5 flex h-60 w-60 justify-center rounded-xl border-8 border-leap-light-green">
                 <Image
                   src={img}
                   alt={name}
                   width={240}
                   height={240}
-                  className="rounded-2xl object-cover"
+                  className="rounded-sm object-cover"
                 />
               </div>
               <p className="mt-5 flex justify-center font-leap text-2xl font-bold text-white">
