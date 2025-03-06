@@ -22,8 +22,8 @@ const BoardMemberCards: React.FC<MemberProps> = ({
 }) => {
   const [flipped, setFlipped] = useState(false);
   return (
-    <div className="mb-20 mt-10 flex flex-col items-center justify-center">
-      <div className="mb-20 flex flex-row gap-20">
+    <div className="mb-10 mt-5 flex flex-col items-center justify-center md:mb-20 md:mt-10 lg:mb-20 lg:mt-10">
+      <div className="flex flex-row gap-20">
         <motion.div
           style={{ transformStyle: "preserve-3d" }}
           transition={{ duration: 0.7 }}
@@ -37,15 +37,15 @@ const BoardMemberCards: React.FC<MemberProps> = ({
                 <Image
                   src={img}
                   alt={name}
-                  width={230}
-                  height={220}
-                  className="rounded-2xl"
+                  width={240}
+                  height={240}
+                  className="rounded-2xl object-cover"
                 />
               </div>
               <p className="mt-5 flex justify-center font-leap text-2xl font-bold text-white">
                 {name}
               </p>
-              <p className="mt-1 flex justify-center font-leap text-2xl font-bold text-white">
+              <p className="mt-1 flex justify-center font-leap text-xl font-medium text-white">
                 {role}
               </p>
             </div>
