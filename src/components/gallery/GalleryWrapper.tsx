@@ -24,7 +24,7 @@ const GalleryWrapper = () => {
           <div className="pb-10 pt-40 font-leap text-3xl font-bold text-leap-dark-green sm:text-4xl md:text-4xl lg:text-5xl">
             Gallery
           </div>
-          <div className="md:pb-15 px-20 pb-4 pt-4 font-leap font-semibold text-leap-dark-green sm:pb-10 sm:text-lg md:text-xl lg:pb-20 lg:text-2xl">
+          <div className="md:pb-15 px-4 pb-4 pt-4 font-leap font-semibold text-leap-dark-green sm:px-20 sm:pb-10 sm:text-lg md:text-xl lg:pb-10 lg:text-2xl">
             Explore memories and photos from our past events
           </div>
         </motion.div>
@@ -33,11 +33,12 @@ const GalleryWrapper = () => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
+          className="mx-auto sm:w-3/4 md:w-3/4 lg:w-1/2"
         >
           <Carousel />
         </motion.div>
 
-        <div className="mt-5 flex justify-center pt-12">
+        <div className="mt-0 flex justify-center pt-8 sm:mt-5 sm:pt-12">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
