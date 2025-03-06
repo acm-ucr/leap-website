@@ -12,6 +12,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import UpcomingTitle from "@/components/events/UpcomingTitle";
+import EventsList from "@/components/events/Events";
 
 const Events = () => {
   const [current, setCurrent] = useState<EventProps>({});
@@ -97,13 +99,30 @@ const Events = () => {
           </DialogContent>
         </Dialog>
       }
+
       <Calendar
         mode="single"
         selected={new Date()}
-        className="w-3/4"
+        className="w-7/8 sm:w-3/4"
         events={data}
         setCurrent={setCurrent}
       />
+
+      <UpcomingTitle title="Upcoming Events" />
+      <div className="space-y-4">
+        {data?.map((event: GoogleEventProps, index: number) => (
+          <EventsList
+            key={index}
+            title={event.summary}
+            date={new Date(event.start).toLocaleDateString("en-US")}
+            time={new Date(event.start).toLocaleTimeString("en-US", {
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+            desc={event.description || ""}
+          />
+        ))}
+      </div>
     </>
   );
 };

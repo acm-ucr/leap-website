@@ -9,10 +9,10 @@ import { buttonVariants } from "./button";
 
 export type GoogleEventProps = {
   start: {
-    dateTime: Date;
+    dateTime: string;
   };
   end: {
-    dateTime: Date;
+    dateTime: string;
   };
   location: string;
   description: string;
@@ -48,7 +48,7 @@ const Day = ({ date, events, setCurrent }: DayProps) => {
     date.getFullYear() === currentDate.getFullYear();
 
   return (
-    <div className={"h-full overflow-y-scroll"}>
+    <div className={"h-full overflow-x-clip overflow-y-scroll"}>
       <div
         className={
           isToday ? "m-0 bg-leap-light-green pb-3 md:pb-6 xl:pb-12" : ""
@@ -66,7 +66,7 @@ const Day = ({ date, events, setCurrent }: DayProps) => {
           ) {
             return (
               <div
-                className="md:text-md mb-1 hidden bg-leap-mid-green p-1 text-left text-xs text-white sm:block sm:text-sm"
+                className="md:text-md mb-1 bg-leap-mid-green p-1 text-left text-[10px] text-white sm:text-sm"
                 key={index}
                 onClick={() =>
                   setCurrent({ title, start, end, location, description })
