@@ -24,7 +24,7 @@ const GalleryWrapper = () => {
           <div className="pb-10 pt-40 font-leap text-3xl font-bold text-leap-dark-green sm:text-4xl md:text-4xl lg:text-5xl">
             Gallery
           </div>
-          <div className="md:pb-15 px-20 pb-4 pt-4 font-leap font-semibold text-leap-dark-green sm:pb-10 sm:text-lg md:text-xl lg:pb-10 lg:text-2xl">
+          <div className="md:pb-15 px-4 pb-4 pt-4 font-leap font-semibold text-leap-dark-green sm:px-20 sm:pb-10 sm:text-lg md:text-xl lg:pb-10 lg:text-2xl">
             Explore memories and photos from our past events
           </div>
         </motion.div>
