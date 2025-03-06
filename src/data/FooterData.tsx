@@ -1,4 +1,5 @@
 import { Newspaper, Instagram, Mail, Linkedin } from "lucide-react";
+import { SiLinktree } from "react-icons/si";
 
 interface social {
   link: string;
@@ -16,7 +17,7 @@ export const socials: social[] = [
     ),
   },
   {
-    link: "https://www.google.com/",
+    link: "mailto:lovingouremotions@gmail.com",
     icon: (
       <Mail
         size={40}
@@ -25,9 +26,9 @@ export const socials: social[] = [
     ),
   },
   {
-    link: "https://www.linkedin.com/",
+    link: "https://linktr.ee/ucrleap",
     icon: (
-      <Linkedin
+      <SiLinktree
         size={40}
         className="text-leap-light-green hover:text-leap-dark-green"
       />
