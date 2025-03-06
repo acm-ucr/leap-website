@@ -1,4 +1,4 @@
-import { Newspaper, Instagram, Mail, Linkedin } from "lucide-react";
+import { Newspaper, Instagram, Mail } from "lucide-react";
 import { SiLinktree } from "react-icons/si";
 
 interface social {
