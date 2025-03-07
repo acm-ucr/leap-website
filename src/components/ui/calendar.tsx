@@ -104,7 +104,7 @@ function Calendar({
         caption:
           "flex relative mt-3 mb-5 items-center justify-center md:items-x-start md:justify-start",
         caption_label:
-          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide ml-20 sm:pl-0 sm:ml-16 md:ml-24",
+          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide md:ml-24",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
           buttonVariants({ variant: "ghost" }),
