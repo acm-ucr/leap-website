@@ -24,11 +24,6 @@ const Events = () => {
       const apiKey = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY;
       const calendarId = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL;
 
-      if (!apiKey || !calendarId) {
-        console.error("API Key or Calendar ID is missing.");
-        return;
-      }
-
       const today = new Date();
       const timeMin = today.toISOString();
       const timeMax = new Date(today);
@@ -103,25 +98,43 @@ const Events = () => {
       <Calendar
         mode="single"
         selected={new Date()}
-        className="w-7/8 sm:w-3/4"
+        className="w-5/6 sm:w-3/4"
         events={data}
         setCurrent={setCurrent}
       />
 
       <UpcomingTitle title="Upcoming Events" />
-      <div className="space-y-4">
-        {data?.map((event: GoogleEventProps, index: number) => (
-          <EventsList
-            key={index}
-            title={event.summary}
-            date={new Date(event.start).toLocaleDateString("en-US")}
-            time={new Date(event.start).toLocaleTimeString("en-US", {
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
-            desc={event.description || ""}
-          />
-        ))}
+      <div className="flex flex-col items-center space-y-4">
+        {data
+          ?.filter((event: GoogleEventProps) => {
+            const eventDate = new Date(event.start.toString());
+            const currentDate = new Date();
+            const range = new Date();
+            range.setDate(currentDate.getDate() + 7);
+            return eventDate >= currentDate && eventDate <= range;
+          })
+          .map((event: EventProps, index: number) => {
+            console.log("Event:", event);
+            return (
+              <EventsList
+                key={index}
+                title={event.title || "Untitled Event"}
+                date={
+                  new Date(event.start as string).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                  }) || ""
+                }
+                time={
+                  new Date(event.start as string).toLocaleTimeString("en-US", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  }) || ""
+                }
+                desc={event.description || ""}
+              />
+            );
+          })}
       </div>
     </>
   );

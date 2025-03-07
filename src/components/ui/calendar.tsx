@@ -22,9 +22,9 @@ export type GoogleEventProps = {
 export type EventProps = Partial<{
   start: string;
   end: string;
-  location: string;
-  description: string;
-  title: string;
+  location?: string;
+  description?: string;
+  title?: string;
 }>;
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
@@ -40,7 +40,6 @@ interface DayProps {
 }
 
 const Day = ({ date, events, setCurrent }: DayProps) => {
-  //const currentMonth = displayMonth.getMonth() === date.getMonth();
   const currentDate = new Date();
   const isToday =
     date.getDate() === currentDate.getDate() &&
@@ -48,13 +47,9 @@ const Day = ({ date, events, setCurrent }: DayProps) => {
     date.getFullYear() === currentDate.getFullYear();
 
   return (
-    <div className={"h-full overflow-x-clip overflow-y-scroll"}>
-      <div
-        className={
-          isToday ? "m-0 bg-leap-light-green pb-3 md:pb-6 xl:pb-12" : ""
-        }
-      >
-        <p className="">{date.getDate()}</p>
+    <div className={"h-full overflow-x-hidden overflow-y-scroll"}>
+      <div className={isToday ? "h-full bg-leap-light-green" : ""}>
+        <p className="md:p-1">{date.getDate()}</p>
 
         {events?.map(({ start, end, location, description, title }, index) => {
           const startDate = new Date(start as string);
@@ -66,17 +61,17 @@ const Day = ({ date, events, setCurrent }: DayProps) => {
           ) {
             return (
               <div
-                className="md:text-md mb-1 bg-leap-mid-green p-1 text-left text-[10px] text-white sm:text-sm"
+                className="md:text-md mb-1 bg-leap-mid-green text-left text-[9px] text-white sm:text-[12px] md:text-sm"
                 key={index}
                 onClick={() =>
                   setCurrent({ title, start, end, location, description })
                 }
               >
+                {title} {" - "}
                 {startDate.toLocaleTimeString("en-US", {
                   hour: "2-digit",
                   minute: "2-digit",
-                })}{" "}
-                - {title}
+                })}
               </div>
             );
           }
@@ -98,13 +93,15 @@ function Calendar({
     <DayPicker
       showOutsideDays={showOutsideDays}
       fixedWeeks={true}
-      className={cn("w-full p-3", className)}
+      className={cn("w-full", className)}
       classNames={{
         months: "flex flex-col sm:space-x-4 sm:space-y-0",
         month: "space-y-0",
-        caption: "flex pt-1 relative mt-3 mb-5",
+        caption:
+          "flex relative mt-3 mb-5 items-center justify-center md:items-x-start md:justify-start",
         caption_label:
-          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide ml-20 sm:pl-0 sm:ml-16 md:ml-24",
+          // "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide ml-20 sm:pl-0 sm:ml-16 md:ml-24",
+          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide md:ml-24",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
           buttonVariants({ variant: "ghost" }),
@@ -117,7 +114,7 @@ function Calendar({
         head_cell:
           "text-white w-full font-leap text-sm md:text-xl border-x border-t border-t-2 border-black pt-2",
         row: "flex w-full",
-        cell: "bg-leap-white-green relative w-full h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black",
+        cell: "bg-leap-white-green relative overflow-x-clip flex-grow-0 w-full overflow-hidden h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black",
         day: cn(
           buttonVariants({ variant: "ghost" }),
           "h-full w-full p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl",
