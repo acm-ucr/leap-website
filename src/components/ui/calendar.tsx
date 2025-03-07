@@ -47,9 +47,13 @@ const Day = ({ date, events, setCurrent }: DayProps) => {
     date.getFullYear() === currentDate.getFullYear();
 
   return (
-    <div className={"h-full overflow-x-hidden overflow-y-scroll"}>
-      <div className={isToday ? "h-full bg-leap-light-green" : ""}>
-        <p className="md:p-1">{date.getDate()}</p>
+    <div className={"h-full overflow-y-auto"}>
+      <div
+        className={
+          isToday ? "m-0 h-full bg-leap-light-green/30 pr-1 font-bold" : "pr-1"
+        }
+      >
+        <p className="">{date.getDate()}</p>
 
         {events?.map(({ start, end, location, description, title }, index) => {
           const startDate = new Date(start as string);
@@ -100,8 +104,7 @@ function Calendar({
         caption:
           "flex relative mt-3 mb-5 items-center justify-center md:items-x-start md:justify-start",
         caption_label:
-          // "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide ml-20 sm:pl-0 sm:ml-16 md:ml-24",
-          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide md:ml-24",
+          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide ml-20 sm:pl-0 sm:ml-16 md:ml-24",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
           buttonVariants({ variant: "ghost" }),
