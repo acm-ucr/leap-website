@@ -29,7 +29,7 @@ const Events = () => {
         today.getTime() - 60 * 60 * 24 * 7 * 5 * 1000,
       ).toISOString();
       const timeMax = new Date(
-        today.getTime() + 60 * 60 * 24 * 7 * 5 * 1000,
+        today.getTime() + 60 * 60 * 24 * 7 * 10 * 1000,
       ).toISOString();
 
       const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true&timeMin=${encodeURIComponent(
@@ -42,6 +42,7 @@ const Events = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        console.log("API Response:", data);
         const events = data.items.map(
           ({
             start,
@@ -106,15 +107,14 @@ const Events = () => {
       />
 
       <UpcomingTitle title="Upcoming Events" />
-      <div className="flex flex-col items-center space-y-4">
+      <div className="mb-10 flex flex-col items-center space-y-4">
         {data
           ?.filter((event: GoogleEventProps) => {
             const eventDate = new Date(event.start.toString());
             const currentDate = new Date();
-            const range = new Date();
-            range.setDate(currentDate.getDate() + 7);
-            return eventDate >= currentDate && eventDate <= range;
+            return eventDate >= currentDate;
           })
+          .slice(0, 3)
           .map((event: EventProps, index: number) => {
             console.log("Event:", event);
             return (

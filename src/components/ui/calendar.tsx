@@ -39,7 +39,8 @@ interface DayProps {
   setCurrent: (props: EventProps) => void;
 }
 
-const Day = ({ date, events, setCurrent }: DayProps) => {
+const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
+  const currentMonth = displayMonth.getMonth() === date.getMonth();
   const currentDate = new Date();
   const isToday =
     date.getDate() === currentDate.getDate() &&
@@ -47,7 +48,9 @@ const Day = ({ date, events, setCurrent }: DayProps) => {
     date.getFullYear() === currentDate.getFullYear();
 
   return (
-    <div className={"h-full overflow-y-auto"}>
+    <div
+      className={`${currentMonth ? "text-black" : "text-gray-400"} h-full overflow-y-auto text-[9px] sm:text-xs md:text-sm lg:text-lg`}
+    >
       <div
         className={
           isToday ? "m-0 h-full bg-leap-light-green/30 pr-1 font-bold" : "pr-1"
@@ -65,7 +68,7 @@ const Day = ({ date, events, setCurrent }: DayProps) => {
           ) {
             return (
               <div
-                className="md:text-md mb-1 bg-leap-mid-green text-left text-[9px] text-white sm:text-[12px] md:text-sm"
+                className="md:text-md mb-1 bg-leap-mid-green text-left text-[9px] text-white hover:bg-leap-mid-green/30 sm:text-[12px] md:text-sm"
                 key={index}
                 onClick={() =>
                   setCurrent({ title, start, end, location, description })
@@ -96,7 +99,7 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      fixedWeeks={true}
+      fixedWeeks={false}
       className={cn("w-full", className)}
       classNames={{
         months: "flex flex-col sm:space-x-4 sm:space-y-0",
@@ -112,17 +115,20 @@ function Calendar({
         ),
         nav_button_previous: "absolute left-0",
         nav_button_next: "absolute right-0 md:left-64",
-        table: "w-full border-collapse",
-        head_row: "flex bg-leap-mid-green w-full text-center items-center",
+        table: "flex flex-col flex-shrink w-full",
+        head_row:
+          "flex flex-row flex-shrink overflow-clip bg-leap-mid-green w-full text-center items-center",
         head_cell:
-          "text-white w-full font-leap text-sm md:text-xl border-x border-t border-t-2 border-black pt-2",
+          "text-white w-full font-leap text-[10px] sm:text-sm md:text-md md:text-xl border-x border-t border-t-2 border-black pt-2",
         row: "flex w-full",
-        cell: "bg-leap-white-green relative overflow-x-clip flex-grow-0 w-full overflow-hidden h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black",
+        cell: "bg-leap-white-green relative overflow-x-clip w-full overflow-hidden h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
           buttonVariants({ variant: "ghost" }),
           "h-full w-full p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl",
         ),
         day_range_end: "day-range-end",
+        day_selected:
+          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
         day_today: "bg-leap-light-green text-accent-foreground",
         day_outside:
           "day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground",

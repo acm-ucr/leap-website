@@ -14,12 +14,12 @@ const EventsList: React.FC<EventProps> = ({ date, time, title, desc }) => {
           <div className="text-xl font-semibold md:text-3xl lg:text-4xl">
             {date}
           </div>
-          <div className="text-md md:text-sm lg:text-lg">{time}</div>
+          <div className="text-md md:text-lg">{time}</div>
         </div>
       </div>
       <div className="col-span-4 h-full bg-[#f7eee3] lg:col-span-6">
         <div className="p-7">
-          <div className="text-3xl font-semibold text-leap-dark-green md:text-4xl lg:text-4xl">
+          <div className="text-xl font-semibold text-leap-dark-green sm:text-3xl md:text-4xl lg:text-4xl">
             {title}
           </div>
           <p className="md:text-md mt-2 text-leap-dark-green lg:text-lg">
