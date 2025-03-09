@@ -1,6 +1,6 @@
 const UpcomingTitle: React.FC<{ title: string }> = ({ title }) => {
   return (
-    <div className="md:mt-30 m-5 mt-20 lg:mt-40">
+    <div className="md:mt-30 relative m-5 mt-20 lg:mt-40">
       <p className="text-alignment mx-auto text-center font-leap text-5xl font-semibold text-leap-dark-green">
         {title}
       </p>
