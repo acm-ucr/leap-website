@@ -38,7 +38,7 @@ const FAQCard: React.FC<FAQCardProps> = ({ text, backText }) => {
           {text}
         </div>
         <div
-          className="absolute flex h-full w-full items-center justify-center px-2 py-1 text-[13px]"
+          className="absolute flex h-full w-full items-center justify-center px-2 py-1 text-[12px]"
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
           {backText}
