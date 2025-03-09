@@ -68,7 +68,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
           ) {
             return (
               <div
-                className="md:text-md mb-1 overflow-x-scroll bg-leap-mid-green text-left text-[9px] text-white hover:cursor-pointer hover:bg-leap-mid-green/30 sm:text-[12px] md:text-sm"
+                className="md:text-md mb-1 text-wrap bg-leap-mid-green text-left text-[8px] text-white hover:cursor-pointer hover:bg-leap-mid-green/30 sm:text-[12px] md:text-sm"
                 key={index}
                 onClick={() =>
                   setCurrent({ title, start, end, location, description })
@@ -121,7 +121,7 @@ function Calendar({
         head_cell:
           "text-white w-full font-leap text-[10px] sm:text-sm md:text-md md:text-xl border-x border-t border-t-2 border-black pt-2",
         row: "flex w-full",
-        cell: "bg-leap-white-green relative overflow-x-scroll w-full h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+        cell: "bg-leap-white-green relative overflow-x-hidden w-full h-9 sm:h-16 lg:h-20 xl:h-28 font-leap text-sm md:text-xl text-right border border-black [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
           buttonVariants({ variant: "ghost" }),
           "h-full w-full p-0 font-leap text-xs sm:text-sm md:text-md lg:text-xl",

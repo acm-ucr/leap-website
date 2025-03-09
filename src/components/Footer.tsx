@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="flex w-full items-center justify-between overflow-x-scroll bg-leap-light-yellow p-8">
+    <div className="flex w-full items-center justify-between overflow-hidden bg-leap-light-yellow p-8">
       <div className="left-0 flex flex-row hover:scale-110">
         <Link href="/">
           <Image src={ucr_leap_logo} className="w-16" alt="UCR LEAP Logo" />
