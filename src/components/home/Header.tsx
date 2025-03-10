@@ -41,7 +41,7 @@ const Header = () => {
             UCR.
           </div>
         </motion.div>
-        <motion.div className="absolute flex translate-x-[80%] translate-y-[325%] items-center justify-center gap-5 sm:translate-x-[180%] md:translate-x-[200%] md:translate-y-[390%] lg:translate-x-[180%] lg:translate-y-[370%] xl:translate-x-[250%] xl:translate-y-[340%]">
+        <div className="absolute flex translate-x-[80%] translate-y-[325%] items-center justify-center gap-5 sm:translate-x-[180%] md:translate-x-[200%] md:translate-y-[390%] lg:translate-x-[180%] lg:translate-y-[370%] xl:translate-x-[250%] xl:translate-y-[340%]">
           <motion.div
             transition={{
               duration: 0.7,
@@ -70,8 +70,8 @@ const Header = () => {
               className="h-20 w-20 md:w-20 lg:h-[110px] lg:w-[110px]"
             />
           </motion.div>
-        </motion.div>
-        <motion.div className="absolute translate-x-[-180%] translate-y-[270%] sm:translate-x-[-340%] sm:translate-y-[200%] md:translate-x-[-330%] md:translate-y-[200%] lg:translate-y-[260%] xl:translate-x-[-450%] xl:translate-y-[210%]">
+        </div>
+        <div className="absolute translate-x-[-180%] translate-y-[270%] sm:translate-x-[-340%] sm:translate-y-[200%] md:translate-x-[-330%] md:translate-y-[200%] lg:translate-y-[260%] xl:translate-x-[-450%] xl:translate-y-[210%]">
           <motion.div
             transition={{
               duration: 0.7,
@@ -86,7 +86,7 @@ const Header = () => {
               className="h-20 w-20 md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px]"
             />
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
