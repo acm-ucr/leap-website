@@ -15,6 +15,7 @@ export default {
           text: "#FFEFEF",
           grey: "#C3C5B8",
           "light-yellow": "#FFFCDE",
+          "white-green": "#F7EEE3",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
