@@ -5,7 +5,7 @@ interface eventTypes {
   description: string;
 }
 
-export const events: eventTypes[] = [
+export const eventData: eventTypes[] = [
   {
     title: "Life in the Industry: PM",
     date: "FEB 29",

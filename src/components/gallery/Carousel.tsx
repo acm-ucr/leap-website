@@ -22,8 +22,24 @@ export function Carousel() {
     });
   }, [api]);
 
+  const handleScrollNext = () => {
+    if (current === slides.length - 1) {
+      api?.scrollTo(0);
+    } else {
+      api?.scrollNext();
+    }
+  };
+
+  const handleScrollPrev = () => {
+    if (current === 0) {
+      api?.scrollTo(slides.length - 1);
+    } else {
+      api?.scrollPrev();
+    }
+  };
+
   return (
-    <div className="w-full px-4 py-6">
+    <div className="relative w-full px-4 py-6">
       <CarouselPrimitive setApi={setApi} className="w-full">
         <CarouselContent>
           {slides?.map((slide: slide) => (
@@ -52,6 +68,18 @@ export function Carousel() {
           </div>
         </div>
       </CarouselPrimitive>
+      <button
+        className="absolute left-0 top-1/2 -translate-x-[20px] -translate-y-[40px] transform rounded-full bg-gray-300 p-2 shadow-lg sm:-translate-x-[30px] sm:p-3 md:-translate-x-[40px] md:p-4 lg:-translate-x-[40px] lg:p-4"
+        onClick={() => handleScrollPrev()}
+      >
+        &lt;
+      </button>
+      <button
+        className="absolute right-0 top-1/2 -translate-x-[-20px] -translate-y-[40px] transform rounded-full bg-gray-300 p-2 shadow-lg sm:-translate-x-[-30px] sm:p-3 md:-translate-x-[-40px] md:p-4 lg:-translate-x-[-40px] lg:p-4"
+        onClick={() => handleScrollNext()}
+      >
+        &gt;
+      </button>
     </div>
   );
 }
