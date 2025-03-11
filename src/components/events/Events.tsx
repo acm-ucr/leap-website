@@ -6,7 +6,6 @@ interface EventProps {
 }
 
 const EventsList: React.FC<EventProps> = ({ date, time, title, desc }) => {
-  console.log("EventsList Props:", { date, time, title, desc });
   return (
     <div className="grid w-3/4 grid-cols-7 items-center overflow-hidden rounded-lg pb-2 font-leap">
       <div className="col-span-3 flex h-full items-center justify-center bg-leap-mid-green lg:col-span-1">

@@ -42,7 +42,6 @@ const Events = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log("API Response:", data);
         const events = data.items.map(
           ({
             start,
@@ -116,7 +115,6 @@ const Events = () => {
           })
           .slice(0, 3)
           .map((event: EventProps, index: number) => {
-            console.log("Event:", event);
             return (
               <EventsList
                 key={index}
