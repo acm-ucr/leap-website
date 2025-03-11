@@ -1,6 +1,6 @@
 "use client";
-import ucr_leap_logo from "@/public/ucr_leap_logo.svg";
-import { navigations } from "@/data/navbar";
+import ucr_leap_logo from "@/public/leapIcon.svg";
+import { navigations } from "@/data/NavbarData";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
@@ -42,8 +42,8 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-transparent p-8">
-      <div className="abolute z-30 pl-8 duration-100 hover:scale-110">
+    <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-leap-light-yellow p-4 lg:p-2">
+      <div className="abolute z-30 pl-0 duration-100 hover:scale-110 md:p-8">
         <Link href="/">
           <Image
             src={ucr_leap_logo}
@@ -58,7 +58,7 @@ const Navbar = () => {
           <Link
             href={link}
             key={index}
-            className={`rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
+            className={`duration-1 rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap text-lg hover:scale-110 ${
               pathName === link
                 ? "border-b-leap-mid-green font-bold text-leap-dark-green"
                 : "border-b-leap-light-green"
@@ -71,7 +71,7 @@ const Navbar = () => {
 
       <button
         onClick={handleClick}
-        className="pointer-events-auto relative z-20 flex flex-col items-center justify-center md:hidden"
+        className="duration-1 pointer-events-auto relative z-20 flex flex-col items-center justify-center hover:scale-110 md:hidden"
       >
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
@@ -95,7 +95,7 @@ const Navbar = () => {
       </button>
 
       <motion.div
-        initial="false"
+        initial="closed"
         animate={isOpen ? "open" : "closed"}
         exit="closed"
         ref={containerRef}

@@ -1,11 +1,11 @@
-interface events {
+interface eventTypes {
   title: string;
   date: string;
   time: string;
   description: string;
 }
 
-export const events: events[] = [
+export const eventData: eventTypes[] = [
   {
     title: "Life in the Industry: PM",
     date: "FEB 29",
