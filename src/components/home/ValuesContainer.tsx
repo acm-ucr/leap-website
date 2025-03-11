@@ -19,7 +19,7 @@ const ValuesContainer = () => {
           alt="Flowers"
           className="h-[300px] w-[200px] md:h-[450px] md:w-[300px] lg:h-[650px] lg:w-[475px]"
         />
-        <div className="absolute translate-x-[-110%] translate-y-[-200%]">
+        <div className="absolute translate-x-[-100%] translate-y-[-200%] md:translate-x-[-170%] md:translate-y-[-280%] lg:translate-x-[-270%] lg:translate-y-[-405%]">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0, rotate: 360 }}
