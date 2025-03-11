@@ -1,4 +1,8 @@
+"use client";
+
 import { motion } from "motion/react";
+import Image from "next/image";
+import redFlower from "@/public/assets/redFlower.svg";
 
 const ValueBox = () => {
   const topics = ["Awareness", "Community", "Safety", "Mental Health"];
@@ -19,6 +23,15 @@ const ValueBox = () => {
             </div>
           </motion.div>
         ))}
+        <div className="absolute translate-x-[150%] translate-y-[300%]">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0, rotate: 360 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+          >
+            <Image src={redFlower} alt="Red Flower" className="h-20 w-20" />
+          </motion.div>
+        </div>
       </div>
     </div>
   );
