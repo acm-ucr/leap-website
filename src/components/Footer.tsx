@@ -1,4 +1,4 @@
-import ucr_leap_logo from "@/public/ucr_leap_logo.svg";
+import ucr_leap_logo from "@/public/leapIcon.svg";
 import { socials } from "@/data/FooterData";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,7 +13,12 @@ const Footer = () => {
       </div>
       <div className="right-0 flex flex-row space-x-6 pl-3">
         {socials.map(({ link, icon }, index) => (
-          <Link href={link} key={index} className="h-full hover:scale-110">
+          <Link
+            href={link}
+            key={index}
+            target="blank"
+            className="hover:scale-110"
+          >
             {icon}
           </Link>
         ))}
