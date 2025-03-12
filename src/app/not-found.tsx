@@ -3,6 +3,7 @@ import BackgroundImage from "@/public/assets/backgrounds/BackgroundError.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
+import pinkFlower from "@/public/assets/pinkFlower.svg";
 
 const NotFound = () => {
   return (
@@ -33,8 +34,17 @@ const NotFound = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
       >
-        <Button text="Back to Home" link="/"></Button>
+        <Button text="Back to Home" link="/" />
       </motion.div>
+      <div className="pointer-events-none absolute translate-x-[190%] translate-y-[80%] md:translate-y-[120%]">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0, rotate: 360 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+        >
+          <Image src={pinkFlower} alt="Pink Flower" className="h-10 w-10" />
+        </motion.div>
+      </div>
     </div>
   );
 };
