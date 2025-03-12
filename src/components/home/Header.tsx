@@ -5,13 +5,13 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="relative flex h-screen w-full flex-col items-center justify-center md:h-[110vh] lg:h-[120vh]">
+    <div className="relative flex h-screen w-full flex-col items-center justify-center">
       <Image
         src={headerBg}
         alt="Home Header"
         className="absolute top-0 -z-30 min-h-screen w-screen object-fill"
       />
-      <div className="mt-[-25vh] flex w-2/3 flex-col items-center justify-center gap-4 md:mt-[-30vh] md:gap-10 lg:mt-[-40vh] xl:mt-[0]">
+      <div className="flex w-2/3 flex-col items-center justify-center gap-5 sm:mt-[-120vh] md:mt-[-15vh]">
         <motion.div
           transition={{
             duration: 0.7,

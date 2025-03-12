@@ -1,6 +1,6 @@
 const CoreValues = () => {
   return (
-    <div className="relative mt-[-15vh] flex items-center justify-center lg:mt-[0]">
+    <div className="relative flex items-center justify-center">
       <div className="w-3/4 text-left">
         <div className="font-leap text-4xl font-bold text-white sm:text-5xl lg:text-7xl">
           Our Core Values

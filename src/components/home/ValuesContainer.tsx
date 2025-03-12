@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const ValuesContainer = () => {
   return (
-    <div className="flex min-h-screen flex-row items-center justify-center lg:pb-24 lg:pt-8">
+    <div className="md:pt-15 flex flex-row items-center justify-center space-x-8 pb-11 lg:pt-20">
       <motion.div
         className="flex items-center justify-center md:mt-20 lg:mt-16"
         initial={{ opacity: 0 }}
@@ -16,11 +16,11 @@ const ValuesContainer = () => {
         <Image
           src={FlowerImg}
           alt="Flowers"
-          className="h-[300px] w-[200px] md:h-[450px] md:w-[300px] lg:h-[650px] lg:w-[475px]"
+          className="h-[300px] w-[200px] items-center md:h-[450px] md:w-[300px] lg:h-[650px] lg:w-[475px]"
         />
       </motion.div>
 
-      <div className="mx-6 flex items-center justify-center md:mx-24 md:mt-20 lg:mx-40 lg:mt-16">
+      <div className="mr-6 mt-20 flex items-center justify-center md:mr-24 lg:mr-40 lg:mt-16">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ y: ["20%", "0%"], x: ["10%", "0%"], opacity: 1 }}
