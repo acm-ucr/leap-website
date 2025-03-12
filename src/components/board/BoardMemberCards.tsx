@@ -22,8 +22,14 @@ const BoardMemberCards: React.FC<MemberProps> = ({
 }) => {
   const [flipped, setFlipped] = useState(false);
   return (
-    <div className="mb-10 mt-5 flex flex-col items-center justify-center md:mb-20 md:mt-10 lg:mb-20 lg:mt-10">
+    <motion.div className="mb-10 mt-5 flex flex-col items-center justify-center md:mb-20 md:mt-10 lg:mb-20 lg:mt-10"
+      initial={{ opacity: 0, y: -30}} 
+      animate={{ opacity: 1, y: 0}}
+      transition={{ duration : 2 }}
+      whileHover={{ scale: 1.1 }}
+      >
       <div className="flex flex-row gap-20">
+        
         <motion.div
           style={{ transformStyle: "preserve-3d" }}
           transition={{ duration: 0.7 }}
@@ -66,7 +72,7 @@ const BoardMemberCards: React.FC<MemberProps> = ({
           </div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
