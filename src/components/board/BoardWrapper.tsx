@@ -15,7 +15,7 @@ const BoardWrapper = () => {
         className="absolute -z-10 h-full w-full"
       />
 
-      <div className="mx-auto grid w-5/6 place-content-center justify-center gap-x-32 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid w-5/6 place-content-center justify-center gap-x-32 sm:grid-cols-2 sm:gap-x-28 lg:grid-cols-3">
         {boardmembers.map(
           ({ name, role, img, whyLeap, majorInfo, careerGoal }, index) => (
             <motion.div
