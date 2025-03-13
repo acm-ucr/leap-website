@@ -2,6 +2,7 @@
 import ValueBox from "@/components/home/ValueBox";
 import Image from "next/image";
 import FlowerImg from "@/public/assets/home/description.webp";
+import lilyPad from "@/public/assets/lilyPad.svg";
 import { motion } from "motion/react";
 
 const ValuesContainer = () => {
@@ -18,6 +19,19 @@ const ValuesContainer = () => {
           alt="Flowers"
           className="h-[300px] w-[200px] items-center md:h-[450px] md:w-[300px] lg:h-[650px] lg:w-[475px]"
         />
+        <div className="absolute translate-x-[-100%] translate-y-[-200%] md:translate-x-[-170%] md:translate-y-[-280%] lg:translate-x-[-270%] lg:translate-y-[-405%]">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0, rotate: 360 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+          >
+            <Image
+              src={lilyPad}
+              alt="LilyPad"
+              className="h-20 w-20 rotate-180"
+            />
+          </motion.div>
+        </div>
       </motion.div>
 
       <div className="mr-6 mt-20 flex items-center justify-center md:mr-24 lg:mr-40 lg:mt-16">
