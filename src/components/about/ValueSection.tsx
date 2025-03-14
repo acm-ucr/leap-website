@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function ValueSection() {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-10">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 pt-28">
       <Image
         src={BackgroundImage}
         alt="questions background"
@@ -15,7 +15,7 @@ export default function ValueSection() {
       />
 
       <motion.div
-        className="mb-12 text-5xl font-bold text-leap-dark-green md:text-6xl"
+        className="mb-12 text-3xl font-bold text-leap-dark-green md:text-5xl"
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}

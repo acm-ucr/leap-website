@@ -7,7 +7,7 @@ import BackgroundImage from "@/public/assets/about/bg-about-questions.webp";
 
 export default function FAQSection() {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center overflow-hidden py-12">
       <Image
         src={BackgroundImage}
         alt="questions background"
@@ -15,7 +15,7 @@ export default function FAQSection() {
       />
 
       <motion.div
-        className="mt-20 text-2xl font-bold text-leap-dark-green md:mt-32 md:text-4xl"
+        className="mb-12 text-3xl font-bold text-leap-dark-green md:text-5xl"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}

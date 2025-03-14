@@ -2,14 +2,10 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import ButterflyImg from "@/public/assets/about/bird.webp";
-import BackgroundImg from "@/public/assets/about/background.webp";
 
 const Leap = () => {
   return (
-    <div
-      className="bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${BackgroundImg.src})` }}
-    >
+    <div className="bg-cover bg-center bg-no-repeat">
       <div className="flex flex-col items-center p-8 text-center sm:hidden">
         <motion.div
           className="text-3xl font-bold"
@@ -48,7 +44,7 @@ const Leap = () => {
         </motion.p>
       </div>
 
-      <div className="lg:ml-26 hidden flex-col justify-between p-8 text-center sm:ml-14 sm:flex md:ml-20 md:flex-row">
+      <div className="hidden flex-col justify-between p-8 text-center sm:flex md:flex-row">
         <div className="w-1/2 p-4 text-center font-leap">
           <motion.div
             className="mt-14 text-3xl font-bold md:text-4xl lg:text-5xl"
