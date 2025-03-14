@@ -42,8 +42,8 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className="absolute z-10 flex w-full flex-row items-center justify-between bg-leap-light-yellow p-4 lg:p-2">
-      <div className="abolute z-30 pl-0 duration-100 hover:scale-110 md:p-8">
+    <div className="fixed top-0 z-10 flex w-full flex-row items-center justify-between bg-leap-light-yellow p-4 lg:p-2">
+      <div className="abolute z-30 pl-0 duration-100 hover:scale-110 md:p-2">
         <Link href="/">
           <Image
             src={ucr_leap_logo}
@@ -61,7 +61,7 @@ const Navbar = () => {
             className={`duration-1 rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap text-lg hover:scale-110 ${
               pathName === link
                 ? "border-b-leap-mid-green font-bold text-leap-dark-green"
-                : "border-b-leap-light-green"
+                : "border-b-transparent"
             }`}
           >
             {name}
@@ -117,7 +117,7 @@ const Navbar = () => {
                 className={`rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
                   pathName === link
                     ? "border-b-leap-mid-green font-bold text-leap-mid-green"
-                    : "border-b-leap-light-green"
+                    : "border-b-transparent"
                 }`}
                 onClick={closeMenu}
               >
