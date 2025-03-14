@@ -33,7 +33,7 @@ const FAQCard: React.FC<FAQCardProps> = ({ text, backText }) => {
       </div>
 
       <div
-        className="square-lg flex aspect-[4/3] w-72 items-center justify-center bg-leap-mid-green p-6 text-center font-leap text-2xl text-white shadow-lg shadow-black md:w-80 lg:w-96 lg:text-3xl"
+        className="square-lg flex aspect-[4/3] w-72 items-center justify-center bg-leap-mid-green p-6 text-center font-leap text-2xl text-white shadow-lg shadow-black md:w-80"
         style={{ position: "relative", transformStyle: "preserve-3d" }}
       >
         <div
@@ -43,7 +43,7 @@ const FAQCard: React.FC<FAQCardProps> = ({ text, backText }) => {
           {text}
         </div>
         <div
-          className="absolute flex h-full w-11/12 items-center justify-center px-2 py-1 text-sm md:w-5/6 lg:text-base"
+          className="absolute flex h-full w-11/12 items-center justify-center px-2 py-1 text-sm md:w-5/6"
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
           {backText}
