@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
 import { motion } from "motion/react";
+
 interface ButtonProps {
   text: string;
   link: string;
+  newTab?: boolean; // Optional prop to determine if the link should open in a new tab
 }
 
-const Button: React.FC<ButtonProps> = ({ text, link }) => {
+const Button: React.FC<ButtonProps> = ({ text, link, newTab = false }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
@@ -14,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({ text, link }) => {
       className="inline-block rounded-lg"
     >
       <div className="flex h-1/6 items-center justify-center">
-        <Link href={link} target="_blank">
+        <Link href={link} target={newTab ? "_blank" : "_self"}>
           <div className="h-15 m-0 flex w-40 items-center rounded-lg border-4 border-leap-dark-green bg-leap-mid-green px-4 py-1 text-center font-leap text-lg text-white">
             {text}
           </div>
