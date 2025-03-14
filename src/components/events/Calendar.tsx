@@ -113,28 +113,47 @@ const Events = () => {
             const currentDate = new Date();
             return eventDate >= currentDate;
           })
-          .slice(0, 3)
-          .map((event: EventProps, index: number) => {
-            return (
-              <EventsList
-                key={index}
-                title={event.title || "Untitled Event"}
-                date={
-                  new Date(event.start as string).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                  }) || ""
-                }
-                time={
-                  new Date(event.start as string).toLocaleTimeString("en-US", {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  }) || ""
-                }
-                desc={event.description || ""}
-              />
-            );
-          })}
+          .slice(0, 3).length === 0 ? (
+          <p className="sm:text-md mt-1 text-sm sm:mt-5 md:text-xl lg:text-2xl xl:text-3xl">
+            {" "}
+            No upcoming events.
+          </p>
+        ) : (
+          data
+            ?.filter((event: GoogleEventProps) => {
+              const eventDate = new Date(event.start.toString());
+              const currentDate = new Date();
+              return eventDate >= currentDate;
+            })
+            .slice(0, 3)
+            .map((event: EventProps, index: number) => {
+              return (
+                <EventsList
+                  key={index}
+                  title={event.title || "Untitled Event"}
+                  date={
+                    new Date(event.start as string).toLocaleDateString(
+                      "en-US",
+                      {
+                        month: "long",
+                        day: "numeric",
+                      },
+                    ) || ""
+                  }
+                  time={
+                    new Date(event.start as string).toLocaleTimeString(
+                      "en-US",
+                      {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      },
+                    ) || ""
+                  }
+                  desc={event.description || ""}
+                />
+              );
+            })
+        )}
       </div>
     </>
   );
