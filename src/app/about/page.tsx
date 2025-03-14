@@ -18,8 +18,8 @@ const AboutUs = () => {
         }
         background={BackgroundImage}
       />
-      <FAQSection />
       <Leap />
+      <FAQSection />
       <ValueSection />
     </div>
   );
