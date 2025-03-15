@@ -6,7 +6,7 @@ import ButterflyImg from "@/public/assets/about/bird.webp";
 const Leap = () => {
   return (
     <div className="bg-cover bg-center bg-no-repeat">
-      <div className="flex flex-col items-center p-8 text-center sm:hidden">
+      <div className="flex flex-col items-center p-8 text-center text-leap-dark-green sm:hidden">
         <motion.div
           className="text-3xl font-bold"
           initial={{ x: -50, opacity: 0 }}
@@ -29,7 +29,7 @@ const Leap = () => {
           </motion.div>
         </div>
         <motion.p
-          className="text-xl font-semibold text-black"
+          className="text-xl font-semibold"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -44,10 +44,10 @@ const Leap = () => {
         </motion.p>
       </div>
 
-      <div className="hidden flex-col justify-between p-8 text-center sm:flex md:flex-row">
+      <div className="hidden flex-col justify-between gap-x-40 p-6 text-center text-leap-dark-green sm:flex md:flex-row">
         <div className="w-1/2 p-4 text-center font-leap">
           <motion.div
-            className="mt-14 text-3xl font-bold md:text-4xl lg:text-5xl"
+            className="mt-9 text-3xl font-bold md:text-4xl lg:text-5xl"
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -55,7 +55,7 @@ const Leap = () => {
             LEAP!
           </motion.div>
           <motion.p
-            className="max-w-1xl md:text-1.5xl text-xl font-semibold text-black lg:text-3xl"
+            className="md:text-1.5xl w-[450px] text-xl font-semibold lg:text-3xl"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
