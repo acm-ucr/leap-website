@@ -6,6 +6,7 @@ import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./button";
+import { motion } from "motion/react";
 
 export type GoogleEventProps = {
   start: {
@@ -48,8 +49,14 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
     date.getFullYear() === currentDate.getFullYear();
 
   return (
-    <div
+    <motion.div
       className={`${currentMonth ? "text-black" : "text-gray-400"} h-full text-[9px] sm:text-xs md:text-sm lg:text-lg`}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        duration: 0.5,
+        delay: 0.1,
+      }}
     >
       <div
         className={
@@ -84,7 +91,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
           }
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -100,21 +107,24 @@ function Calendar({
     <DayPicker
       showOutsideDays={showOutsideDays}
       fixedWeeks={false}
-      className={cn("w-full", className)}
+      className={cn(
+        "w-full animate-fade-up animate-delay-150 animate-duration-[1500ms] animate-once animate-ease-in-out",
+        className,
+      )}
       classNames={{
         months: "flex flex-col sm:space-x-4 sm:space-y-0",
         month: "space-y-0",
         caption:
-          "flex relative mt-3 mb-5 items-center justify-center md:items-x-start md:justify-start",
+          "grid grid-cols-[auto,auto,auto] md:w-1/2 xl:w-1/3 2xl:w-1/4 3xl:w-1/6 relative mt-3 mb-5 items-center justify-between",
         caption_label:
-          "text-md md:text-xl lg:text-xxl text-leap-mid-green font-leap font-bold tracking-wide md:ml-24",
-        nav: "space-x-1 flex items-center",
+          "order-1 relative text-md md:text-xl lg:text-2xl xl:text-3xl text-leap-mid-green font-leap font-bold tracking-wide",
+        nav: "contents",
         nav_button: cn(
           buttonVariants({ variant: "ghost" }),
           "h-9 w-9 md:h-16 md:w-16 bg-transparent text-leap-mid-green opacity-100 hover:opacity-100",
         ),
-        nav_button_previous: "absolute left-0",
-        nav_button_next: "absolute right-0 md:left-64",
+        nav_button_previous: "order-0",
+        nav_button_next: "order-2",
         table: "flex flex-col flex-shrink w-full",
         head_row:
           "flex flex-row flex-shrink overflow-clip bg-leap-mid-green w-full text-center items-center",
