@@ -11,6 +11,7 @@ const OurBoard = () => {
       className="relative flex min-h-screen w-full flex-col items-center bg-cover bg-center bg-no-repeat text-center"
       style={{ backgroundImage: `url(${BackgroundImg.src})` }}
     >
+      <BoardDecorationsTop />
       <motion.div
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -25,7 +26,7 @@ const OurBoard = () => {
           issues.
         </div>
       </motion.div>
-      <BoardDecorationsTop />
+
       {/* <Header
         title={"Our Board"}
         subtitle={
