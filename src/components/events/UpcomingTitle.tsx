@@ -11,7 +11,7 @@ const UpcomingTitle: React.FC<{ title: string }> = ({ title }) => {
         delay: 0.1,
       }}
     >
-      <p className="text-alignment mx-auto text-center font-leap text-5xl font-semibold text-leap-dark-green">
+      <p className="text-alignment mx-auto text-center font-leap text-xl font-semibold text-leap-dark-green sm:text-5xl">
         {title}
       </p>
       <div className="relative m-2 mx-auto w-1/6 border-b-4 border-leap-mid-green p-2" />
