@@ -6,7 +6,7 @@ import ButterflyImg from "@/public/assets/about/bird.webp";
 const Leap = () => {
   return (
     <div className="bg-cover bg-center bg-no-repeat">
-      <div className="flex flex-col items-center p-8 text-center text-leap-dark-green sm:hidden">
+      <div className="flex flex-col items-center p-8 text-center text-leap-dark-green sm:flex md:hidden">
         <motion.div
           className="text-3xl font-bold"
           initial={{ x: -50, opacity: 0 }}
@@ -44,8 +44,8 @@ const Leap = () => {
         </motion.p>
       </div>
 
-      <div className="hidden flex-col justify-between gap-x-40 p-6 text-center text-leap-dark-green sm:flex md:flex-row">
-        <div className="w-1/2 p-4 text-center font-leap">
+      <div className="hidden p-6 text-center text-leap-dark-green md:flex md:items-center md:justify-center md:gap-x-20">
+        <div className="flex w-3/5 flex-col items-center p-4 text-center font-leap">
           <motion.div
             className="mt-9 text-3xl font-bold md:text-4xl lg:text-5xl"
             initial={{ opacity: 0, y: -50 }}
@@ -71,7 +71,7 @@ const Leap = () => {
         </div>
 
         <motion.div
-          className="flex w-1/2 justify-center"
+          className="flex w-1/2 items-center justify-center"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -79,7 +79,7 @@ const Leap = () => {
           <Image
             src={ButterflyImg}
             alt="Bird"
-            className="h-[450px] w-[250px] md:h-[550px] md:w-[300px] lg:h-[700px] lg:w-[450px]"
+            className="h-[450px] w-[250px] md:h-[450px] md:w-[300px] lg:h-[700px] lg:w-[450px]"
           />
         </motion.div>
       </div>
