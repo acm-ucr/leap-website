@@ -22,7 +22,7 @@ const Header = () => {
           }}
           initial={{ opacity: 0, scale: 0.7 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          className="text-center font-leap text-4xl font-bold text-leap-dark-green md:text-6xl lg:text-8xl"
+          className="text-center font-leap text-4xl font-bold text-leap-dark-green md:text-7xl lg:text-8xl"
         >
           UCR LEAP!
         </motion.div>
@@ -39,7 +39,7 @@ const Header = () => {
           health of mental health in the Asian & Pacific Islander community of
           UCR.
         </motion.div>
-        <div className="absolute flex translate-x-[80%] translate-y-[325%] items-center justify-center gap-5 sm:translate-x-[180%] md:translate-x-[200%] md:translate-y-[390%] lg:translate-x-[180%] lg:translate-y-[370%] xl:translate-x-[250%] xl:translate-y-[340%]">
+        <div className="absolute flex translate-x-[80%] translate-y-[240%] items-center justify-center gap-5 sm:translate-x-[180%] sm:translate-y-[310%] md:translate-x-[200%] md:translate-y-[350%] lg:translate-x-[180%] lg:translate-y-[310%] xl:translate-x-[250%] xl:translate-y-[280%]">
           <motion.div
             transition={{
               duration: 0.7,
@@ -69,7 +69,7 @@ const Header = () => {
             />
           </motion.div>
         </div>
-        <div className="absolute translate-x-[-180%] translate-y-[270%] sm:translate-x-[-340%] sm:translate-y-[200%] md:translate-x-[-330%] md:translate-y-[200%] lg:translate-y-[260%] xl:translate-x-[-450%] xl:translate-y-[210%]">
+        <div className="absolute translate-x-[-190%] translate-y-[180%] sm:translate-x-[-340%] sm:translate-y-[200%] md:translate-x-[-330%] md:translate-y-[180%] lg:translate-y-[185%] xl:translate-x-[-450%] xl:translate-y-[160%]">
           <motion.div
             transition={{
               duration: 0.7,

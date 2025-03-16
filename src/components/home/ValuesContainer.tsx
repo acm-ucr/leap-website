@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 
 const ValuesContainer = () => {
   return (
-    <div className="flex flex-row items-center justify-center gap-x-10 py-10 lg:pb-24">
+    <div className="flex flex-row items-center justify-center gap-x-5 px-5 py-10 sm:gap-x-10 lg:pb-24">
       <motion.div
         className="flex items-center justify-center md:mt-20 lg:mt-16"
         initial={{ opacity: 0 }}

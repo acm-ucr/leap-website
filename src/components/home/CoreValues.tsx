@@ -1,7 +1,7 @@
 const CoreValues = () => {
   return (
     <div className="relative mt-[-30vh] flex w-3/4 flex-col items-start justify-center text-left sm:mt-[-30vh] md:mt-[-30vh] lg:mt-[-10vh]">
-      <div className="font-leap text-4xl font-bold text-white sm:text-5xl lg:text-7xl">
+      <div className="font-leap text-3xl font-bold text-white md:text-4xl lg:text-7xl">
         Our Core Values
       </div>
       <p className="mt-10 font-leap text-xl text-white md:text-2xl">

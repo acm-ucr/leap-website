@@ -22,7 +22,7 @@ const ValueBox = () => {
           </div>
         </motion.div>
       ))}
-      <div className="absolute translate-x-[150%] translate-y-[300%] sm:translate-x-[170%] lg:translate-x-[210%] lg:translate-y-[600%]">
+      <div className="absolute translate-x-[150%] translate-y-[100%] sm:translate-x-[170%] lg:translate-x-[210%] lg:translate-y-[210%]">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0, rotate: 360 }}
