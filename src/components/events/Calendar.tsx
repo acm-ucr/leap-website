@@ -151,6 +151,7 @@ const Events = () => {
         {data ? (
           data
             ?.filter((event: GoogleEventProps) => {
+              if (!event || !event.start) return false;
               const eventDate = new Date(event.start.toString());
               const currentDate = new Date();
               return eventDate >= currentDate;
