@@ -148,13 +148,7 @@ const Events = () => {
           delay: 0.1,
         }}
       >
-        {data
-          ?.filter((event: GoogleEventProps) => {
-            const eventDate = new Date(event.start.toString());
-            const currentDate = new Date();
-            return eventDate >= currentDate;
-          })
-          .slice(0, 3).length === 0 ? (
+        {data ? (
           <p className="sm:text-md mt-1 text-sm sm:mt-5 md:text-xl lg:text-2xl xl:text-3xl">
             {" "}
             No upcoming events.
@@ -162,7 +156,7 @@ const Events = () => {
         ) : (
           data
             ?.filter((event: GoogleEventProps) => {
-              const eventDate = new Date(event.start);
+              const eventDate = new Date(event.start.toString());
               const currentDate = new Date();
               return eventDate >= currentDate;
             })
