@@ -31,7 +31,7 @@ const BoardMemberCards: React.FC<MemberProps> = ({
           animate={{ rotateY: flipped ? 180 : 0 }}
           onClick={() => setFlipped((prevState) => !prevState)}
         >
-          <div className="flex h-96 w-80 justify-center rounded-3xl border-8 border-white bg-leap-dark-green">
+          <div className="flex h-96 w-72 justify-center rounded-3xl border-8 border-white bg-leap-dark-green">
             <div className="flex flex-col items-center">
               <div className="mt-5 flex h-60 w-60 justify-center rounded-xl border-8 border-leap-light-green">
                 <Image
@@ -42,10 +42,10 @@ const BoardMemberCards: React.FC<MemberProps> = ({
                   className="rounded-sm object-cover"
                 />
               </div>
-              <p className="mt-5 flex justify-center font-leap text-2xl font-bold text-white">
+              <p className="mt-5 flex justify-center font-leap text-xl font-bold text-white">
                 {name}
               </p>
-              <p className="mt-1 flex justify-center font-leap text-xl font-medium text-white">
+              <p className="mt-1 flex justify-center font-leap text-lg font-medium text-white">
                 {role}
               </p>
             </div>
@@ -57,7 +57,7 @@ const BoardMemberCards: React.FC<MemberProps> = ({
               transform: "rotateY(180deg)",
             }}
           >
-            <div className="text-md p-6 text-left">
+            <div className="text-md p-4 text-left">
               <p className="text-leap-text">{majorInfo}</p>
               <p className="pb-4 text-leap-text">{careerGoal}</p>
               <p className="text-lg font-bold text-leap-text">Why leap?</p>
