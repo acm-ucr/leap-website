@@ -149,11 +149,6 @@ const Events = () => {
         }}
       >
         {data ? (
-          <p className="sm:text-md mt-1 text-sm sm:mt-5 md:text-xl lg:text-2xl xl:text-3xl">
-            {" "}
-            No upcoming events.
-          </p>
-        ) : (
           data
             ?.filter((event: GoogleEventProps) => {
               const eventDate = new Date(event.start.toString());
@@ -188,6 +183,11 @@ const Events = () => {
                 />
               );
             })
+        ) : (
+          <p className="sm:text-md mt-1 text-sm sm:mt-5 md:text-xl lg:text-2xl xl:text-3xl">
+            {" "}
+            No upcoming events.
+          </p>
         )}
       </motion.div>
     </>
