@@ -162,7 +162,7 @@ const Events = () => {
         ) : (
           data
             ?.filter((event: GoogleEventProps) => {
-              const eventDate = new Date(event.start.toString());
+              const eventDate = new Date(event.start);
               const currentDate = new Date();
               return eventDate >= currentDate;
             })
