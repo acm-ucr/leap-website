@@ -21,7 +21,7 @@ const BoardWrapper = () => {
             <motion.div
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 2, delay: index * 0.2 }}
+              transition={{ duration: 0.5 }}
               whileHover={{ scale: 1.1 }}
             >
               <BoardMemberCards
