@@ -14,6 +14,7 @@ const AboutUs = () => {
           <Button
             text="View our constitution"
             link="https://docs.google.com/document/d/1quEtJKF8hjcZ77S2JVNCk2Ctr3K6JmeBMNkSkquYBsI/edit?usp=sharing"
+            newTab
           />
         }
         background={BackgroundImage}
