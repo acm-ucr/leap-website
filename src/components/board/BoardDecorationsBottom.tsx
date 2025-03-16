@@ -12,7 +12,7 @@ const BoardDecorationsBottom = () => {
             duration: 0.7,
             delay: 0.2,
           }}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           whileInView={{ opacity: 1 }}
         >
           <div className="absolute bottom-3 left-[3vh] h-[100px] w-[100px] md:h-[120px] md:w-[120px] lg:h-[150px] lg:w-[150px]">

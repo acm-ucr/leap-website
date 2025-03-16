@@ -12,10 +12,10 @@ const BoardDecorationsTop = () => {
             duration: 0.7,
             delay: 0.2,
           }}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           whileInView={{ opacity: 1 }}
         >
-          <div className="absolute right-[3vh] top-48 h-[100px] w-[100px] md:top-64 md:h-[120px] md:w-[120px] lg:top-64 lg:h-[150px] lg:w-[150px]">
+          <div className="absolute right-[3vh] top-36 h-[100px] w-[100px] sm:top-48 md:top-64 md:h-[120px] md:w-[120px] lg:top-64 lg:h-[150px] lg:w-[150px]">
             <motion.div
               animate={{ rotate: [0, 10, -10, 0] }}
               transition={{

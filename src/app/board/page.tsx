@@ -27,13 +27,6 @@ const OurBoard = () => {
         </div>
       </motion.div>
 
-      {/* <Header
-        title={"Our Board"}
-        subtitle={
-          "Individuals dedicated to helping students overcome mental health issues."
-        }
-        background={BackgroundImage}
-      /> */}
       <BoardWrapper />
       <BoardDecorationsBottom />
     </div>
