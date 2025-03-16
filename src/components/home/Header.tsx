@@ -39,7 +39,7 @@ const Header = () => {
           health of mental health in the Asian & Pacific Islander community of
           UCR.
         </motion.div>
-        <div className="absolute flex translate-x-[80%] translate-y-[240%] items-center justify-center gap-5 sm:translate-x-[180%] sm:translate-y-[310%] md:translate-x-[200%] md:translate-y-[350%] lg:translate-x-[180%] lg:translate-y-[310%] xl:translate-x-[250%] xl:translate-y-[280%]">
+        <div className="invisible absolute flex translate-x-[80%] translate-y-[240%] items-center justify-center gap-5 sm:visible sm:translate-x-[180%] sm:translate-y-[310%] md:translate-x-[200%] md:translate-y-[350%] lg:translate-x-[180%] lg:translate-y-[310%] xl:translate-x-[250%] xl:translate-y-[280%]">
           <motion.div
             transition={{
               duration: 0.7,
@@ -69,7 +69,7 @@ const Header = () => {
             />
           </motion.div>
         </div>
-        <div className="absolute translate-x-[-190%] translate-y-[180%] sm:translate-x-[-340%] sm:translate-y-[200%] md:translate-x-[-330%] md:translate-y-[180%] lg:translate-y-[185%] xl:translate-x-[-450%] xl:translate-y-[160%]">
+        <div className="invisible absolute translate-x-[-190%] translate-y-[180%] sm:visible sm:translate-x-[-340%] sm:translate-y-[200%] md:translate-x-[-330%] md:translate-y-[180%] lg:translate-y-[185%] xl:translate-x-[-450%] xl:translate-y-[160%]">
           <motion.div
             transition={{
               duration: 0.7,

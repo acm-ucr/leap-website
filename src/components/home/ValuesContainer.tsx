@@ -1,7 +1,7 @@
 "use client";
 import ValueBox from "@/components/home/ValueBox";
 import Image from "next/image";
-import FlowerImg from "@/public/assets/home/description.webp";
+import FlowerImg from "@/public/assets/home/homepageFlowers.webp";
 import lilyPad from "@/public/assets/lilyPad.svg";
 import { motion } from "motion/react";
 
