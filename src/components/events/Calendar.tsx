@@ -14,6 +14,9 @@ import {
 } from "@/components/ui/dialog";
 import UpcomingTitle from "@/components/events/UpcomingTitle";
 import EventsList from "@/components/events/Events";
+import BackgroundImage from "@/public/assets/backgrounds/HeaderEvent.webp";
+import Image from "next/image";
+import { motion } from "motion/react";
 
 const Events = () => {
   const [current, setCurrent] = useState<EventProps>({});
@@ -66,6 +69,36 @@ const Events = () => {
 
   return (
     <>
+      <div className="relative h-full text-center">
+        <Image
+          src={BackgroundImage}
+          alt="Events Background"
+          className="fixed inset-0 -z-10 h-screen w-full object-cover"
+          objectFit="cover"
+        />
+        <motion.div
+          className="pb-10 pt-52 font-leap text-3xl font-bold text-leap-dark-green sm:text-4xl md:pt-60 md:text-4xl lg:text-5xl"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.1,
+          }}
+        >
+          Events
+        </motion.div>
+        <motion.div
+          className="md:pb-15 px-20 pb-8 pt-4 font-leap font-semibold text-leap-dark-green sm:pb-10 sm:text-lg md:text-xl lg:pb-20 lg:text-2xl"
+          initial={{ opacity: 0, y: 0 }}
+          whileInView={{ opacity: 1, y: -30 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.1,
+          }}
+        >
+          Explore when our next event is and make sure to stop by.
+        </motion.div>
+      </div>
       {
         <Dialog
           open={Object.keys(current).length > 0}
@@ -106,7 +139,15 @@ const Events = () => {
       />
 
       <UpcomingTitle title="Upcoming Events" />
-      <div className="mb-10 flex flex-col items-center space-y-4">
+      <motion.div
+        className="mb-10 flex flex-col items-center space-y-4"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, y: -30 }}
+        transition={{
+          duration: 0.5,
+          delay: 0.1,
+        }}
+      >
         {data
           ?.filter((event: GoogleEventProps) => {
             const eventDate = new Date(event.start.toString());
@@ -154,7 +195,7 @@ const Events = () => {
               );
             })
         )}
-      </div>
+      </motion.div>
     </>
   );
 };
