@@ -15,7 +15,7 @@ const BoardDecorationsTop = () => {
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 1 }}
         >
-          <div className="absolute right-[3vh] top-36 h-[100px] w-[100px] sm:top-48 md:top-64 md:h-[120px] md:w-[120px] lg:top-64 lg:h-[150px] lg:w-[150px]">
+          <div className="absolute right-[1vh] top-24 h-[100px] w-[100px] sm:right-[3vh] sm:top-48 md:top-64 md:h-[120px] md:w-[120px] lg:top-64 lg:h-[150px] lg:w-[150px]">
             <motion.div
               animate={{ rotate: [0, 10, -10, 0] }}
               transition={{
@@ -23,7 +23,11 @@ const BoardDecorationsTop = () => {
                 repeat: Infinity,
               }}
             >
-              <Image src={redFlower} alt="red flower" className="" />
+              <Image
+                src={redFlower}
+                alt="red flower"
+                className="w-3/4 sm:w-full"
+              />
             </motion.div>
           </div>
         </motion.div>

@@ -23,7 +23,11 @@ const BoardDecorationsBottom = () => {
                 repeat: Infinity,
               }}
             >
-              <Image src={pinkFlower} alt="pink flower" className="" />
+              <Image
+                src={pinkFlower}
+                alt="pink flower"
+                className="w-3/4 sm:w-full"
+              />
             </motion.div>
           </div>
         </motion.div>
