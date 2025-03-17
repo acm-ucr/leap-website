@@ -2,15 +2,11 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import ButterflyImg from "@/public/assets/about/bird.webp";
-import BackgroundImg from "@/public/assets/about/background.webp";
 
 const Leap = () => {
   return (
-    <div
-      className="bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${BackgroundImg.src})` }}
-    >
-      <div className="flex flex-col items-center p-8 text-center sm:hidden">
+    <div className="bg-cover bg-center bg-no-repeat">
+      <div className="flex flex-col items-center p-8 text-center text-leap-dark-green sm:flex md:hidden">
         <motion.div
           className="text-3xl font-bold"
           initial={{ x: -50, opacity: 0 }}
@@ -33,7 +29,7 @@ const Leap = () => {
           </motion.div>
         </div>
         <motion.p
-          className="text-xl font-semibold text-black"
+          className="text-xl font-semibold"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -48,10 +44,10 @@ const Leap = () => {
         </motion.p>
       </div>
 
-      <div className="lg:ml-26 hidden flex-col items-center p-8 text-center sm:ml-14 sm:flex md:ml-20 md:flex-row">
-        <div className="w-2/3 text-center font-leap">
+      <div className="hidden p-6 text-center text-leap-dark-green md:flex md:items-center md:justify-center md:gap-x-20">
+        <div className="flex w-3/5 flex-col items-center p-4 text-center font-leap">
           <motion.div
-            className="text-3xl font-bold md:text-4xl lg:text-5xl"
+            className="mt-9 text-3xl font-bold md:text-4xl lg:text-5xl"
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -59,7 +55,7 @@ const Leap = () => {
             LEAP!
           </motion.div>
           <motion.p
-            className="max-w-1xl md:text-1.5xl text-xl font-semibold text-black lg:text-3xl"
+            className="md:text-1.5xl w-[450px] text-xl font-semibold lg:text-3xl"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -75,7 +71,7 @@ const Leap = () => {
         </div>
 
         <motion.div
-          className="flex w-full justify-center"
+          className="flex w-1/2 items-center justify-center"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -83,7 +79,7 @@ const Leap = () => {
           <Image
             src={ButterflyImg}
             alt="Bird"
-            className="h-[450px] w-[250px] md:h-[550px] md:w-[300px] lg:h-[700px] lg:w-[450px]"
+            className="h-[450px] w-[250px] md:h-[450px] md:w-[300px] lg:h-[700px] lg:w-[450px]"
           />
         </motion.div>
       </div>
