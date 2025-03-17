@@ -11,8 +11,7 @@ export const socials: social[] = [
     link: "https://www.instagram.com/ucrleap/",
     icon: (
       <Instagram
-        size={40}
-        className="text-leap-light-green hover:text-leap-dark-green"
+        className="text-leap-light-green hover:text-leap-dark-green h-8 w-8 sm:h-10 sm:w-10"
       />
     ),
   },
@@ -20,8 +19,7 @@ export const socials: social[] = [
     link: "mailto:lovingouremotions@gmail.com",
     icon: (
       <Mail
-        size={40}
-        className="text-leap-light-green hover:text-leap-dark-green"
+        className="text-leap-light-green hover:text-leap-dark-green h-8 w-8 sm:h-10 sm:w-10"
       />
     ),
   },
@@ -29,8 +27,7 @@ export const socials: social[] = [
     link: "https://linktr.ee/ucrleap",
     icon: (
       <SiLinktree
-        size={40}
-        className="text-leap-light-green hover:text-leap-dark-green"
+        className="text-leap-light-green hover:text-leap-dark-green h-8 w-8 sm:h-10 sm:w-10"
       />
     ),
   },
@@ -38,8 +35,7 @@ export const socials: social[] = [
     link: "https://docs.google.com/document/d/1quEtJKF8hjcZ77S2JVNCk2Ctr3K6JmeBMNkSkquYBsI/edit?tab=t.0",
     icon: (
       <Newspaper
-        size={40}
-        className="text-leap-light-green hover:text-leap-dark-green"
+        className="text-leap-light-green hover:text-leap-dark-green h-8 w-8 sm:h-10 sm:w-10"
       />
     ),
   },

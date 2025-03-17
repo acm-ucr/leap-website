@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="flex w-full items-center justify-between overflow-hidden bg-leap-light-yellow p-4">
       <div className="left-0 flex flex-row hover:scale-110">
         <Link href="/">
-          <Image src={ucr_leap_logo} className="w-16" alt="UCR LEAP Logo" />
+          <Image src={ucr_leap_logo} className="w-14 sm:w-16" alt="UCR LEAP Logo" />
         </Link>
       </div>
       <div className="right-0 flex flex-row space-x-6 pl-3">
