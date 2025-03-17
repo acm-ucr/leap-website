@@ -10,37 +10,25 @@ export const socials: social[] = [
   {
     link: "https://www.instagram.com/ucrleap/",
     icon: (
-      <Instagram
-        size={40}
-        className="text-leap-light-green hover:text-leap-dark-green"
-      />
+      <Instagram className="h-8 w-8 text-leap-light-green hover:text-leap-dark-green sm:h-10 sm:w-10" />
     ),
   },
   {
     link: "mailto:lovingouremotions@gmail.com",
     icon: (
-      <Mail
-        size={40}
-        className="text-leap-light-green hover:text-leap-dark-green"
-      />
+      <Mail className="h-8 w-8 text-leap-light-green hover:text-leap-dark-green sm:h-10 sm:w-10" />
     ),
   },
   {
     link: "https://linktr.ee/ucrleap",
     icon: (
-      <SiLinktree
-        size={40}
-        className="text-leap-light-green hover:text-leap-dark-green"
-      />
+      <SiLinktree className="h-8 w-8 text-leap-light-green hover:text-leap-dark-green sm:h-10 sm:w-10" />
     ),
   },
   {
     link: "https://docs.google.com/document/d/1quEtJKF8hjcZ77S2JVNCk2Ctr3K6JmeBMNkSkquYBsI/edit?tab=t.0",
     icon: (
-      <Newspaper
-        size={40}
-        className="text-leap-light-green hover:text-leap-dark-green"
-      />
+      <Newspaper className="h-8 w-8 text-leap-light-green hover:text-leap-dark-green sm:h-10 sm:w-10" />
     ),
   },
 ];
