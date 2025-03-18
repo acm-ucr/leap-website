@@ -115,7 +115,7 @@ function Calendar({
         months: "flex flex-col sm:space-x-4 sm:space-y-0",
         month: "space-y-0",
         caption:
-          "grid grid-cols-[auto,auto,auto] md:w-1/2 xl:w-1/2 relative mt-3 mb-5 items-center justify-between",
+          "grid grid-cols-[auto,auto,auto] md:w-2/3 xl:w-1/2 relative mt-3 mb-5 items-center justify-between",
         caption_label:
           "order-1 relative text-md md:text-xl lg:text-2xl xl:text-3xl text-leap-mid-green font-leap font-bold tracking-wide",
         nav: "contents",
