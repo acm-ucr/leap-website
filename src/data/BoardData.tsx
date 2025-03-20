@@ -56,7 +56,7 @@ export const boardmembers: boardmembers[] = [
   {
     name: "Kathy Le",
     role: "Events Coordinator",
-    img: "/assets/board/kathyLe.jpg",
+    img: "/assets/board/kathyLe.webp",
     majorInfo: "Third Year, Psychology + Neuroscience Major",
     careerGoal: "Career Goal: Clinical Research Psychologist",
     whyLeap:
