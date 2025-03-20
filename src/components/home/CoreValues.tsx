@@ -25,17 +25,8 @@ const CoreValues = () => {
           background to chat, destress, make friends, and learn about mental
           health in the AAPI community. Come join us to hangout!
         </motion.p>
-
       </div>
-      <p className="mt-10 font-leap text-xl text-white md:text-2xl">
-        Loving our Emotions as Asian & Pacific !slanders, otherwise known as
-        LEAP!, is a community of friends who advocate for safe spaces and mental
-        health. We strive to make a safe space for everyone of every background
-        to chat, destress, make friends, and learn about mental health in the
-        AAPI community. Come join us to hangout!
-      </p>
     </div>
   );
 };
-
 export default CoreValues;
