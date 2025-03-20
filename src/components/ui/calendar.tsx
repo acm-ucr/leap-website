@@ -115,13 +115,13 @@ function Calendar({
         months: "flex flex-col sm:space-x-4 sm:space-y-0",
         month: "space-y-0",
         caption:
-          "grid grid-cols-[auto,auto,auto] md:w-1/2 xl:w-1/3 2xl:w-1/4 3xl:w-1/6 relative mt-3 mb-5 items-center justify-between",
+          "grid grid-cols-[auto,auto,auto] md:w-2/3 xl:w-1/2 relative mt-3 mb-5 items-center justify-between",
         caption_label:
           "order-1 relative text-md md:text-xl lg:text-2xl xl:text-3xl text-leap-mid-green font-leap font-bold tracking-wide",
         nav: "contents",
         nav_button: cn(
           buttonVariants({ variant: "ghost" }),
-          "h-9 w-9 md:h-16 md:w-16 bg-transparent text-leap-mid-green opacity-100 hover:opacity-100",
+          "h-9 w-9 md:h-16 md:w-16 bg-transparent text-leap-mid-green opacity-100",
         ),
         nav_button_previous: "order-0",
         nav_button_next: "order-2",
