@@ -114,7 +114,7 @@ const Navbar = () => {
             >
               <Link
                 href={link}
-                className={`rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap flex justify-center ${
+                className={`flex justify-center rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
                   pathName === link
                     ? "border-b-leap-mid-green font-bold text-leap-dark-green"
                     : "border-b-transparent text-leap-dark-green"
