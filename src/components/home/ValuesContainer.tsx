@@ -1,13 +1,13 @@
 "use client";
 import ValueBox from "@/components/home/ValueBox";
 import Image from "next/image";
-import FlowerImg from "@/public/assets/home/description.webp";
+import FlowerImg from "@/public/assets/home/homepageFlowers.webp";
 import lilyPad from "@/public/assets/lilyPad.svg";
 import { motion } from "motion/react";
 
 const ValuesContainer = () => {
   return (
-    <div className="flex min-h-screen flex-row items-center justify-center lg:pb-24 lg:pt-8">
+    <div className="flex flex-row items-center justify-center gap-x-5 px-5 py-10 sm:gap-x-10 lg:pb-24">
       <motion.div
         className="flex items-center justify-center md:mt-20 lg:mt-16"
         initial={{ opacity: 0 }}
@@ -34,7 +34,7 @@ const ValuesContainer = () => {
         </div>
       </motion.div>
 
-      <div className="mx-6 flex items-center justify-center md:mx-24 md:mt-20 lg:mx-40 lg:mt-16">
+      <div className="flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ y: ["20%", "0%"], x: ["10%", "0%"], opacity: 1 }}

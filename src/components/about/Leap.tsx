@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import ButterflyImg from "@/public/assets/about/bird.webp";
+import PinkFlower from "@/public/assets/pinkFlower.svg";
 
 const Leap = () => {
   return (
@@ -26,6 +27,18 @@ const Leap = () => {
               alt="Bird"
               className="h-[450px] w-[250px] md:h-[550px] md:w-[300px] lg:h-[700px] lg:w-[450px]"
             />
+            <div className="absolute h-[105px] w-[105px] -translate-x-[50px] -translate-y-[440px]">
+              <motion.div
+                transition={{
+                  duration: 0.7,
+                  delay: 0.2,
+                }}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0, rotate: 360 }}
+              >
+                <Image src={PinkFlower} alt="Pink Flower" />
+              </motion.div>
+            </div>
           </motion.div>
         </div>
         <motion.p
@@ -81,6 +94,18 @@ const Leap = () => {
             alt="Bird"
             className="h-[450px] w-[250px] md:h-[450px] md:w-[300px] lg:h-[700px] lg:w-[450px]"
           />
+          <div className="absolute h-[110px] w-[110px] -translate-x-[100px] -translate-y-[170px] md:-translate-x-[115px] lg:h-[140px] lg:w-[140px] lg:-translate-x-[200px] lg:-translate-y-[250px]">
+            <motion.div
+              transition={{
+                duration: 0.7,
+                delay: 0.2,
+              }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0, rotate: 360 }}
+            >
+              <Image src={PinkFlower} alt="Pink Flower" />
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </div>

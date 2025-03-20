@@ -12,7 +12,7 @@ const Home = () => {
       <Image
         src={valuesBg}
         alt="Background Image"
-        className="absolute top-[218px] -z-20 h-full w-full object-cover md:top-[250px] lg:top-[300px] xl:top-[420px]"
+        className="absolute top-[30vh] -z-20 h-full w-full object-cover sm:top-[35vh] md:top-[40vh] lg:top-[45vh]"
       />
       <Header />
       <CoreValues />
