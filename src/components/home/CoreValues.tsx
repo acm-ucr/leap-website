@@ -6,7 +6,7 @@ const CoreValues = () => {
     <div className="relative mt-[-15vh] flex items-center justify-center lg:mt-[-10]">
       <div className="w-3/4 text-left">
         <motion.div
-          className="font-leap text-4xl font-bold text-white sm:text-5xl lg:text-7xl"
+          className="font-leap text-4xl font-bold text-white lg:text-7xl"
           initial={{ opacity: 0, scale: 0.7 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}

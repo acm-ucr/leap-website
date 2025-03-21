@@ -22,7 +22,7 @@ const Header = () => {
           }}
           initial={{ opacity: 0, scale: 0.7 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          className="text-center font-leap text-4xl font-bold text-leap-dark-green md:text-7xl lg:text-8xl"
+          className="text-center font-leap text-5xl font-bold text-leap-dark-green md:text-7xl lg:text-8xl"
         >
           UCR LEAP!
         </motion.div>
