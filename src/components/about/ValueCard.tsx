@@ -13,7 +13,7 @@ const ValueCard: React.FC<ValueCardProps> = ({ title, text }) => {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
     >
-      <div className="mb-3 text-center text-4xl font-semibold text-leap-dark-green">
+      <div className="mb-3 text-center text-3xl font-semibold text-leap-dark-green">
         {title}
       </div>
 

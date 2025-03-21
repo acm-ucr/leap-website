@@ -60,6 +60,6 @@ export const boardmembers: boardmembers[] = [
     majorInfo: "Third Year, Psychology + Neuroscience Major",
     careerGoal: "Career Goal: Clinical Research Psychologist",
     whyLeap:
-      "I’ve witnessed how stigmas within AAPI communities often silence conversations about mental health, and I want to dismantle these barriers by creating communities where AAPI individuals feel supported.",
+      "I’ve witnessed firsthand how cultural stigma within AAPI communities often silence conversations about mental health. I hope to create communities where AAPI individuals feel seen and supported without judgment.",
   },
 ];

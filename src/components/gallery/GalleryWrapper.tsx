@@ -21,7 +21,7 @@ const GalleryWrapper = () => {
           transition={{ duration: 1 }}
           className="py-3 text-center font-leap md:py-8 lg:py-10"
         >
-          <div className="pb-10 pt-40 font-leap text-3xl font-bold text-leap-dark-green sm:text-4xl md:text-4xl lg:text-5xl">
+          <div className="pb-10 pt-40 font-leap text-5xl font-bold text-leap-dark-green md:text-6xl">
             Gallery
           </div>
           <div className="md:pb-15 px-4 pb-4 pt-4 font-leap font-semibold text-leap-dark-green sm:px-20 sm:pb-10 sm:text-lg md:text-xl lg:pb-10 lg:text-2xl">
