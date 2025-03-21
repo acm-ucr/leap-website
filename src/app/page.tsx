@@ -2,7 +2,7 @@ import Header from "@/components/home/Header";
 import CoreValues from "@/components/home/CoreValues";
 import ValuesContainer from "@/components/home/ValuesContainer";
 
-import valuesBg from "@/public/assets/home/valuesBg.png";
+import valuesBg from "@/public/assets/home/valuesBg.webp";
 
 import Image from "next/image";
 
