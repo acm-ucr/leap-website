@@ -21,7 +21,7 @@ const AboutUs = () => {
           About Us
         </div>
         <div className="md:pb-15 px-4 pb-4 pt-4 font-leap text-xl font-semibold text-leap-dark-green sm:px-20 sm:pb-10 sm:text-lg md:text-xl lg:pb-10 lg:text-2xl">
-          Learn more about LEAP! @ UCR
+          Learn more about LEAP! @ UCR.
         </div>
       </motion.div>
       <Leap />
