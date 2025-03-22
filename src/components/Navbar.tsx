@@ -76,7 +76,7 @@ const Navbar = () => {
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             isOpen
-              ? "translate-y-2.5 rotate-45 bg-white"
+              ? "translate-y-2.5 rotate-45 bg-black"
               : "-translate-y-0.5 bg-black"
           }`}
         ></span>
@@ -88,7 +88,7 @@ const Navbar = () => {
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             isOpen
-              ? "-translate-y-2.5 -rotate-45 bg-white"
+              ? "-translate-y-2.5 -rotate-45 bg-black"
               : "translate-y-0.5 bg-black"
           }`}
         ></span>
@@ -99,7 +99,7 @@ const Navbar = () => {
         animate={isOpen ? "open" : "closed"}
         exit="closed"
         ref={containerRef}
-        className="absolute left-0 top-0 flex h-[40vh] w-full flex-col items-center justify-center bg-leap-dark-green shadow-lg md:hidden"
+        className="absolute left-0 top-0 flex h-[40vh] w-full flex-col items-center justify-center bg-leap-light-yellow text-leap-dark-green shadow-lg md:hidden"
         variants={sidebarVariants}
       >
         <motion.ul className="list-none space-y-6 text-2xl text-white">
@@ -114,10 +114,10 @@ const Navbar = () => {
             >
               <Link
                 href={link}
-                className={`rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
+                className={`flex justify-center rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap ${
                   pathName === link
-                    ? "border-b-leap-mid-green font-bold text-leap-mid-green"
-                    : "border-b-transparent"
+                    ? "border-b-leap-mid-green font-bold text-leap-dark-green"
+                    : "border-b-transparent text-leap-dark-green"
                 }`}
                 onClick={closeMenu}
               >

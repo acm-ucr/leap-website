@@ -77,7 +77,7 @@ const Events = () => {
           objectFit="cover"
         />
         <motion.div
-          className="pb-10 pt-52 font-leap text-3xl font-bold text-leap-dark-green sm:text-4xl md:pt-60 md:text-4xl lg:text-5xl"
+          className="pb-10 pt-52 font-leap text-5xl font-bold text-leap-dark-green md:pt-60 md:text-6xl"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{
