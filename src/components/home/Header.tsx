@@ -33,7 +33,7 @@ const Header = () => {
           }}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center font-leap text-xl font-semibold text-leap-dark-green md:text-2xl lg:text-3xl"
+          className="text-center font-leap text-lg font-semibold text-leap-dark-green md:text-2xl lg:text-3xl"
         >
           Leap!'s mission is to promote and encourage the acknowledgement and
           health of mental health in the Asian & Pacific Islander community of

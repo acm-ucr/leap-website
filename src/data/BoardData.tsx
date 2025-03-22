@@ -54,12 +54,12 @@ export const boardmembers: boardmembers[] = [
       "Through my passion for mental health advocacy, I hope to help erase the stigma surrounding it in the AAPI community!",
   },
   {
-    name: "Sneha Panda",
+    name: "Kathy Le",
     role: "Events Coordinator",
-    img: "/assets/board/snehapanda-min.webp",
-    majorInfo: "Fourth Year, Psychology Major",
-    careerGoal: "Career Goal: Psychology Researcher",
+    img: "/assets/board/kathyLe.webp",
+    majorInfo: "Third Year, Psychology + Neuroscience Major",
+    careerGoal: "Career Goal: Clinical Research Psychologist",
     whyLeap:
-      "I want to help support people in the AAPI community with mental health, since there is a lot of stigma within our communities with mental health.",
+      "I’ve witnessed firsthand how cultural stigma within AAPI communities often silence conversations about mental health. I hope to create communities where AAPI individuals feel seen and supported without judgment.",
   },
 ];

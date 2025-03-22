@@ -15,7 +15,7 @@ export default function ValueSection() {
       />
 
       <motion.div
-        className="mb-12 text-3xl font-bold text-leap-dark-green md:text-5xl"
+        className="mb-12 text-5xl font-bold text-leap-dark-green"
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
