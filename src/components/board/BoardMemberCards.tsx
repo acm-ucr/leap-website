@@ -60,7 +60,7 @@ const BoardMemberCards: React.FC<MemberProps> = ({
             <div className="text-md p-4 text-left">
               <p className="text-leap-text">{majorInfo}</p>
               <p className="pb-4 text-leap-text">{careerGoal}</p>
-              <p className="text-lg font-bold text-leap-text">Why leap?</p>
+              <p className="text-lg font-bold text-leap-text">Why LEAP!?</p>
               <p className="pt-4 text-leap-text">{whyLeap}</p>
             </div>
           </div>

@@ -7,7 +7,7 @@ interface EventProps {
 
 const EventsList: React.FC<EventProps> = ({ date, time, title, desc }) => {
   return (
-    <div className="grid w-3/4 grid-cols-7 items-center overflow-hidden rounded-lg pb-2 font-leap">
+    <div className="grid w-3/4 grid-cols-7 items-center overflow-hidden rounded-lg font-leap">
       <div className="col-span-3 flex h-full items-center justify-center bg-leap-mid-green lg:col-span-1">
         <div className="flex flex-col items-center justify-center px-10 py-7 text-center text-white">
           <div className="text-xl font-semibold md:text-3xl lg:text-4xl">
