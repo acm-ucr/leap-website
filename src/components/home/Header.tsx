@@ -39,7 +39,7 @@ const Header = () => {
           health of mental health in the Asian & Pacific Islander community of
           UCR.
         </motion.div>
-        <div className="invisible absolute flex translate-x-[80%] translate-y-[240%] items-center justify-center gap-5 sm:visible sm:translate-x-[180%] sm:translate-y-[310%] md:translate-x-[200%] md:translate-y-[370%] lg:translate-x-[180%] lg:translate-y-[310%] xl:translate-x-[250%] xl:translate-y-[280%]">
+        <div className="invisible absolute flex translate-x-[80%] translate-y-[240%] items-center justify-center gap-5 sm:visible sm:translate-x-[180%] sm:translate-y-[300%] md:translate-x-[200%] md:translate-y-[370%] lg:translate-x-[180%] lg:translate-y-[310%] xl:translate-x-[250%] xl:translate-y-[280%]">
           <motion.div
             transition={{
               duration: 0.7,
@@ -51,7 +51,7 @@ const Header = () => {
             <Image
               src={pinkFlower}
               alt="Pink Flower"
-              className="relative h-10 w-10 translate-y-[-10%] md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px]"
+              className="relative h-10 w-10 translate-y-[-10%] sm:translate-y-[40%] md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px]"
             />
           </motion.div>
           <motion.div
@@ -69,7 +69,7 @@ const Header = () => {
             />
           </motion.div>
         </div>
-        <div className="invisible absolute translate-x-[-190%] translate-y-[180%] sm:visible sm:translate-x-[-340%] sm:translate-y-[200%] md:translate-x-[-330%] md:translate-y-[210%] lg:translate-y-[185%] xl:translate-x-[-450%] xl:translate-y-[160%]">
+        <div className="absolute translate-x-[-170%] translate-y-[210%] sm:translate-x-[-340%] sm:translate-y-[230%] md:translate-x-[-330%] md:translate-y-[210%] lg:translate-y-[185%] xl:translate-x-[-450%] xl:translate-y-[160%]">
           <motion.div
             transition={{
               duration: 0.7,
