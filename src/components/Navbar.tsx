@@ -102,7 +102,7 @@ const Navbar = () => {
         className="absolute left-0 top-0 flex h-[40vh] w-full flex-col items-center justify-center bg-leap-light-yellow text-leap-dark-green shadow-lg md:hidden"
         variants={sidebarVariants}
       >
-        <motion.ul className="list-none space-y-6 text-2xl text-white">
+        <motion.ul className="list-none space-y-6 pt-4 text-2xl text-white sm:pt-0">
           {navigations.map(({ link, name }, index) => (
             <motion.li
               key={index}
