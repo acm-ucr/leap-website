@@ -52,7 +52,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
     <motion.div
       className={`${currentMonth ? "text-black" : "text-gray-400"} h-full text-[9px] sm:text-xs md:text-sm lg:text-lg`}
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
       transition={{
         duration: 0.5,
         delay: 0.1,
