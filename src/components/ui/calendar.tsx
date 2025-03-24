@@ -6,7 +6,6 @@ import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./button";
-import { motion } from "motion/react";
 
 export type GoogleEventProps = {
   start: {
