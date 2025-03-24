@@ -49,14 +49,8 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
     date.getFullYear() === currentDate.getFullYear();
 
   return (
-    <motion.div
+    <div
       className={`${currentMonth ? "text-black" : "text-gray-400"} h-full text-[9px] sm:text-xs md:text-sm lg:text-lg`}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        duration: 0.5,
-        delay: 0.1,
-      }}
     >
       <div
         className={
@@ -91,7 +85,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
           }
         })}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
