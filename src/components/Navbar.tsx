@@ -43,7 +43,10 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 z-10 flex w-full flex-row items-center justify-between bg-leap-light-yellow p-4 lg:p-2">
-      <div className="abolute z-30 pl-0 duration-100 hover:scale-110 md:p-2">
+      <motion.div
+        className="abolute z-30 pl-0 duration-100 md:p-2"
+        whileHover={{ scale: 1.1 }}
+      >
         <Link href="/">
           <Image
             src={ucr_leap_logo}
@@ -51,21 +54,23 @@ const Navbar = () => {
             className="w-14 sm:w-16"
           />
         </Link>
-      </div>
+      </motion.div>
 
       <div className="hidden flex-row gap-20 pr-12 md:flex">
         {navigations.map(({ link, name }, index) => (
-          <Link
-            href={link}
-            key={index}
-            className={`duration-1 rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap text-lg hover:scale-110 ${
-              pathName === link
-                ? "border-b-leap-mid-green font-bold text-leap-dark-green"
-                : "border-b-transparent"
-            }`}
-          >
-            {name}
-          </Link>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Link
+              href={link}
+              key={index}
+              className={`duration-1 rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap text-lg hover:scale-110 ${
+                pathName === link
+                  ? "border-b-leap-mid-green font-bold text-leap-dark-green"
+                  : "border-b-transparent"
+              }`}
+            >
+              {name}
+            </Link>
+          </motion.div>
         ))}
       </div>
 
