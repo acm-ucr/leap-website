@@ -13,7 +13,7 @@ const krub = Krub({
 
 export const metadata = {
   title: "UCR LEAP",
-  description: "Created by ACM@UCR",
+  description: "Loving our Emotions as Asians & Pacific !slanders @ UCR!",
 };
 
 type LayoutProps = {

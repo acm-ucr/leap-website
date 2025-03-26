@@ -1,4 +1,4 @@
-interface boardmembers {
+interface boardMembersTypes {
   name: string;
   role: string;
   img: string;
@@ -7,7 +7,7 @@ interface boardmembers {
   whyLeap: string;
 }
 
-export const boardmembers: boardmembers[] = [
+export const boardMembers: boardMembersTypes[] = [
   {
     name: "Cathy Nguyen",
     role: "President",
@@ -15,7 +15,7 @@ export const boardmembers: boardmembers[] = [
     majorInfo: "Fourth Year, Biology Major,",
     careerGoal: "Career Goal: Physical Assistant",
     whyLeap:
-      "Having a supportive community is essential for mental well-being because you will never feel you’re alone, and I am committed to fostering this sense of belonging within the AAPI community at LEAP!.",
+      "Having a supportive community is essential for mental well-being because you will never feel you’re alone, and I am committed to fostering this sense of belonging within the AAPI community at LEAP!",
   },
   {
     name: "Ethan Ly",
@@ -33,7 +33,7 @@ export const boardmembers: boardmembers[] = [
     majorInfo: "Third Year, Psychology Major,",
     careerGoal: "Career Goal: Neuropsychologist",
     whyLeap:
-      "Regardless of where you are in life, mental health is always a challenge. I believe that a large part of this challenge can be overcome through the destigmatization of mental health in AAPI culture, which I continuously strive to bring to LEAP!.",
+      "Regardless of where you are in life, mental health is always a challenge. I believe that a large part of this challenge can be overcome through the destigmatization of mental health in AAPI culture, which I continuously strive to bring to LEAP!",
   },
   {
     name: "Debdeep Bandyopadhyay",
@@ -60,6 +60,6 @@ export const boardmembers: boardmembers[] = [
     majorInfo: "Third Year, Psychology + Neuroscience Major",
     careerGoal: "Career Goal: Clinical Research Psychologist",
     whyLeap:
-      "I’ve witnessed firsthand how cultural stigma within AAPI communities often silence conversations about mental health. I hope to create communities where AAPI individuals feel seen and supported without judgment.",
+      "I’ve witnessed how cultural stigma in AAPI communities often silence mental health discussions. I hope to create communities where AAPI individuals feel seen and supported without judgment.",
   },
 ];

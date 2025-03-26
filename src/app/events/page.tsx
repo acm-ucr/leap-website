@@ -1,11 +1,3 @@
-import Calendar from "@/components/events/Calendar";
+import Wrapper from "@/components/events/Wrapper";
 
-const OurEvents = () => {
-  return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <Calendar />
-    </div>
-  );
-};
-
-export default OurEvents;
+export default Wrapper;

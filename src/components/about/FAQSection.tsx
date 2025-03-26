@@ -1,21 +1,13 @@
 "use client";
 import { motion } from "motion/react";
-import { faqData } from "../../data/FAQsData";
+import { faqData } from "../../data/FAQs";
 import FAQCard from "./FAQCard";
-import Image from "next/image";
-import BackgroundImage from "@/public/assets/about/bg-about-questions.webp";
 
 export default function FAQSection() {
   return (
-    <div className="relative flex flex-col items-center justify-center overflow-hidden py-12">
-      <Image
-        src={BackgroundImage}
-        alt="questions background"
-        className="absolute -z-10 h-full w-full object-cover"
-      />
-
+    <div className="relative flex flex-col items-center justify-center overflow-hidden py-8">
       <motion.div
-        className="mb-12 text-3xl font-bold text-leap-dark-green md:text-5xl"
+        className="mb-6 text-3xl font-bold text-leap-dark-green md:text-5xl"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
