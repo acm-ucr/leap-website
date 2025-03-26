@@ -14,7 +14,7 @@ const BoardDecorationsBottom = () => {
         initial={{ opacity: 1 }}
         whileInView={{ opacity: 1 }}
       >
-        <div className="absolute bottom-3 left-[3vh] h-[100px] w-[100px] md:h-[120px] md:w-[120px] lg:h-[150px] lg:w-[150px]">
+        <div className="absolute bottom-8 left-[3vh] h-[75px] w-[75px] md:h-[120px] md:w-[120px] lg:h-[150px] lg:w-[150px]">
           <motion.div
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{

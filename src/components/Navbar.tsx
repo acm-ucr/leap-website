@@ -58,10 +58,9 @@ const Navbar = () => {
 
       <div className="hidden flex-row gap-20 pr-12 md:flex">
         {navigations.map(({ link, name }, index) => (
-          <motion.div whileHover={{ scale: 1.1 }}>
+          <motion.div key={index} whileHover={{ scale: 1.1 }}>
             <Link
               href={link}
-              key={index}
               className={`duration-1 rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap text-lg hover:scale-110 ${
                 pathName === link
                   ? "border-b-leap-mid-green font-bold text-leap-dark-green"

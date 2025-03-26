@@ -19,13 +19,8 @@ const Footer = () => {
       </motion.div>
       <div className="right-0 flex flex-row space-x-6 pl-3">
         {socials.map(({ link, icon }, index) => (
-          <motion.div whileHover={{ scale: 1.1 }}>
-            <Link
-              href={link}
-              key={index}
-              target="blank"
-              className="hover:scale-110"
-            >
+          <motion.div key={index} whileHover={{ scale: 1.1 }}>
+            <Link href={link} target="blank" className="hover:scale-110">
               {icon}
             </Link>
           </motion.div>
