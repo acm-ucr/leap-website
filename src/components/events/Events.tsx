@@ -18,9 +18,9 @@ const EventsList: React.FC<EventProps> = ({ date, time, title, desc }) => {
         <div className="text-xl font-semibold text-leap-dark-green sm:text-3xl md:text-4xl lg:text-4xl">
           {title}
         </div>
-        <p className="md:text-md mt-2 text-leap-dark-green lg:text-lg">
+        <div className="md:text-md mt-2 text-leap-dark-green lg:text-lg">
           {desc}
-        </p>
+        </div>
       </div>
     </div>
   );
