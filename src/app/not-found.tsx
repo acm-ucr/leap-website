@@ -1,8 +1,9 @@
 "use client";
 import BackgroundImage from "@/public/assets/backgrounds/BackgroundError.webp";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import Button from "../components/Button";
 import pinkFlower from "@/public/assets/pinkFlower.svg";
 
 const NotFound = () => {
@@ -16,7 +17,7 @@ const NotFound = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
         className="mb-2 text-5xl font-bold text-leap-text md:text-7xl"
       >
         404
@@ -24,7 +25,7 @@ const NotFound = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.1 }}
+        transition={{ duration: 0.4 }}
         className="mb-3 text-lg font-semibold text-leap-text md:text-2xl"
       >
         Page Not Found
@@ -32,9 +33,15 @@ const NotFound = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.4 }}
       >
-        <Button text="Back to Home" link="/" />
+        <Button
+          asChild
+          className="h-15 m-0 flex w-40 items-center rounded-lg border-4 border-leap-dark-green bg-leap-mid-green px-4 py-1 text-center font-leap text-lg text-white hover:bg-leap-mid-green"
+        >
+          <Link href="/">Back to Home</Link>
+        </Button>
       </motion.div>
       <div className="pointer-events-none absolute translate-x-[190%] translate-y-[80%] md:translate-y-[120%]">
         <motion.div

@@ -1,6 +1,6 @@
 "use client";
-import ucr_leap_logo from "@/public/leapIcon.svg";
-import { navigations } from "@/data/NavbarData";
+import leapLogo from "@/public/leapIcon.webp";
+import { navigations } from "@/data/NavbarLinks";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
@@ -49,7 +49,7 @@ const Navbar = () => {
       >
         <Link href="/">
           <Image
-            src={ucr_leap_logo}
+            src={leapLogo}
             alt="leap navbar logo"
             className="w-14 sm:w-16"
           />
@@ -58,10 +58,9 @@ const Navbar = () => {
 
       <div className="hidden flex-row gap-20 pr-12 md:flex">
         {navigations.map(({ link, name }, index) => (
-          <motion.div whileHover={{ scale: 1.1 }}>
+          <motion.div key={index} whileHover={{ scale: 1.1 }}>
             <Link
               href={link}
-              key={index}
               className={`duration-1 rounded-lg border-4 border-l-transparent border-r-transparent border-t-transparent font-leap text-lg hover:scale-110 ${
                 pathName === link
                   ? "border-b-leap-mid-green font-bold text-leap-dark-green"
@@ -84,19 +83,19 @@ const Navbar = () => {
               ? "translate-y-2.5 rotate-45 bg-black"
               : "-translate-y-0.5 bg-black"
           }`}
-        ></span>
+        />
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             isOpen ? "opacity-0" : "bg-black opacity-100"
           }`}
-        ></span>
+        />
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             isOpen
               ? "-translate-y-2.5 -rotate-45 bg-black"
               : "translate-y-0.5 bg-black"
           }`}
-        ></span>
+        />
       </button>
 
       <motion.div
