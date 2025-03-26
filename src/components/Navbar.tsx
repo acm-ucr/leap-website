@@ -1,5 +1,5 @@
 "use client";
-import ucr_leap_logo from "@/public/leapIcon.png";
+import ucr_leap_logo from "@/public/leapIcon.webp";
 import { navigations } from "@/data/NavbarLinks";
 import Link from "next/link";
 import Image from "next/image";
