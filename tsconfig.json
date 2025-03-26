@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/data/FooterLinks.ts"
+    "src/data/FooterLinks.tsx"
   ],
   "exclude": ["node_modules"]
 }
