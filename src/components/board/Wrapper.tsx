@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import BackgroundImage from "@/public/assets/backgrounds/BackgroundBoard.webp";
-import { boardmembers } from "@/data/BoardData";
-import BoardMemberCards from "@/components/board/BoardMemberCards";
+import { boardmembers } from "@/data/Board";
+import BoardMemberCards from "@/components/board/Cards";
 import { motion } from "motion/react";
 
 const BoardWrapper = () => {

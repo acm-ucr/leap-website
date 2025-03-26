@@ -1,5 +1,5 @@
-import { Newspaper, Instagram, Mail } from "lucide-react";
-import { SiLinktree } from "react-icons/si";
+import { Newspaper, Mail } from "lucide-react";
+import { SiLinktree, SiInstagram } from "react-icons/si";
 
 interface social {
   link: string;
@@ -10,7 +10,7 @@ export const socials: social[] = [
   {
     link: "https://www.instagram.com/ucrleap/",
     icon: (
-      <Instagram className="h-8 w-8 text-leap-light-green hover:text-leap-dark-green sm:h-10 sm:w-10" />
+      <SiInstagram className="h-8 w-8 text-leap-light-green hover:text-leap-dark-green sm:h-10 sm:w-10" />
     ),
   },
   {

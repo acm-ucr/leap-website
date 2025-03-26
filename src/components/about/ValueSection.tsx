@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { valueData } from "@/data/ValueData";
+import { valueData } from "@/data/Values";
 import ValueCard from "@/components/about/ValueCard";
 import BackgroundImage from "@/public/assets/about/bg-Value-about.webp";
 import Image from "next/image";

@@ -7,7 +7,7 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/carousel/Carousel";
-import { slides, slide } from "@/data/GalleryData";
+import { slides, slide } from "@/data/CarouselImages";
 import Image from "next/image";
 
 export function Carousel() {
