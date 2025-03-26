@@ -68,7 +68,7 @@ const Events = () => {
   });
 
   return (
-    <>
+    <div className="flex flex-col items-center justify-center gap-4">
       <div className="relative h-full text-center">
         <Image
           src={BackgroundImage}
@@ -191,7 +191,7 @@ const Events = () => {
           </p>
         )}
       </motion.div>
-    </>
+    </div>
   );
 };
 
