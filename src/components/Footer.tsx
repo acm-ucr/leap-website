@@ -1,12 +1,14 @@
+"use client";
 import ucr_leap_logo from "@/public/leapIcon.svg";
 import { socials } from "@/data/FooterData";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const Footer = () => {
   return (
     <div className="flex w-full items-center justify-between overflow-hidden bg-leap-light-yellow p-4">
-      <div className="left-0 flex flex-row hover:scale-110">
+      <motion.div className="left-0 flex flex-row" whileHover={{ scale: 1.1 }}>
         <Link href="/">
           <Image
             src={ucr_leap_logo}
@@ -14,17 +16,19 @@ const Footer = () => {
             alt="UCR LEAP Logo"
           />
         </Link>
-      </div>
+      </motion.div>
       <div className="right-0 flex flex-row space-x-6 pl-3">
         {socials.map(({ link, icon }, index) => (
-          <Link
-            href={link}
-            key={index}
-            target="blank"
-            className="hover:scale-110"
-          >
-            {icon}
-          </Link>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Link
+              href={link}
+              key={index}
+              target="blank"
+              className="hover:scale-110"
+            >
+              {icon}
+            </Link>
+          </motion.div>
         ))}
       </div>
     </div>
