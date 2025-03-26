@@ -1,5 +1,5 @@
 "use client";
-import ucr_leap_logo from "@/public/leapIcon.webp";
+import leapLogo from "@/public/leapIcon.webp";
 import { socials } from "@/data/FooterLinks";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,7 +11,7 @@ const Footer = () => {
       <motion.div className="left-0 flex flex-row" whileHover={{ scale: 1.1 }}>
         <Link href="/">
           <Image
-            src={ucr_leap_logo}
+            src={leapLogo}
             className="w-14 sm:w-16"
             alt="UCR LEAP Logo"
           />
