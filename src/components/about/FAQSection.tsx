@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
-import { faqData } from "../../data/FAQs";
-import FAQCard from "./FAQCard";
+import { faqData } from "@/data/FAQs";
+import FAQCard from "@/components/about/FAQCard";
 
 export default function FAQSection() {
   return (
