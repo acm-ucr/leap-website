@@ -10,11 +10,7 @@ const Footer = () => {
     <div className="flex w-full items-center justify-between overflow-hidden bg-leap-light-yellow p-4">
       <motion.div className="left-0 flex flex-row" whileHover={{ scale: 1.1 }}>
         <Link href="/">
-          <Image
-            src={leapLogo}
-            className="w-14 sm:w-16"
-            alt="UCR LEAP Logo"
-          />
+          <Image src={leapLogo} className="w-14 sm:w-16" alt="UCR LEAP Logo" />
         </Link>
       </motion.div>
       <div className="right-0 flex flex-row space-x-6 pl-3">
