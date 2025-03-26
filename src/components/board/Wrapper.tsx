@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import BackgroundImage from "@/public/assets/backgrounds/BackgroundBoard.webp";
-import { BoardMembers } from "@/data/Board";
+import { boardMembers } from "@/data/Board";
 import BoardMemberCards from "@/components/board/Cards";
 import { motion } from "motion/react";
 
@@ -16,7 +16,7 @@ const BoardWrapper = () => {
       />
 
       <div className="mx-auto grid w-5/6 place-content-center justify-center gap-x-32 sm:grid-cols-2 sm:gap-x-28 lg:grid-cols-3">
-        {BoardMembers.map(
+        {boardMembers.map(
           ({ name, role, img, whyLeap, majorInfo, careerGoal }, index) => (
             <motion.div
               initial={{ opacity: 0, y: -30 }}

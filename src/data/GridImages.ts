@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-interface PicturesData {
+interface picturesData {
   className: string;
   pictures: StaticImageData;
   alt: string;
@@ -20,7 +20,7 @@ import grid13 from "@/public/assets/gallery/grid/grid13.webp";
 import grid14 from "@/public/assets/gallery/grid/grid14.webp";
 import grid15 from "@/public/assets/gallery/grid/grid15.webp";
 
-export const PicturesData: PicturesData[] = [
+export const picturesData: picturesData[] = [
   {
     className: "flex justify-center items-center md:row-span-2 lg:row-span-2",
     pictures: grid1,

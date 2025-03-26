@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import pinkFlower from "@/public/assets/pinkFlower.svg";
 
-const NotFound = () => {
+const Error = () => {
   return (
     <div className="relative flex h-[90vh] flex-col items-center justify-center overflow-hidden">
       <Image
@@ -55,4 +55,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default Error;
