@@ -11,7 +11,7 @@ const NotFound = () => {
     <div className="relative flex h-[90vh] flex-col items-center justify-center overflow-hidden">
       <Image
         src={BackgroundImage}
-        alt="404"
+        alt="500"
         className="absolute -z-20 min-h-screen w-screen"
       />
       <motion.div

@@ -1,4 +1,4 @@
-interface boardmembers {
+interface BoardMembersTypes {
   name: string;
   role: string;
   img: string;
@@ -7,7 +7,7 @@ interface boardmembers {
   whyLeap: string;
 }
 
-export const boardmembers: boardmembers[] = [
+export const BoardMembers: BoardMembersTypes[] = [
   {
     name: "Cathy Nguyen",
     role: "President",
