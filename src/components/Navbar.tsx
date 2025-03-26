@@ -1,5 +1,5 @@
 "use client";
-import ucr_leap_logo from "@/public/leapIcon.webp";
+import leapLogo from "@/public/leapIcon.webp";
 import { navigations } from "@/data/NavbarLinks";
 import Link from "next/link";
 import Image from "next/image";
@@ -49,7 +49,7 @@ const Navbar = () => {
       >
         <Link href="/">
           <Image
-            src={ucr_leap_logo}
+            src={leapLogo}
             alt="leap navbar logo"
             className="w-14 sm:w-16"
           />
