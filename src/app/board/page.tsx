@@ -1,7 +1,7 @@
 "use client";
-import BoardWrapper from "@/components/board/BoardWrapper";
-import BoardDecorationsBottom from "@/components/board/BoardDecorationsBottom";
-import BoardDecorationsTop from "@/components/board/BoardDecorationsTop";
+import BoardWrapper from "@/components/board/Wrapper";
+import BoardDecorationsBottom from "@/components/board/DecorationsBottom";
+import BoardDecorationsTop from "@/components/board/DecorationsTop";
 import BackgroundImg from "@/public/assets/about/bg-about-us.webp";
 import { motion } from "motion/react";
 
