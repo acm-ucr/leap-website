@@ -2,7 +2,8 @@
 import BackgroundImage from "@/public/assets/backgrounds/BackgroundError.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Button from "../components/Button";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import pinkFlower from "@/public/assets/pinkFlower.svg";
 
 const NotFound = () => {
@@ -34,7 +35,12 @@ const NotFound = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
       >
-        <Button text="Back to Home" link="/" />
+        <Button
+          asChild
+          className="h-15 m-0 flex w-40 items-center rounded-lg border-4 border-leap-dark-green bg-leap-mid-green px-4 py-1 text-center font-leap text-lg text-white hover:bg-leap-mid-green"
+        >
+          <Link href="/">Back to Home</Link>
+        </Button>
       </motion.div>
       <div className="pointer-events-none absolute translate-x-[190%] translate-y-[80%] md:translate-y-[120%]">
         <motion.div

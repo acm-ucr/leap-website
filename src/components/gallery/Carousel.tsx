@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Card } from "@/components/carousel/Card";
+import { Card } from "@/components/ui/carousel/Card";
 import {
   Carousel as CarouselPrimitive,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
-} from "@/components/carousel/Carousel";
+} from "@/components/ui/carousel/Carousel";
 import { slides, slide } from "@/data/CarouselImages";
 import Image from "next/image";
 

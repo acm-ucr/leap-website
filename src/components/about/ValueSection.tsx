@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function ValueSection() {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 pt-28">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-8">
       <Image
         src={BackgroundImage}
         alt="questions background"
