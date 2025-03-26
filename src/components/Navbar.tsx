@@ -1,6 +1,6 @@
 "use client";
-import ucr_leap_logo from "@/public/leapIcon.svg";
-import { navigations } from "@/data/NavbarData";
+import ucr_leap_logo from "@/public/leapIcon.png";
+import { navigations } from "@/data/NavbarLinks";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
@@ -84,19 +84,19 @@ const Navbar = () => {
               ? "translate-y-2.5 rotate-45 bg-black"
               : "-translate-y-0.5 bg-black"
           }`}
-        ></span>
+        />
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             isOpen ? "opacity-0" : "bg-black opacity-100"
           }`}
-        ></span>
+        />
         <span
           className={`my-1 block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             isOpen
               ? "-translate-y-2.5 -rotate-45 bg-black"
               : "translate-y-0.5 bg-black"
           }`}
-        ></span>
+        />
       </button>
 
       <motion.div

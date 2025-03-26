@@ -1,6 +1,6 @@
 "use client";
-import ucr_leap_logo from "@/public/leapIcon.svg";
-import { socials } from "@/data/FooterData";
+import ucr_leap_logo from "@/public/leapIcon.png";
+import { socials } from "@/data/FooterLinks";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";

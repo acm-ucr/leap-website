@@ -1,5 +1,5 @@
 "use client";
-import { PicturesData } from "@/data/PicturesData";
+import { PicturesData } from "@/data/GridImages";
 import { motion } from "motion/react";
 import Image from "next/image";
 

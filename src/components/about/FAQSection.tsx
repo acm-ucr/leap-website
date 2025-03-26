@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { faqData } from "../../data/FAQsData";
+import { faqData } from "../../data/FAQs";
 import FAQCard from "./FAQCard";
 import Image from "next/image";
 import BackgroundImage from "@/public/assets/about/bg-about-questions.webp";

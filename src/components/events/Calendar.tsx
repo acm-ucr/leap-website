@@ -17,6 +17,7 @@ import EventsList from "@/components/events/Events";
 import BackgroundImage from "@/public/assets/backgrounds/HeaderEvent.webp";
 import Image from "next/image";
 import { motion } from "motion/react";
+import Header from "@/components/Header";
 
 const Events = () => {
   const [current, setCurrent] = useState<EventProps>({});
@@ -76,28 +77,10 @@ const Events = () => {
           className="fixed inset-0 -z-10 h-screen w-full object-cover"
           objectFit="cover"
         />
-        <motion.div
-          className="pb-10 pt-52 font-leap text-5xl font-bold text-leap-dark-green md:pt-60 md:text-6xl"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.5,
-            delay: 0.1,
-          }}
-        >
-          Events
-        </motion.div>
-        <motion.div
-          className="md:pb-15 px-20 pb-8 pt-4 font-leap font-semibold text-leap-dark-green sm:pb-10 sm:text-lg md:text-xl lg:pb-20 lg:text-2xl"
-          initial={{ opacity: 0, y: 0 }}
-          whileInView={{ opacity: 1, y: -30 }}
-          transition={{
-            duration: 0.5,
-            delay: 0.1,
-          }}
-        >
-          Explore when our next event is and make sure to stop by.
-        </motion.div>
+        <Header
+          title="Events"
+          subtitle="Explore when our next event is and make sure to stop by."
+        />
       </div>
       {
         <Dialog
