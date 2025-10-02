@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
 import { motion } from "motion/react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface MemberProps {
   name: string;
   role: string;
-  img: string;
+  img: StaticImageData;
   majorInfo: string;
   careerGoal: string;
   whyLeap: string;
