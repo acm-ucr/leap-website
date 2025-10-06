@@ -63,10 +63,8 @@ export const boardMembers: boardMembersTypes[] = [
     name: "Vanna Tat",
     role: "Events Coordinator",
     img: Vanna,
-    majorInfo:
-      "4th Year, Sociology Major & Organizational Behavior/Human Resources Minor",
-    careerGoal:
-      "Human Resource Management within a hospital, in relation to ethics.",
+    majorInfo: "4th Year, Sociology Major & Organizational Behavior/HR Minor",
+    careerGoal: "HR Management within a hospital, in relation to ethics.",
     whyLeap:
       "I found a little safe space on campus where light and deep conversations about mental health have drawn attention to my own. LEAP! has shown me that we don’t need a lot to take care of our mental health and that it's not a burden. Even as just an ounce of empowerment and confidence in one’s cultural identity or personal well-being, I wish to provide a sense of community as well as help those who may feel lost on their journey.",
   },
