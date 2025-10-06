@@ -57,11 +57,13 @@ const BoardMemberCards: React.FC<MemberProps> = ({
               transform: "rotateY(180deg)",
             }}
           >
-            <div className="text-md p-4 text-left">
-              <p className="text-leap-text">{majorInfo}</p>
-              <p className="pb-4 text-leap-text">{careerGoal}</p>
-              <p className="text-lg font-bold text-leap-text">Why LEAP!?</p>
-              <p className="pt-4 text-leap-text">{whyLeap}</p>
+            <div className="p-4 text-left">
+              <p className="text-sm text-leap-text">{majorInfo}</p>
+              <p className="pb-4 text-xs text-leap-text">{careerGoal}</p>
+              <p className="text-md font-bold leading-none text-leap-text">
+                Why LEAP!?
+              </p>
+              <p className="pt-4 text-[0.8rem] text-leap-text">{whyLeap}</p>
             </div>
           </div>
         </motion.div>
