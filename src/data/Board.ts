@@ -46,9 +46,10 @@ export const boardMembers: boardMembersTypes[] = [
     name: "Debdeep Bandyopadhyay",
     role: "Treasurer",
     img: Debdeep,
-    majorInfo: "",
-    careerGoal: "",
-    whyLeap: "",
+    majorInfo: "4th Year Psychology Major",
+    careerGoal: "Clinical Psychologist ",
+    whyLeap:
+      "Leap has always been a very comforting space that I can share with many friends. The small activities paired alongside important discussions made college a lot easier as it felt like I had a community to rely upon. I'd love to continue helping shape that for this coming year for more students!",
   },
   {
     name: "Kathy Le",
